@@ -5,9 +5,9 @@
 
     <div class="container col-xs-12 col-sm-10 col-md-8 col-lg-6 col-centered wr-content wr-login col-centered sign-panel">
 
-        <p class="page-sub-title">Register</p>
+        <p class="page-sub-title">注册</p>
 
-        <p>Create a new account in WSO2 IoT Server(All fields are required.)</p>
+        <p>在WSO2 IoT 创建一个新账户（所有项都必填）</p>
         <hr/>
         <!-- validation -->
         <div class="wr-validation-summary hidden alert alert-danger">
@@ -23,46 +23,46 @@
                 <i class="icon fw fw-error"></i><span></span>
             </div>
             <div class="form-group">
-                <label for="first_name" class="wr-input-label">First Name</label>
-                <input type="text" id="first_name" name="first_name" class="form-control" placeholder="First Name"
+                <label for="first_name" class="wr-input-label">名字</label>
+                <input type="text" id="first_name" name="first_name" class="form-control" placeholder="名字"
                        data-regex="{{firstnameJSRegEx}}" data-lengthmsg="{{usernameHelpText}}"
                        data-errormsg="{{firstnameRegExViolationErrorMsg}}"/>
             </div>
 
             <div class="form-group">
-                <label for="last_name" class="wr-input-label">Last Name</label>
-                <input type="text" id="last_name" name="last_name" class="form-control" placeholder="Last Name"
+                <label for="last_name" class="wr-input-label">姓氏</label>
+                <input type="text" id="last_name" name="last_name" class="form-control" placeholder="姓氏"
                        data-regex="{{lastnameJSRegEx}}" data-errormsg="{{lastnameRegExViolationErrorMsg}}"/>
             </div>
 
             <div class="form-group">
-                <label for="user_name" class="wr-input-label">Username ( {{usernameHelpText}} )</label>
-                <input type="text" id="user_name" name="user_name" class="form-control" placeholder="Username"
+                <label for="user_name" class="wr-input-label">用户名 ( {{usernameHelpText}} )</label>
+                <input type="text" id="user_name" name="user_name" class="form-control" placeholder="用户名"
                        data-regex="{{usernameJSRegEx}}" data-errormsg="{{usernameRegExViolationErrorMsg}}"/>
             </div>
 
             <div class="form-group">
-                <label for="email" class="wr-input-label">Email</label>
-                <input type="text" id="email" name="email" class="form-control" placeholder="Email"
+                <label for="email" class="wr-input-label">邮箱</label>
+                <input type="text" id="email" name="email" class="form-control" placeholder="邮箱"
                        data-regex="{{emailJSRegEx}}" data-errormsg="{{emailRegExViolationErrorMsg}}"/>
             </div>
 
             <div class="form-group">
-                <label for="password" class="wr-input-label">Password</label>
+                <label for="password" class="wr-input-label">密码</label>
                 <input type="password" id="password" name="password" class="form-control"
-                       placeholder="Password"/>
+                       placeholder="密码"/>
             </div>
 
             <div class="form-group">
-                <label for="password_confirmation" class="wr-input-label">Confirm Password</label>
+                <label for="password_confirmation" class="wr-input-label">确认密码</label>
                 <input type="password" id="password_confirmation" name="password_confirmation"
-                       class="form-control" placeholder="Confirm Password"/>
+                       class="form-control" placeholder="确认密码"/>
             </div>
 
             <div class="wr-input-control">
-                <button class="wr-btn" id="add-user-btn">Register</button>
+                <button class="wr-btn" id="add-user-btn">注册</button>
                 <button class="wr-btn" onclick="document.location.href='{{@app.context}}/login';">
-                    Cancel
+                    	取消
                 </button>
             </div>
         </div>

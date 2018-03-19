@@ -30,11 +30,11 @@
             <ul class="dropdown-menu dropdown-menu-right slideInDown"
                 role="menu">
                 <li>
-                    <a href="javascript:void(0)" id="change-password">Change Password</a>
+                    <a href="javascript:void(0)" id="change-password">修改密码</a>
                 </li>
                 <li>
                     <!--suppress HtmlUnknownTarget -->
-                    <a href="{{@app.context}}/logout">Sign out</a>
+                    <a href="{{@app.context}}/logout">退出</a>
                 </li>
 
                 <div id="change-password-window" class="hide">
@@ -49,7 +49,7 @@
                       <i class="fw fw-edit fw-stack-1x fw-inverse"></i>
                    </span>
                 </span>
-                            Change Password
+                            	修改密码
                         </h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i
                                 class="fw fw-cancel"></i></button>
@@ -60,20 +60,20 @@
                             <i class="icon fw fw-error"></i><span></span>
                         </div>
                         <h5>
-                            Type your current password *
+                            	输入当前密码 *
                             <br><br>
                             <div>
                                 <input id="current-password" type="password" autocomplete="off" class="form-control modal-input"/>
                             </div>
                             <br><br>
-                            Type a new password *
+                            	输入新密码 *
                             <br><br>
                             <div>
                                 <input id="new-password" type="password" autocomplete="off" class="form-control modal-input"
-                                       placeholder="[ Your password should be 5 characters or more and should not include any white spaces ]"/>
+                                       placeholder="[ 您的密码应该是5个字符或更多，并且不应该包含任何空格 ]"/>
                             </div>
                             <br><br>
-                            Confirm your new password *
+                            	确认新密码 *
                             <br><br>
                             <div>
                                 <input id="retyped-new-password" type="password" autocomplete="off" class="form-control modal-input"/>
@@ -83,8 +83,8 @@
                     </div>
                     <div class="modal-footer">
                         <div class="buttons">
-                            <a href="#" id="change-password-yes-link" class="btn-operations">Change</a>
-                            <a href="#" id="change-password-cancel-link" class="btn-operations">Cancel</a>
+                            <a href="#" id="change-password-yes-link" class="btn-operations">修改</a>
+                            <a href="#" id="change-password-cancel-link" class="btn-operations">取消</a>
                         </div>
                     </div>
                 </div>
@@ -96,7 +96,7 @@
                     <i class="fw fw-circle fw-stack-2x fw-stroke text-success"></i>
                     <i class="fw fw-check fw-stack-1x fw-inverse"></i>
                 </span>
-                            Password has been successfully updated
+                            	密码修改成功
                         </h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i
                                 class="fw fw-cancel"></i></button>
@@ -104,12 +104,12 @@
                     <hr>
                     <div class="modal-body add-margin-top-2x add-margin-bottom-2x">
                         <h5 class="text-center">
-                            You will be logged out automatically, Please login using your new password.
+                            	您将自动注销，请使用您的新密码登录。
                         </h5>
                     </div>
                     <div class="modal-footer">
                         <div class="buttons">
-                            <a href="{{@app.context}}/uuf/logout" id="change-password-success-link" class="btn-operations">Ok</a>
+                            <a href="{{@app.context}}/uuf/logout" id="change-password-success-link" class="btn-operations">好的</a>
                         </div>
                     </div>
                 </div>
