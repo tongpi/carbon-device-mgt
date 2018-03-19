@@ -26,7 +26,7 @@
         <li>
             <a href="{{@app.context}}/devices">
                 <i class="fw fw-mobile"></i>
-                Device Management
+                	设备管理
             </a>
         </li>
     {{/if}}
@@ -34,7 +34,7 @@
         <li>
             <a href="{{@app.context}}/device-types">
                 <i class="fw fw-devices"></i>
-                Device Type Management
+                	设备类型管理
             </a>
         </li>
     {{/if}}
@@ -73,7 +73,7 @@
         <li>
             <a href="{{@app.context}}/groups">
                 <i class="fw fw-group"></i>
-                Group Management
+                	组管理
             </a>
         </li>
     {{/if}}
@@ -81,17 +81,17 @@
         <li><a><i class="fw fw-user"></i>User Management</a>
             <ul>
                 {{#if permissions.LIST_USERS}}
-                    <li><a href="{{@app.context}}/users"><i class="fw fw-user"></i>Users</a></li>
+                    <li><a href="{{@app.context}}/users"><i class="fw fw-user"></i>用户</a></li>
                 {{/if}}
 
                 {{#if permissions.LIST_ROLES}}
-                    <li><a href="{{@app.context}}/roles"><i class="fw fw-bookmark"></i>Roles</a></li>
+                    <li><a href="{{@app.context}}/roles"><i class="fw fw-bookmark"></i>角色</a></li>
                 {{/if}}
             </ul>
         </li>
     {{/if}}
     {{#if permissions.LIST_POLICIES}}
-        <li><a href="{{@app.context}}/policies"><i class="fw fw-policy"></i>Policy Management</a></li>
+        <li><a href="{{@app.context}}/policies"><i class="fw fw-policy"></i>策略管理</a></li>
     {{/if}}
 
     {{#if permissions.TENANT_CONFIGURATION}}
@@ -99,7 +99,7 @@
 
             <li>
                 <a href="{{@app.context}}/platform-configuration"><i class="fw fw-service"></i>
-                    Platform Configurations
+                    	设置
                 </a>
             </li>
 
@@ -111,13 +111,13 @@
                 <ul>
                     <li>
                         <a href="{{@app.context}}/platform-configuration"><i class="fw fw-service"></i>
-                            Platform Configurations
+                            	平台设置
                         </a>
                     </li>
                     <!-- todo change the permission and get the related permission -->
                     <li>
                         <a href="{{@app.context}}/certificates"><i class="fw fw-security-policy"></i>
-                            Certificate Configurations
+                            	证书设置
                         </a>
                     </li>
                 </ul>
@@ -129,7 +129,7 @@
         <li>
             <a href="{{@app.context}}/device-locations">
                 <i class="fw fw-map-location"></i>
-                Device Locations
+                	设备位置
             </a>
         </li>
     {{/if}}
@@ -147,7 +147,7 @@
                 <span class="icon fw-stack">
                     <i class="fw fw-notification fw-stack-1x"></i>
                 </span>
-                <span class="hidden-xs">Notifications</span>
+                <span class="hidden-xs">通知消息</span>
                 <span class="badge notifications" id="notification-bubble"></span>
             </a>
         </li>
@@ -159,9 +159,9 @@
         <ul class="sidebar-messages">
         </ul>
         <div class="text-center"><a href="{{@app.context}}/notification-listing" class="btn
-            btn-primary all-notifications">Show All Notifications</a></div>
+            btn-primary all-notifications">显示所有通知</a></div>
         <div id="right-side-pane-notifications-clear" class="text-center"><a class="btn
-            btn-primary" data-click-event="clear-notification">Clear All Notifications</a></div>
+            btn-primary" data-click-event="clear-notification">清除所有通知</a></div>
     </div>
 {{/zone}}
 {{#zone "bottomJs"}}
