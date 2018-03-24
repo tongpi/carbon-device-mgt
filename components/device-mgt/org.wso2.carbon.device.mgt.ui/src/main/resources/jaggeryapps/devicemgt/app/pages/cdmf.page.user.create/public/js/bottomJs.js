@@ -186,7 +186,7 @@ $("#userStore").change(
                 function (data) {
                     data = JSON.parse(data);
                     if (data.errorMessage) {
-                        $(errorMsg).text("Selected user store prompted an error : " + data.errorMessage);
+                        $(errorMsg).text("选择的用户存储提示错误 : " + data.errorMessage);
                         $(errorMsgWrapper).removeClass("hidden");
                     } else {
                         $("#roles").empty();
@@ -233,31 +233,31 @@ $(document).ready(function () {
         var errorMsgWrapper = "#user-create-error-msg";
         var errorMsg = "#user-create-error-msg span";
         if (!username) {
-            $(errorMsg).text("Username is a required field. It cannot be empty.");
+            $(errorMsg).text("用户名必填，不能为空。");
             $(errorMsgWrapper).removeClass("hidden");
         } else if (!inputIsValid(usernameInput.data("regex"), username)) {
             $(errorMsg).text(usernameInput.data("errormsg"));
             $(errorMsgWrapper).removeClass("hidden");
         } else if (!firstname) {
-            $(errorMsg).text("Firstname is a required field. It cannot be empty.");
+            $(errorMsg).text("名字必填，不能为空。");
             $(errorMsgWrapper).removeClass("hidden");
         } else if (!inputIsValid(firstnameInput.data("regex"), firstname)) {
             $(errorMsg).text(firstnameInput.data("errormsg"));
             $(errorMsgWrapper).removeClass("hidden");
         } else if (!lastname) {
-            $(errorMsg).text("Lastname is a required field. It cannot be empty.");
+            $(errorMsg).text("姓氏必填，不能为空。");
             $(errorMsgWrapper).removeClass("hidden");
         } else if (!inputIsValid(lastnameInput.data("regex"), lastname)) {
             $(errorMsg).text(lastnameInput.data("errormsg"));
             $(errorMsgWrapper).removeClass("hidden");
         } else if (!emailAddress) {
-            $(errorMsg).text("Email is a required field. It cannot be empty.");
+            $(errorMsg).text("邮箱必填，不能为空。");
             $(errorMsgWrapper).removeClass("hidden");
         } else if (!emailIsValid(emailAddress)) {
-            $(errorMsg).text("Provided email is invalid.");
+            $(errorMsg).text("邮箱无效。");
             $(errorMsgWrapper).removeClass("hidden");
         } else if (!roles) {
-            $(errorMsg).text("Role is a required field. It cannot be empty.");
+            $(errorMsg).text("角色必填，不能为空。");
             $(errorMsgWrapper).removeClass("hidden");
         } else {
             var addUserFormData = {};
@@ -287,7 +287,7 @@ $(document).ready(function () {
                         // Refreshing with success message
                         $("#user-create-form").addClass("hidden");
                         modalDialog.header('<span class="fw-stack">' +
-                            '<i class="fw fw-info fw-stack-1x"></i> </span> User was added successfully');
+                            '<i class="fw fw-info fw-stack-1x"></i> </span> 新增用户成功。');
                         if (response.message) {
                             $("#modal-content-user-created-with-message").append("<h4>" + response.message + "</h4>");
                             modalDialog.content($("#modal-content-user-created-with-message").html());
@@ -304,9 +304,9 @@ $(document).ready(function () {
                 }, function (data) {
                     var payload = JSON.parse(data.responseText);
                     if (data.status == 409) {
-                        $(errorMsg).text("User : " + username + " already exists. Pick another username.");
+                        $(errorMsg).text("用户名 : " + username + " 已存在。 选择其他用户名。");
                     } else if (data.status == 500) {
-                        $(errorMsg).text("An unexpected error occurred at backend server. Please try again later.");
+                        $(errorMsg).text("后端服务器发生异常错误。 请稍后再试。");
                     } else {
                         $(errorMsg).text(payload.message);
                     }

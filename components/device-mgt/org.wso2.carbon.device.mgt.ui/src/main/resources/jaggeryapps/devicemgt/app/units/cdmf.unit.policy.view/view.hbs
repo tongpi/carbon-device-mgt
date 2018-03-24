@@ -17,46 +17,46 @@
             <div class="row no-gutter add-padding-5x add-margin-top-5x" style="border: 1px solid #e4e4e4;">
                 <div class="media">
                     <div style="background: #11375B; color: #fff; padding: 10px; margin-bottom: 5px">
-                        Policy Overview
+                        	策略概述
                     </div>
                     {{#defineZone "policy-detail-properties"}}
                         <table class="table table-responsive table-striped" id="members">
                             <tbody>
                             <tr role="row" class="even">
-                                <td class="sorting_1" style="padding:10px 15px; width: 14%;">Platform</td>
+                                <td class="sorting_1" style="padding:10px 15px; width: 14%;">平台</td>
                                 <td id="policy-platform" style="padding:10px 15px;"></td>
                             </tr>
                             <tr role="row" class="odd">
-                                <td class="sorting_1" style="padding:10px 15px;">Groups</td>
+                                <td class="sorting_1" style="padding:10px 15px;">组</td>
                                 <td id="policy-groups" style="padding:10px 15px;"></td>
                             </tr>
                             <tr role="row" class="even">
-                                <td class="sorting_1" style="padding:10px 15px;">Action upon non-compliance</td>
+                                <td class="sorting_1" style="padding:10px 15px;">针对违规行为</td>
                                 <td id="policy-action" style="padding:10px 15px;"></td>
                             </tr>
                             <tr role="row" class="even">
-                                <td class="sorting_1" style="padding:10px 15px;">Status</td>
+                                <td class="sorting_1" style="padding:10px 15px;">状态</td>
                                 <td id="policy-status" style="padding:10px 15px;"></td>
                             </tr>
                             <tr role="row" id="users-row" class="even">
-                                <td class="sorting_1" style="padding:10px 15px;">Assigned Users</td>
+                                <td class="sorting_1" style="padding:10px 15px;">分配的用户</td>
                                 <td id="policy-users" style="padding:10px 15px;"></td>
                             </tr>
                             <tr role="row" id="roles-row" class="even">
-                                <td class="sorting_1" style="padding:10px 15px;">Assigned Roles</td>
+                                <td class="sorting_1" style="padding:10px 15px;">分配的角色</td>
                                 <td id="policy-roles" style="padding:10px 15px;"></td>
                             </tr>
                             </tbody>
                         </table>
                     {{/defineZone}}
-                    <div style="background: #11375B; color: #fff; padding: 10px; margin-bottom: 5px">Description
+                    <div style="background: #11375B; color: #fff; padding: 10px; margin-bottom: 5px">描述
                     </div>
                     <div class="add-margin-top-4x">
                         <div id="policy-description" class="panel-title-description"></div>
                     </div>
                     <br>
                     <div style="background: #11375B; color: #fff; padding: 10px; margin-bottom: 5px">
-                        Profile Information
+                        	配置信息
                     </div>
                     <div class="add-margin-top-4x">
                         <div id="policy-profile-main-error-msg" class="alert alert-danger hidden" role="alert">
@@ -66,7 +66,7 @@
                             <div class='wr-advance-operations-init'>
                                 <br/>
                                 <i class='fw fw-settings fw-spin fw-2x'></i>
-                                Loading Platform Features . . .
+                                	加载平台特色中 . . .
                                 <br/>
                                 <br/>
                             </div>
@@ -82,10 +82,10 @@
         </div>
     {{else}}
         <h1 class="page-sub-title">
-            Permission Denied
+            	无权限
         </h1>
         <br>
-        You not authorized to enter Policy Management Section.
+        	您无权进入策略管理部分。
         <br>
     {{/if}}
 {{/zone}}

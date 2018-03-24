@@ -25,12 +25,12 @@
     </li>
     <li>
         <a href="{{@app.context}}/certificates">
-            Certificates
+            	证书
         </a>
     </li>
     <li>
         <a href="{{@app.context}}/certificates/add">
-            Add
+            	添加
         </a>
     </li>
 {{/zone}}
@@ -43,8 +43,8 @@
                 <!-- content -->
                 <div id="certificate-create-form" class="container col-centered wr-content">
                     <div class="wr-form">
-                        <p class="page-sub-title">Add Certificate</p>
-                        <p>Please note that * sign represents required fields of data.</p>
+                        <p class="page-sub-title">添加证书</p>
+                        <p>请注意带*的为必填项。</p>
                         <hr/>
                         <div class="row">
                             <div class="col-lg-8">
@@ -53,13 +53,13 @@
                                 </div>
 
                                 <label class="wr-input-label ">
-                                    Serial Number *
+                                    	编号 *
                                 </label>
                                 <br>
                                 <div id="serialNoInputField" class="form-group wr-input-control">
                                     <input type="text" id="serialNo" class="form-control"/>
                                 </div>
-                                <label class="wr-input-label">Certificate *</label>
+                                <label class="wr-input-label">证书 *</label>
                                 <div id="certificateField" class="form-group wr-input-control">
                                     <input type="file" id="certificate" class="form-control"/>
                                 </div>
@@ -68,27 +68,25 @@
                         <br>
                         <div class="row">
                             <div class="col-lg-8">
-                                <button id="add-certificate-btn" class="wr-btn">Add Certificate</button>
+                                <button id="add-certificate-btn" class="wr-btn">添加证书</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div id="certificate-created-msg" class="container col-centered wr-content hidden">
                     <div class="wr-form">
-                        <p class="page-sub-title">Certificate was added successfully.</p>
+                        <p class="page-sub-title">证书添加成功。</p>
                         <br>
-                        <br>Please click <b>"Add Another Certificate"</b>, if you wish to add another certificate or
-                        click
-                        <b>"View Certificate List"</b> to complete the process and go back to the certificate list.
+                        <br>如果你想要继续添加证书，请点击 <b>"继续添加证书"</b>,或完成返回证书列表请点击 <b>"查看证书列表"</b>。
                         <hr/>
-                        <button class="wr-btn" onclick="window.location.href='{{@app.context}}/certificates'">View Certificate List
+                        <button class="wr-btn" onclick="window.location.href='{{@app.context}}/certificates'">查看证书列表
                         </button>
                         <a href="{{@app.context}}/certificates/add" class="cu-btn-inner">
                         <span class="fw-stack">
                             <i class="fw fw-circle-outline fw-stack-2x"></i>
                             <i class="fw fw-add fw-stack-1x"></i>
                         </span>
-                            Add Another Certificate
+                            	继续添加证书
                         </a>
                     </div>
                 </div>
@@ -98,10 +96,10 @@
         <!-- /content/body -->
     {{else}}
         <h1 class="page-sub-title">
-            Permission Denied
+            	无权限
         </h1>
         <br>
-        You not authorized to enter Certificate Management Section.
+        	您无权限进入证书管理部分。
         <br>
     {{/if}}
 {{/zone}}

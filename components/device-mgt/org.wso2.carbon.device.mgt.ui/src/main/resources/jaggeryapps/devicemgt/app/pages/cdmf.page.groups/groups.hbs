@@ -34,7 +34,7 @@
     </li>
     <li>
         <a href="{{@app.context}}/groups">
-            Groups
+            	组
         </a>
     </li>
 {{/zone}}
@@ -47,7 +47,7 @@
                 <i class="fw fw-add fw-stack-1x"></i>
                 <i class="fw fw-circle-outline fw-stack-2x"></i>
             </span>
-                Add Group
+                	添加组
             </a>
         </li>
     {{/if}}
@@ -68,7 +68,7 @@
                             <tr class="sort-row">
                                 <th class="no-sort"></th>
                                 <th class="no-sort"></th>
-                                <th>By Owner</th>
+                                <th>所有者</th>
                                 <th class="no-sort"></th>
                             </tr>
                             <tr class="filter-row filter-box">
@@ -87,7 +87,7 @@
                             <h3 class="text-muted">
                                 <i class="fw fw-group fw-3x"></i>
                             </h3>
-                            <h3 class="text-muted">You don't have any device groups. Let's add a new device group!</h3>
+                            <h3 class="text-muted">你没有任何设备组。让我们添加一个设备组！</h3>
                             {{#if permissions.ADD_GROUP}}
                                 <h3>
                                     <!--suppress HtmlUnknownTarget -->
@@ -96,7 +96,7 @@
                                             <i class="fw fw-circle-outline fw-stack-2x"></i>
                                             <i class="fw fw-add fw-stack-1x"></i>
                                         </span>
-                                        Add New Group
+                                        	添加新组
                                     </a>
                                 </h3>
                             {{/if}}
@@ -111,7 +111,7 @@
                                 <span class="fw-stack add-margin-right-2x">
                                     <i class="fw fw-circle-outline fw-stack-2x"></i>
                                     <i class="fw fw-share fw-stack-1x"></i>
-                                </span> Group Sharing
+                                </span> 组共享
                             </span>
                         </h3>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i
@@ -123,7 +123,7 @@
                         </div>
                         <div id="user-names">
                             <h4>
-                                Select user role(s)
+                                	选择用户角色
                             </h4>
                             <div class="wr-input-control" id="rolesListing">
                             </div>
@@ -133,14 +133,14 @@
                         <div class="buttons">
                             {{#if permissions.ADD_ROLE}}
                                 <a href="{{@app.context}}/role/add" class="btn-operations">
-                                    New Role
+                                    	新角色
                                 </a>
                                 <a href="#" id="share-group-new-role-from-selection" class="btn-operations">
-                                    New Role from Selection
+                                    	选择新角色
                                 </a>
                             {{/if}}
                             <a href="#" id="share-group-next-link" class="btn-operations">
-                                Share
+                                	分享
                             </a>
                         </div>
                     </div>
@@ -153,7 +153,7 @@
                                 <span class="fw-stack add-margin-right-2x">
                                     <i class="fw fw-circle-outline fw-stack-2x"></i>
                                     <i class="fw fw-bookmark fw-stack-1x"></i>
-                                </span> Group Sharing Role
+                                </span> 组共享角色
                             </span>
                         </h3>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i
@@ -165,7 +165,7 @@
                         </div>
                         <div id="user-roles">
                             <h4>
-                                Enter Group Sharing Role Name
+                                	输入组共享角色名称
                                 <br><br>
                                 <input type="text" id="group-sharing-role-name"
                                        class="form-control modal-input operationDataKeys" />
@@ -176,11 +176,11 @@
                     <div class="modal-footer">
                         <div class="buttons">
                             <a href="#" id="share-group-w3-yes-link" class="btn-operations">
-                                OK
+                                	好的
                             </a>
 
                             <a href="#" id="share-group-w3-cancel-link" class="btn-operations btn-default">
-                                Cancel
+                                	取消
                             </a>
                         </div>
                     </div>
@@ -190,17 +190,17 @@
                     <div class="content">
                         <div class="row">
                             <div class="col-lg-5 col-md-6 col-centered">
-                                <h3>Group successfully updated.</h3>
+                                <h3>组更新成功。</h3>
                                 <br />
-                                Do you want to manage users?
+                                	你想管理用户吗？
                                 <div class="buttons">
                                     <a href="{{@app.context}}/users" id="share-group-add-users-yes-link"
                                        class="btn-operations">
-                                        Yes
+                                        	是的
                                     </a>
 
                                     <a href="#" class="btn-operations btn-default" data-dismiss="modal">
-                                        No
+                                        	不了
                                     </a>
                                 </div>
                                 <br />
@@ -213,17 +213,17 @@
                     <div class="content">
                         <div class="row">
                             <div class="col-lg-5 col-md-6 col-centered">
-                                <h3>New Role was successfully created.</h3>
+                                <h3>新角色创建成功。</h3>
                                 <br />
-                                Do you need to Add / Remove users from the chosen roles?
+                                	你需要添加/删除所选角色的用户？
                                 <div class="buttons">
                                     <a href="{{@app.context}}/users" id="share-group-add-users-yes-link"
                                        class="btn-operations">
-                                        Yes
+                                        	是的
                                     </a>
 
                                     <a href="#" class="btn-operations btn-default" data-dismiss="modal">
-                                        No
+                                        	不了
                                     </a>
                                 </div>
                                 <br />
@@ -236,16 +236,16 @@
                     <div class="content">
                         <div class="row">
                             <div class="col-lg-5 col-md-6 col-centered">
-                                <h3>Do you really want to remove this group?</h3>
+                                <h3>你想要删除这个组吗？</h3>
 
                                 <div class="buttons">
                                     <a href="#" id="remove-group-yes-link" class="btn-operations">
-                                        Yes
+                                        	是的
                                     </a>
 
                                     <a href="#" id="remove-group-cancel-link" class="btn-operations btn-default"
                                        data-dismiss="modal">
-                                        Cancel
+                                        	取消
                                     </a>
                                 </div>
                             </div>
@@ -257,7 +257,7 @@
                     <div class="content">
                         <div class="row">
                             <div class="col-lg-5 col-md-6 col-centered">
-                                <h3>Successfully removed the group.</h3>
+                                <h3>删除组成功。</h3>
                             </div>
                         </div>
                     </div>
@@ -270,7 +270,7 @@
                                 <span class="fw-stack add-margin-right-2x">
                                     <i class="fw fw-circle-outline fw-stack-2x"></i>
                                     <i class="fw fw-edit fw-stack-1x"></i>
-                                </span> Update Group
+                                </span> 修改组
                             </span>
                         </h3>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i
@@ -282,31 +282,31 @@
                         </div>
                         <div>
                             <h4>
-                                Enter new name and description for the group
+								为组输入新名称和描述
                                 <br><br>
-                                Name:
+                                	名称:
                                 <br/>
                                 <input type="text" id="edit-group-name"
-                                       class="form-control modal-input operationDataKeys" placeholder="Group Name"
+                                       class="form-control modal-input operationDataKeys" placeholder="组名称"
                                        value="">
                                 </input>
                                 <br>
-                                Description:
+                                	描述:
                                 <br/>
                                 <input type="text" id="edit-group-description"
                                        class="form-control modal-input operationDataKeys"
-                                       placeholder="Group Description" value="">
+                                       placeholder="组描述" value="">
                             </h4>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <div class="buttons">
                             <a href="#" id="edit-group-yes-link" class="btn-operations">
-                                Update
+                                	修改
                             </a>
 
                             <a href="#" id="edit-group-cancel-link" class="btn-operations btn-default">
-                                Cancel
+                                	取消
                             </a>
                         </div>
                     </div>
@@ -316,7 +316,7 @@
                     <div class="content">
                         <div class="row">
                             <div class="col-lg-5 col-md-6 col-centered">
-                                <h3>Group was successfully updated.</h3>
+                                <h3>组修改成功。</h3>
                             </div>
                         </div>
                     </div>
@@ -326,10 +326,10 @@
                     <div class="content">
                         <div class="row">
                             <div class="col-lg-5 col-md-6 col-centered">
-                                <h3 id="error-msg">Bad Request. Please contact your administrator.</h3>
+                                <h3 id="error-msg">错误的请求。请联系您的管理员。</h3>
                                 <div class="buttons">
                                     <a href="#" id="group-400-link" class="btn-operations">
-                                        Ok
+                                        	好的
                                     </a>
                                 </div>
                             </div>
@@ -341,11 +341,11 @@
                     <div class="content">
                         <div class="row">
                             <div class="col-lg-5 col-md-6 col-centered">
-                                <h3>Operation not permitted.</h3>
+                                <h3>操作无法执行</h3>
 
                                 <div class="buttons">
                                     <a href="#" id="group-403-link" class="btn-operations">
-                                        Ok
+                                        	好的
                                     </a>
                                 </div>
                             </div>
@@ -357,11 +357,11 @@
                     <div class="content">
                         <div class="row">
                             <div class="col-lg-5 col-md-6 col-centered">
-                                <h3 id="group-404-message">Not found.</h3>
+                                <h3 id="group-404-message">未找到。</h3>
 
                                 <div class="buttons">
                                     <a href="#" id="group-404-link" class="btn-operations">
-                                        Ok
+                                        	好的
                                     </a>
                                 </div>
                             </div>
@@ -373,11 +373,11 @@
                     <div class="content">
                         <div class="row">
                             <div class="col-lg-5 col-md-6 col-centered">
-                                <h3>Group does not exist.</h3>
+                                <h3>组不存在。</h3>
 
                                 <div class="buttons">
                                     <a href="#" id="group-409-link" class="btn-operations">
-                                        Ok
+                                        	好的
                                     </a>
                                 </div>
                             </div>
@@ -389,11 +389,11 @@
                     <div class="content">
                         <div class="row">
                             <div class="col-lg-5 col-md-6 col-centered">
-                                <h3 id="unexp-error-msg">Unexpected error occurred!</h3>
+                                <h3 id="unexp-error-msg">发生异常错误！</h3>
 
                                 <div class="buttons">
                                     <a href="#" id="group-unexpected-error-link" class="btn-operations">
-                                        Ok
+                                        	好的
                                     </a>
                                 </div>
                             </div>

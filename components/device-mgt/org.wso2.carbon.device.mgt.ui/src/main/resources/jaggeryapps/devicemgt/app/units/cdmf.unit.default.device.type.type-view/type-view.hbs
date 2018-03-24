@@ -12,24 +12,24 @@
 </div>
 
 <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 padding-top">
-    <h3 class="uppercase">Description</h3>
+    <h3 class="uppercase">描述</h3>
     <hr>
     <p class="grey margin-top">{{type.deviceTypeMetaDefinition.description}}</p>
     <br>
     <hr>
     <br>
     <a href="#create"
-       class="btn-operations"><i class="fw fw-add add-margin-1x"></i> Create Device</i>
+       class="btn-operations"><i class="fw fw-add add-margin-1x"></i> 创建设备</i>
     </a>
     <a href="/api-store/apis/info?name=DeviceAgent Service&version=1.0.0&provider=admin"
        class="btn-operations"
-       target="_blank"><i class="fw fw-api add-margin-1x"></i> View API</i>
+       target="_blank"><i class="fw fw-api add-margin-1x"></i> 查看 API</i>
     </a>
     <div id="device-agent-downloading-content" class="hide">
         <div class="modal-content">
             <div class="row">
                 <div class="col-md-7 col-centered center-container">
-                    <h3>Device Agent will downloading shortly.</h3>
+                    <h3>设备代理将很快下载。</h3>
                 </div>
             </div>
         </div>
@@ -38,10 +38,10 @@
         <div class="modal-content">
             <div class="row">
                 <div class="col-md-7 col-centered center-container">
-                    <h3>Exception at backend. Try Later.</h3>
+                    <h3>后台异常。请稍后再试。</h3>
                     <div class="buttons">
                         <a href="#" id="device-400-link" class="btn-operations">
-                            OK
+                            	好的
                         </a>
                     </div>
                 </div>
@@ -52,13 +52,13 @@
         <div class="modal-content">
             <div class="row">
                 <div class="col-md-7 col-centered center-container">
-                    <h3>You have to log in first.</h3><br/>
+                    <h3>你必须先登录。</h3><br/>
                     <div class="buttons">
                         <a href="#" id="device-401-link" class="blue-button">
-                            Goto Login Page
+                            	转到登录页面
                         </a>&nbsp;&nbsp;
                         <a href="#" onclick="hidePopup();" class="btn-operations">
-                            Cancel
+                            	取消
                         </a>
                     </div>
                 </div>
@@ -69,11 +69,11 @@
         <div class="modal-content">
             <div class="row">
                 <div class="col-md-7 col-centered center-container">
-                    <h3>Action not permitted.</h3><br/>
+                    <h3>操作不允许。</h3><br/>
 
                     <div class="buttons">
                         <a href="#" id="device-403-link" class="btn-operations">
-                            OK
+                            	好的
                         </a>
                     </div>
                 </div>
@@ -84,10 +84,10 @@
         <div class="modal-content">
             <div class="row">
                 <div class="col-md-7 col-centered center-container">
-                    <h3>Device Sketch does not exist.</h3><br/>
+                    <h3>设备程序不存在。</h3><br/>
                     <div class="buttons">
                         <a href="#" id="device-409-link" class="btn-operations">
-                            OK
+                            	好的
                         </a>
                     </div>
                 </div>
@@ -98,10 +98,10 @@
         <div class="modal-content">
             <div class="row">
                 <div class="col-md-7 col-centered center-container">
-                    <h3>Unexpected error.</h3><br/>
+                    <h3>异常错误。</h3><br/>
                     <div class="buttons">
                         <a href="#" id="device-unexpected-error-link" class="btn-operations">
-                            OK
+                            	好的
                         </a>
                     </div>
                 </div>
@@ -111,20 +111,20 @@
     <br/><br/>
 </div>
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-double grey-bg">
-    <h2 class="uppercase">How To Enroll a Device</h2>
+    <h2 class="uppercase">如何登记设备</h2>
     <hr>
     <ul class="list-unstyled">
-        <li class="padding-top-double"><span><h4 class="uppercase">Generate Application</h4></span>
+        <li class="padding-top-double"><span><h4 class="uppercase">生成应用程序</h4></span>
            <code>curl -k -X POST {{httpsGateway}}/api-application-registration/register -H
             'authorization: Basic Base64(username:password)' -H 'content-type: application/json'
             -d '{  "applicationName":"testme", "isAllowedToAllDomains":false, "tags":["device_agent"]}'</code>
         </li>
-        <li class="padding-top-double"><span><h4 class="uppercase">Generate Token</h4></span>
+        <li class="padding-top-double"><span><h4 class="uppercase">生成令牌</h4></span>
             <code>curl -k -d "grant_type=password&username=%username%&password=%password%&scope=perm:device:enroll perm:device:disenroll perm:device:modify perm:device:operations perm:device:publish-event"
             -H "Authorization: Basic Base64(client_id:client_secret)"
             -H "Content-Type: application/x-www-form-urlencoded" {{httpsGateway}}/token</code>
         </li>
-        <li class="padding-top-double"><span><h4 class="uppercase">Create Device</h4></span>
+        <li class="padding-top-double"><span><h4 class="uppercase">创建设备</h4></span>
             <code>curl -X POST {{httpsGateway}}/api/device-mgt/v1.0/device/agent/enroll -H 'accept: application/json'
             -H 'authorization: Bearer %accessToken%'
             -H 'content-type: application/json' -d '{ "name": "devicename", "type": "{{deviceType}}",
@@ -139,7 +139,7 @@
 <hr/>
 
 <div id="create" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-double grey-bg">
-    <h2 class="uppercase">Create A Device</h2>
+    <h2 class="uppercase">创建一个设备</h2>
     <hr>
     <div id="device-create-form" class=" wr-content">
         <div class="wr-form">
@@ -149,32 +149,32 @@
                         <i class="icon fw fw-error"></i><span></span>
                     </div>
                     <input aria-describedby="basic-addon1" type="text" id="deviceTypeName" style="display: none;"
-                           data-error-msg="invalid device type name" class="form-control" value="{{deviceType}}"/>
+                           data-error-msg="设备类型名称无效" class="form-control" value="{{deviceType}}"/>
                     <br>
-                    <label class="wr-input-label">Name</label>
+                    <label class="wr-input-label">名称</label>
                     <input aria-describedby="basic-addon1" type="text" id="deviceName"
-                           data-error-msg="invalid device name" class="form-control hidden-input"/>
+                           data-error-msg="设备名称无效" class="form-control hidden-input"/>
                     <br/>
-                    <label class="wr-input-label">Device Identifier</label>
+                    <label class="wr-input-label">设备标识符</label>
                     <input aria-describedby="basic-addon1" type="text" id="deviceId"
-                           data-error-msg="invalid device id" class="form-control hidden-input"/>
+                           data-error-msg="设备标识符无效" class="form-control hidden-input"/>
                     <br/>
 
-                    <label class="wr-input-label">Description</label>
+                    <label class="wr-input-label">描述</label>
                     <input aria-describedby="basic-addon1" type="text" id="deviceDescription"
-                           data-error-msg="invalid device description" class="form-control hidden-input"/>
+                           data-error-msg="设备描述无效" class="form-control hidden-input"/>
                     <br/>
                     {{#if type.deviceTypeMetaDefinition}}
                         {{#each type.deviceTypeMetaDefinition.properties}}
                             <label class="wr-input-label">{{this}}</label>
                             <input aria-describedby="basic-addon1" type="text" id="{{this}}" name="properties"
-                                   data-error-msg="invalid device description" class="form-control hidden-input"/>
+                                   data-error-msg="设备描述无效" class="form-control hidden-input"/>
                             <br/>
                         {{/each}}
                     {{/if}}
 
                     <br>
-                    <button id="add-device-btn" class="wr-btn">Create Device</button>
+                    <button id="add-device-btn" class="wr-btn">创建设备</button>
                     <a id="downloadAnchorElem" style="display:none"></a>
                     <div id="device-create-success-msg" class="alert hidden" role="alert">
                         <i class="icon fw fw-success"></i><span></span>
@@ -183,11 +183,11 @@
             </div>
             <div id="devicetype-created-msg" class="container col-centered wr-content hidden">
                 <div class="wr-form">
-                    <p class="page-sub-title">Device Type Event was added successfully.</p>
-                    <b>"View Device Type List"</b> to complete the process and go back to the devie type list.
+                    <p class="page-sub-title">设备类型项目添加成功。</p>
+                    <b>"查看设备类型列表"</b> 完成过程，返回设备类型列表。
                     <hr/>
                     <button class="wr-btn" onclick="window.location.href='{{@app.context}}/device-types'">
-                        View Device Type List
+                        	查看设备类型列表
                     </button>
                 </div>
             </div>
@@ -196,11 +196,11 @@
                     <div class="modal-content clearfix">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fw fw-cancel"></i></button>
-                            <h3 class="modal-title" id="deviceModalLabel">Device Created Succesfully</h3>
+                            <h3 class="modal-title" id="deviceModalLabel">创建设备成功。</h3>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" onclick="redirectPage('{{@app.context}}/device');">Go To Device Page</button>
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary" onclick="redirectPage('{{@app.context}}/device');">转到设备页面</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                         </div>
                     </div>
                 </div>

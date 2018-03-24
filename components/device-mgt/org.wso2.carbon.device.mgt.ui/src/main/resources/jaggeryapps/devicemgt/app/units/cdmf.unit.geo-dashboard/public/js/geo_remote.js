@@ -105,7 +105,7 @@ function addWmsEndPoint() {
     var validated = false;
 
     if (serviceName === undefined || serviceName == "" || serviceName == null) {
-        var message = "Service Provider name cannot be empty.";
+        var message = "服务提供商名称不能为空。";
         noty({text: '<span style="color: red">' + message + '</span>', type: 'error'});
     }
 

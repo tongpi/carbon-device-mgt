@@ -22,30 +22,30 @@
         {{#if isAdminRole}}
             <div class="container col-centered wr-content">
                 <div class="wr-form">
-                    <p class="page-sub-title">Attention!</p>
+                    <p class="page-sub-title">注意！</p>
                     <hr/>
-                    <br>This is an prohibited action.
+                    <br>这是禁止的行为。
                 </div>
             </div>
         {{else}}
             <div id="role-create-form" data-cloud={{isCloud}} class="container">
                 <div class="wr-form">
-                    <p class="page-sub-title">Edit Role</p>
-                    <p>Please note that * sign represents required fields of data.</p>
+                    <p class="page-sub-title">修改角色</p>
+                    <p>注意带*的为必填项。</p>
                     <hr/>
                     <div class="row">
                         <div class="col-lg-8">
                             <div id="role-create-error-msg" class="alert alert-danger hidden" role="alert">
                                 <i class="icon fw fw-error"></i><span></span>
                             </div>
-                            <label class="wr-input-label">Domain</label>
+                            <label class="wr-input-label">域名</label>
                             <div class="wr-input-control">
                                 <select id="domain" class="form-control select" disabled>
                                     <option>{{userStore}}</option>
                                 </select>
                             </div>
                             <label class="wr-input-label">
-                                Role Name *
+                                	角色名称 *
                             </label>
                             <br>
                             <label class="wr-input-label" id="roleNameValidationText">
@@ -54,7 +54,7 @@
                             {{#if isCloud}}
                                 <div id="roleNameField" class="form-group wr-input-control input-group">
                                     <!--suppress HtmlFormInputWithoutLabel -->
-                                    <span class="input-group-addon" id="basic-addon1">devicemgt</span>
+                                    <span class="input-group-addon" id="basic-addon1">设备管理</span>
                                     <input aria-describedby="basic-addon1" type="text" id="rolename"
                                            data-regex="{{roleNameJSRegEx}}"
                                            data-errormsg="{{roleNameRegExViolationErrorMsg}}" class="form-control"
@@ -70,17 +70,15 @@
                                 </div>
                             {{/if}}
                             <span class=" rolenameError hidden glyphicon glyphicon-remove form-control-feedback"></span>
-                            <label class="error rolenameEmpty hidden" for="summary">Role name is required & Should be in
-                                                                                    minimum 3 characters long and do not
-                                                                                    include any whitespaces. </label>
+                            <label class="error rolenameEmpty hidden" for="summary">角色名称为必填项，至少3个字符长度且不能包含空格。 </label>
 
                             <br>
-                            <button id="add-role-btn" class="wr-btn">Update Role</button>
+                            <button id="add-role-btn" class="wr-btn">修改角色</button>
 
                             <div id="role-created-msg" class="container col-centered wr-content hidden">
                                 <div class="wr-form">
-                                    <p class="page-sub-title">Role was updated successfully.</p>
-                                    <br>You will be redirected to Roles Listing Page in a moment.
+                                    <p class="page-sub-title">角色修改成功。</p>
+                                    <br>您将立即重定向到角色列表页面。
                                 </div>
                             </div>
                             <!-- /content -->

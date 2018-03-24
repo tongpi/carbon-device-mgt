@@ -20,7 +20,7 @@ function onRequest(context) {
     // var log = new Log("policy-listing.js");
     context.handlebars.registerHelper('equal', function (lvalue, rvalue, options) {
         if (arguments.length < 3)
-            throw new Error("Handlebars Helper equal needs 2 parameters");
+            throw new Error("Handlebars 帮助工具中'equal'标签需要2个参数");
         if (lvalue != rvalue) {
             return options.inverse(this);
         } else {
@@ -35,22 +35,22 @@ function onRequest(context) {
         context["policyListToView"] = policyListToView;
         var policyCount = policyListToView.length;
         if (policyCount == 0) {
-            context["policyListingStatusMsg"] = "No policy is available to be displayed.";
+            context["policyListingStatusMsg"] = "无可用策略显示。";
             context["saveNewPrioritiesButtonEnabled"] = false;
             context["noPolicy"] = true;
         } else if (policyCount == 1) {
-            context["policyListingStatusMsg"] = "Two or more policies should be available to set up a priority order.";
+            context["policyListingStatusMsg"] = "两个或更多策略来设置优先顺序是有用的。";
             context["saveNewPrioritiesButtonEnabled"] = false;
             context["noPolicy"] = false;
         } else {
-            context["policyListingStatusMsg"] = "Drag and move to re-order policy priority.";
+            context["policyListingStatusMsg"] = "拖动并移动以重新排列策略优先级。";
             context["saveNewPrioritiesButtonEnabled"] = true;
             context["noPolicy"] = false;
         }
     } else {
         // here, response["status"] == "error"
         context["policyListToView"] = [];
-        context["policyListingStatusMsg"] = "Error in retrieving policies. Please try reloading the page.";
+        context["policyListingStatusMsg"] = "检索策略时出错。 请尝试重新加载页面。";
         context["saveNewPrioritiesButtonEnabled"] = false;
     }
 

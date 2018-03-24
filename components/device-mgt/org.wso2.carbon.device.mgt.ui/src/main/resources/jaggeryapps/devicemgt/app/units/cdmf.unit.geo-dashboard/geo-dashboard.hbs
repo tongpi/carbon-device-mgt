@@ -50,7 +50,7 @@
                     <form id="mapSearch" class="navbar-form" role="search"
                           onsubmit="focusOnSpatialObject($(this).find('#searchbox').val());return false;">
                         <div class="form-group has-feedback">
-                            <input autofocus="true" id="searchbox" type="text" placeholder="Search"
+                            <input autofocus="true" id="searchbox" type="text" placeholder="搜索"
                                    class="form-control typeahead">
                             <span id="searchicon" class="fa fa-search form-control-feedback"></span>
                         </div>
@@ -66,8 +66,8 @@
         <div id="map"></div>
         {{#if geoServicesEnabled}}
         <div id="ws-alerts">
-            <i id="ws-alert-stream" class="fw fw-circle text-muted"></i> Alerts Stream&nbsp;
-            <i id="ws-spatial-stream" class="fw fw-circle text-muted"></i> Spatial Stream
+            <i id="ws-alert-stream" class="fw fw-circle text-muted"></i> 警报流&nbsp;
+            <i id="ws-spatial-stream" class="fw fw-circle text-muted"></i> 空间流
         </div>
         {{/if}}
     </div>
@@ -75,7 +75,7 @@
     <div id="predictionResults" style="background: darkgray;display: none;border-radius: 13px;height: 94%;padding: 0"
          class="col-md-2 pull-right">
         <div class="panel-heading text-center">
-            <h4> Prediction Results For: <span id="predictionResultsID" class="text-info"></span>
+            <h4> 预测结果: <span id="predictionResultsID" class="text-info"></span>
                 <i id="objectInfoCloseButton" class="fa fa-times pull-right"
                    onclick="$('#predictionResults').animate({width: ['toggle','swing']},200);toggeled = false;spatialObject = currentSpatialObjects[selectedSpatialObject];spatialObject.removePath();spatialObject.marker.closePopup();selectedSpatialObject = null;">
                 </i>
@@ -83,7 +83,7 @@
         </div>
         <br>
         <div class="panel panel-default" style="overflow: auto;box-shadow: 0 0 8px 0 #635749">
-            <div class="panel-heading text-center"><h4>Prediction</h4>
+            <div class="panel-heading text-center"><h4>预测</h4>
             </div>
             <br>
             <div class="panel-body">
@@ -105,62 +105,50 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">Welcome to the BootLeaf template!</h4>
+                    <h4 class="modal-title">欢迎使用BootLeaf模板！</h4>
                 </div>
                 <div class="modal-body">
                     <ul class="nav nav-tabs" id="aboutTabs">
-                        <li class="active"><a href="#about" data-toggle="tab"><i class="fa fa-question-circle"></i>&nbsp;About
-                                                                                                                   the project</a></li>
-                        <li><a href="#contact" data-toggle="tab"><i class="fa fa-envelope"></i>&nbsp;Contact us</a></li>
-                        <li><a href="#disclaimer" data-toggle="tab"><i class="fa fa-exclamation-circle"></i>&nbsp;Disclaimer</a>
+                        <li class="active"><a href="#about" data-toggle="tab"><i class="fa fa-question-circle"></i>&nbsp;关于该项目</a></li>
+                        <li><a href="#contact" data-toggle="tab"><i class="fa fa-envelope"></i>&nbsp;联系我们</a></li>
+                        <li><a href="#disclaimer" data-toggle="tab"><i class="fa fa-exclamation-circle"></i>&nbsp;免责声明</a>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe"></i>&nbsp;Metadata
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe"></i>&nbsp;元数据
                                 <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#boroughs-tab" data-toggle="tab">Boroughs</a></li>
-                                <li><a href="#subway-lines-tab" data-toggle="tab">Subway Lines</a></li>
-                                <li><a href="#theaters-tab" data-toggle="tab">Theaters</a></li>
-                                <li><a href="#museums-tab" data-toggle="tab">Museums</a></li>
+                                <li><a href="#boroughs-tab" data-toggle="tab">自治市镇</a></li>
+                                <li><a href="#subway-lines-tab" data-toggle="tab">地铁线路</a></li>
+                                <li><a href="#theaters-tab" data-toggle="tab">影剧院</a></li>
+                                <li><a href="#museums-tab" data-toggle="tab">博物馆</a></li>
                             </ul>
                         </li>
                     </ul>
                     <div class="tab-content" id="aboutTabsContent" style="padding-top: 10px;">
                         <div class="tab-pane fade active in" id="about">
-                            <p>A simple, responsive template for building web mapping applications with <a
-                                    href="http://getbootstrap.com/">Bootstrap 3</a>, <a href="http://leafletjs.com/"
-                                                                                        target="_blank">Leaflet</a>, and <a
-                                    href="http://twitter.github.io/typeahead.js/" target="_blank">typeahead.js</a>. Open
-                               source, MIT licensed, and available on <a href="https://github.com/bmcbride/bootleaf"
-                                                                         target="_blank">GitHub</a>.</p>
+                            <p>使用<a href="http://getbootstrap.com/"> Bootstrap 3 </a>，
+                            <a href =“http://leafletjs.com/”target =“>”构建Web地图应用程序的简单响应模板 _blank“>宣传单</a>
+                            	 和<a href="http://twitter.github.io/typeahead.js/" target="_blank"> typeahead.js </a>。 
+                            	 开放源码，MIT许可，并可在<a href="https://github.com/bmcbride/bootleaf" target="_blank"> GitHub </a>上获得。</p>
 
                             <div class="panel panel-primary">
-                                <div class="panel-heading">Features</div>
+                                <div class="panel-heading">特色</div>
                                 <ul class="list-group">
-                                    <li class="list-group-item">Fullscreen mobile-friendly map template with responsive
-                                                                navbar and modal placeholders
+                                    <li class="list-group-item">具有响应式导航栏和模式占位符的全屏移动友好地图模板
                                     </li>
-                                    <li class="list-group-item">jQuery loading of external GeoJSON files</li>
-                                    <li class="list-group-item">Logical multiple layer marker clustering via the <a
-                                            href="https://github.com/Leaflet/Leaflet.markercluster" target="_blank">leaflet
-                                                                                                                    marker cluster plugin</a></li>
-                                    <li class="list-group-item">Elegant client-side multi-layer feature search with
-                                                                autocomplete using <a href="http://twitter.github.io/typeahead.js/" target="_blank">typeahead.js</a>
+                                    <li class="list-group-item">jQuery加载外部 Geo JSON文件</li>
+                                    <li class="list-group-item">通过<a href="https://github.com/Leaflet/Leaflet.markercluster" target="_blank">传单标记群集插件</a>进行逻辑多层标记群集</li>
+                                    <li class="list-group-item">使用<a href="http://twitter.github.io/typeahead.js/" target="_blank"> typeahead.js </a>进行自动完成的客户端多层功能搜索
                                     </li>
-                                    <li class="list-group-item">Responsive sidebar feature list with sorting and filtering
-                                                                via <a href="http://listjs.com/" target="_blank">list.js</a></li>
-                                    <li class="list-group-item">Marker icons included in grouped layer control via the <a
-                                            href="https://github.com/ismyrnow/Leaflet.groupedlayercontrol" target="_blank">grouped
-                                                                                                                           layer control plugin</a></li>
+                                    <li class="list-group-item">通过<a href="http://listjs.com/" target="_blank"> list.js </a>进行排序和过滤的响应式边栏功能列表</li>
+                                    <li class="list-group-item">标记图标通过<a href="https://github.com/ismyrnow/Leaflet.groupedlayercontrol" target="_blank">分组图层控制插件</a>包含在分组图层控件中</li>
                                 </ul>
                             </div>
                         </div>
                         <div id="disclaimer" class="tab-pane fade text-danger">
-                            <p>The data provided on this site is for informational and planning purposes only.</p>
+                            <p>本网站提供的资料仅供参考及策划之用。</p>
 
-                            <p>Absolutely no accuracy or completeness guarantee is implied or intended. All information on
-                               this map is subject to such variations and corrections as might result from a complete title
-                               search and/or accurate field survey.</p>
+                            <p>绝对没有暗示或意图的准确性或完整性保证。 本地图上的所有信息都受到完整标题搜索和/或准确的实地调查可能导致的变化和更正的影响。</p>
                         </div>
                         <div class="tab-pane fade" id="contact">
                             <form id="contact-form">
@@ -168,26 +156,26 @@
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <label for="first-name">First Name:</label>
+                                                <label for="first-name">名字:</label>
                                                 <input type="text" class="form-control" id="first-name">
                                             </div>
                                             <div class="form-group">
-                                                <label for="last-email">Last Name:</label>
+                                                <label for="last-email">姓氏:</label>
                                                 <input type="text" class="form-control" id="last-email">
                                             </div>
                                             <div class="form-group">
-                                                <label for="email">Email:</label>
+                                                <label for="email">邮箱:</label>
                                                 <input type="text" class="form-control" id="email">
                                             </div>
                                         </div>
                                         <div class="col-md-8">
-                                            <label for="message">Message:</label>
+                                            <label for="message">消息:</label>
                                             <textarea class="form-control" rows="8" id="message"></textarea>
                                         </div>
                                         <div class="col-md-12">
                                             <p>
                                                 <button type="submit" class="btn btn-primary pull-right"
-                                                        data-dismiss="modal">Submit
+                                                        data-dismiss="modal">提交
                                                 </button>
                                             </p>
                                         </div>
@@ -196,30 +184,27 @@
                             </form>
                         </div>
                         <div class="tab-pane fade" id="boroughs-tab">
-                            <p>Borough data courtesy of <a
-                                    href="http://www.nyc.gov/html/dcp/html/bytes/meta_dis_nyboroughwi.shtml"
-                                    target="_blank">New York City Department of City Planning</a></p>
+                            <p>各地数据由<a href="http://www.nyc.gov/html/dcp/html/bytes/meta_dis_nyboroughwi.shtml" target="_blank">纽约市城市规划局</a>提供</p>
                         </div>
                         <div class="tab-pane fade" id="subway-lines-tab">
                             <p><a href="http://spatialityblog.com/2010/07/08/mta-gis-data-update/#datalinks"
-                                  target="_blank">MTA Subway data</a> courtesy of the <a
+                                  target="_blank">MTA地铁数据 </a>  <a
                                     href="http://www.urbanresearch.org/about/cur-components/cuny-mapping-service"
-                                    target="_blank">CUNY Mapping Service at the Center for Urban Research</a></p>
+                                    target="_blank">由城市研究中心的CUNY制图服务提供</a></p>
                         </div>
                         <div class="tab-pane fade" id="theaters-tab">
-                            <p>Theater data courtesy of <a
-                                    href="https://data.cityofnewyork.us/Recreation/Theaters/kdu2-865w" target="_blank">NYC
-                                                                                                                       Department of Information & Telecommunications (DoITT)</a></p>
+                            <p>剧院数据 <a
+                                    href="https://data.cityofnewyork.us/Recreation/Theaters/kdu2-865w" target="_blank">由纽约市信息和电信部（DoITT）提供</a></p>
                         </div>
                         <div class="tab-pane fade" id="museums-tab">
-                            <p>Museum data courtesy of <a
+                            <p>博物馆数据 courtesy of <a
                                     href="https://data.cityofnewyork.us/Recreation/Museums-and-Galleries/sat5-adpb"
-                                    target="_blank">NYC Department of Information & Telecommunications (DoITT)</a></p>
+                                    target="_blank">由纽约市信息与电信部（DoITT）提供</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
                 </div>
             </div>
         </div>
@@ -231,7 +216,7 @@
                 <div class="modal-header">
                     <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <h4 id = "title" class="modal-title">
-                        WSO2 Geo Dashboard
+                        WSO2 Geo 面板
                     </h4>
                 </div>
                 <div class="modal-body">
@@ -260,7 +245,7 @@
                     <div id="urlInput">
                         <div style="height: 0px;" id="collapseOne" class="panel-collapse collapse">
                             <div class="panel-body">
-                                <p>A string of the following form:</p>
+                                <p>以下形式的字符串:</p>
                                 <pre><code class="javascript"><span class="string">'http://{s}.somedomain.com/blabla/{z}/{x}/{y}.png'</span></code></pre>
                                 <p><code class="javascript">{s}</code> means one of the available subdomains (used
                                                                        sequentially to help with browser parallel requests per domain limitation; subdomain
@@ -300,7 +285,7 @@
                                     <button style="text-align: left;" class="btn btn-default btn-xs btn-block collapsed"
                                             onclick="$('.fa-chevron-right').toggleClass('fa-rotate-90')"
                                             data-toggle="collapse" data-parent="#accordion" href="#tileUrlOptions">
-                                        <i class="fa fa-chevron-right"></i> Options
+                                        <i class="fa fa-chevron-right"></i> 选项
                                     </button>
                                 </h4>
                             </div>
@@ -319,19 +304,19 @@
 
                                     <div class="input-group input-group-sm col-sm-9">
                                         <small class="text-primary">
-                                            <label class="col-sm-9 control-label" for="maxzoom">Max zoom level</label>
+                                            <label class="col-sm-9 control-label" for="maxzoom">最大缩放级别</label>
                                         </small>
                                         <input id="maxzoom" type="text" class="form-control"
-                                               placeholder="Number between(around) 1~19">
+                                               placeholder="数字范围 1~19">
                                     </div>
                                     <br/>
 
                                     <div class="input-group input-group-sm col-sm-9">
                                         <small class="text-primary">
-                                            <label class="col-sm-2 control-label" for="data_attribution">Attribution</label>
+                                            <label class="col-sm-2 control-label" for="data_attribution">属性</label>
                                         </small>
                                         <input id="data_attribution" type="text" class="form-control"
-                                               placeholder="Enter attribution">
+                                               placeholder="输入属性">
                                     </div>
 
                                 </div>
@@ -363,19 +348,15 @@
                     <div>
                         <div style="height: 0px;" id="wmsOverview" class="panel-collapse collapse">
                             <div class="panel-body">
-                                The OpenGIS® Web Map Service Interface Standard (WMS) provides a simple HTTP interface for
-                                requesting geo-registered map images from one or more distributed geospatial databases.
-                                A WMS request defines the geographic layer(s) and area of interest to be processed.
-                                The response to the request is one or more geo-registered map images (returned as JPEG, PNG,
-                                etc) that can be displayed in a browser application.
-                                The interface also supports the ability to specify whether the returned images should be
-                                transparent so that layers from multiple servers can be combined or not.
+                                	OpenGIS®Web地图服务接口标准（WMS）提供了一个简单的HTTP接口，用于请求来自一个或多个分布式地理空间数据库的地理注册地图图像。
+                                 	WMS请求定义了要处理的地理层和感兴趣区域。 对请求的响应是一个或多个可以在浏览器应用程序中显示的地理注册地图图像（以JPEG，PNG等格式返回）。 
+                                 	该界面还支持指定返回的图像是否应该透明，以便可以组合多个服务器的图层。
                             </div>
                         </div>
                         <div class="input-group input-group-sm">
                             <span class="input-group-addon"><i class="fa fa-italic"></i></span>
                             <input autofocus="enable" id="serviceName" type="text" class="form-control"
-                                   placeholder="Service provider name">
+                                   placeholder="服务提供商名称">
                         </div>
 
                         <br>
@@ -383,14 +364,14 @@
                         <div class="input-group input-group-sm">
                             <span class="input-group-addon"><i class="fa fa-align-justify"></i></span>
                             <input autofocus="enable" id="layers" type="text" class="form-control"
-                                   placeholder="Service layers as comma seperated values">
+                                   placeholder="服务层以逗号分隔值显示">
                         </div>
                         <br>
 
                         <div class="input-group input-group-sm">
                             <span class="input-group-addon">V.</span>
                             <input autofocus="enable" id="wmsVersion" type="text" class="form-control"
-                                   placeholder="WMS version (i.e: 1.1.1 or 1.3.0)">
+                                   placeholder="WMS 版本 (即: 1.1.1 or 1.3.0)">
                         </div>
                         <br>
 
@@ -413,7 +394,7 @@
                                     <button style="text-align: left;" class="btn btn-default btn-xs btn-block collapsed"
                                             onclick="$('.fa-chevron-right').toggleClass('fa-rotate-90')"
                                             data-toggle="collapse" data-parent="#accordion" href="#wmsOptions">
-                                        <i class="fa fa-chevron-right"></i> Options
+                                        <i class="fa fa-chevron-right"></i> 选项
                                     </button>
                                 </h4>
                             </div>
@@ -422,10 +403,10 @@
 
                                     <div class="input-group input-group-sm col-sm-11">
                                         <small class="text-primary">
-                                            <label class="col-sm-6 control-label" for="outputFormat">Output format</label>
+                                            <label class="col-sm-6 control-label" for="outputFormat">输出格式</label>
                                         </small>
                                         <input id="outputFormat" type="text" class="form-control"
-                                               placeholder="Output format (i.e: image/png, image/jpeg, image/svg)">
+                                               placeholder="输出格式 (即: image/png, image/jpeg, image/svg)">
                                     </div>
                                 </div>
                             </div>
@@ -453,7 +434,7 @@
                     </h4>
                     <div class="col-lg-5 col-md-6 col-centered">
                         <h4>
-                            Adding GeoJson
+                            	增加 GeoJson
                             <br>
                         </h4>
                     </div>
@@ -461,15 +442,15 @@
                 <div class="modal-body">
                     <div class="col-lg-8 col-md-8 col-centered">
                         <div>
-                            <label for="importGeoJsonFile">Import GeoJson</label>
+                            <label for="importGeoJsonFile">导入 GeoJson</label>
                             <input id="importGeoJsonFile" type="file">
                             <hr />
                             <label for="enterGeoJson">Enter GeoJson</label>
                             <textarea id="enterGeoJson" class="form-control" rows="10"></textarea>
                         </div>
                         <div class="pull-right">
-                            <button id="updateGeoJson" class="btn btn-primary" onclick="importGeoJson()">Import</button>
-                            <button type="button" class="btn btn-default" onclick="closeAll()">Cancel</button>
+                            <button id="updateGeoJson" class="btn btn-primary" onclick="importGeoJson()">导入</button>
+                            <button type="button" class="btn btn-default" onclick="closeAll()">取消</button>
                             <br />
                             <br />
                         </div>
@@ -487,7 +468,7 @@
                     </h4>
                     <div class="col-lg-5 col-md-6 col-centered">
                         <h4>
-                            Adding GeoJson
+                            	增加 GeoJson
                             <br>
                         </h4>
                     </div>
@@ -498,12 +479,12 @@
                             <label for="importGeoJsonFile">Import GeoJson</label>
                             <input id="importGeoJsonFile" type="file">
                             <hr />
-                            <label for="enterGeoJson">Enter GeoJson</label>
+                            <label for="enterGeoJson">输入 GeoJson</label>
                             <textarea id="enterGeoJson" class="form-control" rows="10"></textarea>
                         </div>
                         <div class="pull-right">
-                            <button id="updateGeoJson" class="btn btn-primary" onclick="importGeoJson()">Import</button>
-                            <button type="button" class="btn btn-default" onclick="closeAll()">Cancel</button>
+                            <button id="updateGeoJson" class="btn btn-primary" onclick="importGeoJson()">导入</button>
+                            <button type="button" class="btn btn-default" onclick="closeAll()">取消</button>
                             <br />
                             <br />
                         </div>
@@ -522,9 +503,9 @@
                 {{#if geoServicesEnabled}}
                 <h6>Speed<span class="label label-primary pull-right"><span id="speed"></span> km/h</span></h6>
                 <h6>Heading<span id="heading" class="label label-primary pull-right"></span></h6>
-                <button type="button" class="btn btn-info btn-xs" onClick="toggleSpeedGraph();return false;">Speed Graph</button>
-                <button type="button" class="btn btn-info btn-xs" onClick="focusOnRecentHistorySpatialObject();return false;">Recent History</button>
-                <button type="button" class="btn btn-info btn-xs" onClick="popupDateRange();">Full History</button>
+                <button type="button" class="btn btn-info btn-xs" onClick="toggleSpeedGraph();return false;">速度图</button>
+                <button type="button" class="btn btn-info btn-xs" onClick="focusOnRecentHistorySpatialObject();return false;">最近历史</button>
+                <button type="button" class="btn btn-info btn-xs" onClick="popupDateRange();">全部历史</button>
                 {{/if}}
             </div>
         </div>
@@ -532,19 +513,19 @@
         <div id="dateRangePopup">
             <div class="form-horizontal">
                 <div class="form-group">
-                    <label class="col-sm-3">From:</label>
+                    <label class="col-sm-3">来自:</label>
                     <div class="col-sm-9">
                         <input id="timeFromCal" type="text">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-3">To:</label>
+                    <label class="col-sm-3">到:</label>
                     <div class="col-sm-9">
                         <input id="timeToCal" type="text">
                     </div>
                 </div>
             </div>
-            <button type="button" class="btn btn-info btn-xs" onClick="focusOnHistorySpatialObject(document.getElementById('objectId').innerHTML, document.getElementById('timeFromCal').value, document.getElementById('timeToCal').value);return false;">Full History</button>
+            <button type="button" class="btn btn-info btn-xs" onClick="focusOnHistorySpatialObject(document.getElementById('objectId').innerHTML, document.getElementById('timeFromCal').value, document.getElementById('timeToCal').value);return false;">全部历史</button>
         </div>
 
         <div id="markerPopupStop" class="popover top">
@@ -562,12 +543,12 @@
             <div class="arrow"></div>
             <h3 class="popover-title">ID <span id="objectId"></span></h3>
             <div class="popover-content">
-                <h6>Severity</h6>
+                <h6>严重程度</h6>
 
                 <p id="severity" class="bg-primary" style="margin: 0px;padding: 0px;"></p>
             </div>
             <div class="popover-content">
-                <h6>Information</h6>
+                <h6>信息</h6>
 
                 <p id="information" class="bg-primary" style="margin: 0px;padding: 0px;"></p>
             </div>
@@ -576,28 +557,28 @@
         <div id="setWithinAlert">
             <form role="form" style="width: auto;">
                 <div class="form-group">
-                    <label class="text-primary" for="withinAlertAreaName">Fence name</label>
-                    <input class="form-control" id="withinAlertAreaName" placeholder="Fence name" type="text">
-                    <span class="help-block">Name of the selected area(e.g. colombo)</span>
+                    <label class="text-primary" for="withinAlertAreaName">栅栏名称</label>
+                    <input class="form-control" id="withinAlertAreaName" placeholder="栅栏名称" type="text">
+                    <span class="help-block">所选区域的名称(例如. colombo)</span>
                 </div>
                 <div>
                     <div class="btn-group btn-group-sm btn-group-justified">
                         <div class="btn-group">
                             <button id="addWithinAlert" onclick="setWithinAlert($(this).attr('leaflet_id'))" type="button"
                                     class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="left"
-                                    title="Save selected area for alerts">Save
+                                    title="保存所选区域的警报">保存
                             </button>
                         </div>
                         <div class="btn-group">
                             <button onclick="$('#editWithinGeoJSON #updateGeoJson').attr('leaflet_id',$(this).attr('leaflet_id'));$('#editWithinGeoJSON textarea').text(JSON.stringify(map._layers[$(this).attr('leaflet_id')].toGeoJSON(),null, '\t'));$('#editWithinGeoJSON').modal('toggle')"
-                                    type="button" class="btn btn-default btn-xs editGeoJson">Edit
+                                    type="button" class="btn btn-default btn-xs editGeoJson">修改
                             </button>
                         </div>
                         <div class="btn-group">
                             <a id="exportGeoJson" download="geoJson.json" href="#"
                                onclick="exportToGeoJSON(this, JSON.stringify(map._layers[$(this).attr('leaflet_id')].toGeoJSON(),null, '\t'))"
                                class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="left"
-                               title="Export selected area as a geoJson file">Export</a>
+                               title="将选定区域导出为geoJson文件">导出</a>
                         </div>
                     </div>
                 </div>
@@ -606,28 +587,28 @@
         <div id="setExitAlert">
             <form role="form" style="width: auto;">
                 <div class="form-group">
-                    <label class="text-primary" for="exitAlertAreaName">Fence name</label>
-                    <input class="form-control" id="exitAlertAreaName" placeholder="Fence name" type="text">
-                    <span class="help-block">Name of the selected area(e.g. colombo)</span>
+                    <label class="text-primary" for="exitAlertAreaName"></label>
+                    <input class="form-control" id="exitAlertAreaName" placeholder="栅栏名称" type="text">
+                    <span class="help-block">所选区域的名称(例如. colombo)</span>
                 </div>
                 <div>
                     <div class="btn-group btn-group-sm btn-group-justified">
                         <div class="btn-group">
                             <button id="addExitAlert" onclick="setExitAlert($(this).attr('leaflet_id'))" type="button"
                                     class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="left"
-                                    title="Save selected area for alerts">Save
+                                    title="保存所选区域的警报">保存
                             </button>
                         </div>
                         <div class="btn-group">
                             <button onclick="$('#editExitGeoJSON #updateGeoJson').attr('leaflet_id',$(this).attr('leaflet_id'));$('#editExitGeoJSON textarea').text(JSON.stringify(map._layers[$(this).attr('leaflet_id')].toGeoJSON(),null, '\t'));$('#editExitGeoJSON').modal('toggle')"
-                                    type="button" class="btn btn-default btn-xs editGeoJson">Edit
+                                    type="button" class="btn btn-default btn-xs editGeoJson">修改
                             </button>
                         </div>
                         <div class="btn-group">
                             <a id="exportGeoJson" download="geoJson.json" href="#"
                                onclick="exportToGeoJSON(this, JSON.stringify(map._layers[$(this).attr('leaflet_id')].toGeoJSON(),null, '\t'))"
                                class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="left"
-                               title="Export selected area as a geoJson file">Export</a>
+                               title="将选定区域导出为geoJson文件">导出</a>
                         </div>
                     </div>
                 </div>
@@ -637,34 +618,34 @@
         <div id="setStationeryAlert">
             <form role="form" style="width: auto;">
                 <div class="form-group">
-                    <label class="text-primary" for="stationaryAlertAreaName">Fence name</label>
+                    <label class="text-primary" for="stationaryAlertAreaName">栅栏名称</label>
                     <input class="form-control" id="stationaryAlertAreaName" placeholder="Stationery name" type="text">
-                    <span class="help-block">Name of the selected area(e.g. colombo)</span>
+                    <span class="help-block">所选区域的名称(例如. colombo)</span>
 
-                    <label class="text-primary" for="fRadius">Fluctuation radius</label>
+                    <label class="text-primary" for="fRadius">波动半径</label>
                     <input class="form-control" id="fRadius" onblur="reformatRadius(this.form.fRadius.value);" placeholder="m" type="text">
 
-                    <label class="text-primary" for="time">Time</label>
-                    <input class="form-control" id="time" placeholder="Seconds" type="text">
+                    <label class="text-primary" for="time">时间</label>
+                    <input class="form-control" id="time" placeholder="秒" type="text">
                 </div>
                 <div>
                     <div class="btn-group btn-group-sm btn-group-justified">
                         <div class="btn-group">
                             <button id="addStationeryAlert" onclick="setStationeryAlert($(this).attr('leaflet_id'))" type="button"
                                     class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="left"
-                                    title="Save selected area for alerts">Save
+                                    title="保存所选区域的警报">保存
                             </button>
                         </div>
                         <div class="btn-group">
                             <button onclick="$('#editWithinGeoJSON #updateGeoJson').attr('leaflet_id',$(this).attr('leaflet_id'));$('#editWithinGeoJSON textarea').text(JSON.stringify(map._layers[$(this).attr('leaflet_id')].toGeoJSON(),null, '\t'));$('#editWithinGeoJSON').modal('toggle')"
-                                    type="button" class="btn btn-default btn-xs editGeoJson">Edit
+                                    type="button" class="btn btn-default btn-xs editGeoJson">修改
                             </button>
                         </div>
                         <div class="btn-group">
                             <a id="exportGeoJson" download="geoJson.json" href="#"
                                onclick="exportToGeoJSON(this, JSON.stringify(map._layers[$(this).attr('leaflet_id')].toGeoJSON(),null, '\t'))"
                                class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="left"
-                               title="Export selected area as a geoJson file">Export</a>
+                               title="将选定区域导出为geoJson文件">导出</a>
                         </div>
                     </div>
                 </div>
@@ -673,28 +654,28 @@
         <div id="setTrafficAlert">
             <form role="form" style="width: auto;">
                 <div class="form-group">
-                    <label class="text-primary" for="trafficAlertAreaName">Fence name</label>
-                    <input class="form-control" id="trafficAlertAreaName" placeholder="Area Name" type="text">
-                    <span class="help-block">Name of the selected area(e.g. colombo)</span>
+                    <label class="text-primary" for="trafficAlertAreaName">栅栏名称</label>
+                    <input class="form-control" id="trafficAlertAreaName" placeholder="区域名称" type="text">
+                    <span class="help-block">所选区域的名称(例如. colombo)</span>
                 </div>
                 <div>
                     <div class="btn-group btn-group-sm btn-group-justified">
                         <div class="btn-group">
                             <button id="addTrafficAlert" onclick="setTrafficAlert($(this).attr('leaflet_id'))" type="button"
                                     class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="left"
-                                    title="Save selected area for alerts">Save
+                                    title="保存所选区域的警报">保存
                             </button>
                         </div>
                         <div class="btn-group">
                             <button onclick="$('#editTrafficGeoJSON #updateGeoJson').attr('leaflet_id',$(this).attr('leaflet_id'));$('#editTrafficGeoJSON textarea').text(JSON.stringify(map._layers[$(this).attr('leaflet_id')].toGeoJSON(),null, '\t'));$('#editTrafficGeoJSON').modal('toggle')"
-                                    type="button" class="btn btn-default btn-xs editGeoJson">Edit
+                                    type="button" class="btn btn-default btn-xs editGeoJson">修改
                             </button>
                         </div>
                         <div class="btn-group">
                             <a id="exportGeoJson" download="geoJson.json" href="#"
                                onclick="exportToGeoJSON(this, JSON.stringify(map._layers[$(this).attr('leaflet_id')].toGeoJSON(),null, '\t'))"
                                class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="left"
-                               title="Export selected area as a geoJson file">Export</a>
+                               title="将选定区域导出为geoJson文件">导出</a>
                         </div>
                     </div>
                 </div>

@@ -19,7 +19,7 @@
 {{#if deviceTypesList}}
     <div class="row wr-device-board">
         <div class="col-lg-12 wr-secondary-bar">
-            <span class="page-sub-title">Device Types</span>
+            <span class="page-sub-title">设备类型</span>
         </div>
     </div>
     <div class="container-fluid">
@@ -28,7 +28,7 @@
             <thead>
             <tr class="sort-row">
                 <th class="no-sort"></th>
-                <th>By Device Type</th>
+                <th>设备类型</th>
                 <th class="no-sort"></th>
             </tr>
             </thead>
@@ -49,7 +49,7 @@
                     <i class="fw fw-circle-outline fw-stack-2x"></i>
                     <i class="fw fw-document fw-stack-1x"></i>
                 </span>
-                Quick Startup Guide
+                	快速启动指南
             </a>
         </div>
     </div>
@@ -59,19 +59,19 @@
 {{#if virtualDeviceTypesList}}
     <div class="row wr-device-board">
         <div class="col-lg-12 wr-secondary-bar">
-            <span class="page-sub-title">Virtual Device Types</span>
+            <span class="page-sub-title">虚拟设备类型</span>
         </div>
     </div>
-    <h3 style="margin-left: 10px;">Don't have a device?</h3>
+    <h3 style="margin-left: 10px;">没有设备吗？</h3>
     {{#each virtualDeviceTypesList}}
         <div class="try-device-container" id="{{deviceTypeName}}">
             <div class="message message-info try-device-message">
                 <p class="try-device-text">
                     <button id="{{deviceTypeName}}_btn"
                             onclick="location.href='{{@app.context}}/device/{{deviceTypeName}}/enroll?type=virtual'"
-                            class="btn btn-default btn-primary">Try
+                            class="btn btn-default btn-primary">尝试
                     </button>
-                    our {{deviceTypeLabel}} device
+                    	我们的 {{deviceTypeLabel}} 设备
                 </p>
                 <img class="try-device-image" src="{{thumb}}">
             </div>

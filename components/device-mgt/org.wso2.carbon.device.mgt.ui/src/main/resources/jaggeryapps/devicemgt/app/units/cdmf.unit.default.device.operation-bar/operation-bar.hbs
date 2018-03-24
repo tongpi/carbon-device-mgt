@@ -60,20 +60,19 @@
 
                             <form id="form-{{operation}}" style="padding-bottom: 20px;"-->
                                 <select id="operation-type" class="form-control" onChange="operationTypeChage(this)" style="display:none">
-                                    <option value="PROFILE">Profile</option>
-                                    <option value="COMMAND">Command</option>
+                                    <option value="PROFILE">配置</option>
+                                    <option value="COMMAND">命令</option>
                                 </select>
                                 <br />
                                 <input type="hidden" id="operation-code" value="{{operation}}" />
                                 <textarea id="operation-payload" placeholder="payload" class="form-control" rows="10" cols="70"></textarea>
                                 <br />
 
-                                <button id="btnSend" type="button" onclick="submitForm('form-{{operation}}')" class="btn btn-default">&nbsp;&nbsp;&nbsp;&nbsp;Send
-                                                       to Device&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                                <button id="btnSend" type="button" onclick="submitForm('form-{{operation}}')" class="btn btn-default">&nbsp;&nbsp;&nbsp;&nbsp;发送到设备&nbsp;&nbsp;&nbsp;&nbsp;</button>
                                 <label id="lblSending" class="wr-input-label hidden"><i
-                                        class="fw fw-lifecycle fw-spin fw-2x"></i> Sending..</label>
+                                        class="fw fw-lifecycle fw-spin fw-2x"></i> 发送中..</label>
                                 <label id="lblSent" class="wr-input-label hidden"><i
-                                        class="fw fw-check fw-2x"></i> Sent</label>
+                                        class="fw fw-check fw-2x"></i> 已发送</label>
                             </form>
                         </div>
                     </div>
@@ -84,7 +83,7 @@
 {{else}}
     <div align="center">
         <h4 style="color: #D8000C"><i class="icon fw fw-error" style="color: #D8000C"></i>
-            Operations Loading Failed!</h4>
+            	操作加载失败！</h4>
     </div>
 {{/if}}
 

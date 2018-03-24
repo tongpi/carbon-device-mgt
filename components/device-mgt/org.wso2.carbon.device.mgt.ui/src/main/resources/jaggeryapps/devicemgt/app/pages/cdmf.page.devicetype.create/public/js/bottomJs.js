@@ -153,13 +153,13 @@ $(document).ready(function () {
 		var deviceTypeName = $("#deviceTypeName").val();
 		var deviceTypeDescription = $("#deviceTypeDescription").val();
 		if (!deviceTypeName || deviceTypeName.trim() == "" ) {
-			$(errorMsg).text("Device Type Name Cannot be empty.");
+			$(errorMsg).text("设备类型名称不能为空。");
 			$(errorMsgWrapper).removeClass("hidden");
 			return;
 		}
 
 		if (!deviceTypeDescription || deviceTypeDescription.trim() == "" ) {
-			$(errorMsg).text("Device Type Description Cannot be empty.");
+			$(errorMsg).text("设备类型描述不能为空。");
 			$(errorMsgWrapper).removeClass("hidden");
 			return
 		}
@@ -224,16 +224,16 @@ $(document).ready(function () {
 		        },
 		        function (jqXHR) {
 		            if (jqXHR.status == 500) {
-		                $(errorMsg).text("Unexpected error.");
+		                $(errorMsg).text("异常错误.");
 		                $(errorMsgWrapper).removeClass("hidden");
 		            }
 					if (jqXHR.status == 400) {
-						$(errorMsg).text("Device type name should not contain whitespaces.");
+						$(errorMsg).text("设备类型名称不应该包含空格。");
 						$(errorMsgWrapper).removeClass("hidden");
 					}
 
 					if (jqXHR.status == 409) {
-						$(errorMsg).text("Device type already exists");
+						$(errorMsg).text("设备类型已存在");
 						$(errorMsgWrapper).removeClass("hidden");
 					}
 		        }

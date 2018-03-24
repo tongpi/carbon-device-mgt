@@ -73,7 +73,7 @@ function readSingleFile(evt) {
                 console.log(pemContent);
                 $(errorMsgWrapper).addClass("hidden");
             } else {
-                $(errorMsg).text("Certificate must be a .pem file containing a valid certificate data.");
+                $(errorMsg).text("证书必须是包含有效证书数据的.pem文件。");
                 $(errorMsgWrapper).removeClass("hidden");
             }
         }
@@ -95,10 +95,10 @@ $(document).ready(function () {
         var serialNoInput = $("input#serialNo");
         var serialNo = serialNoInput.val();
         if (!serialNo) {
-            $(errorMsg).text("Serial Number is a required field. It cannot be empty.");
+            $(errorMsg).text("证书编号不能为空。");
             $(errorMsgWrapper).removeClass("hidden");
         } else if (!pemContent) {
-            $(errorMsg).text(" .pem file must contains certificate information.");
+            $(errorMsg).text(" .pem文件必须包含证书信息。");
             $(errorMsgWrapper).removeClass("hidden");
         } else {
             var addCertificateFormData = {};
@@ -117,7 +117,7 @@ $(document).ready(function () {
                     $("#certificate-created-msg").removeClass("hidden");
                 }, function (data) {
                     if (data["status"] == 500) {
-                        $(errorMsg).text("An unexpected error occurred at backend server. Please try again later.");
+                        $(errorMsg).text("后端发生异常错误。请稍后再试。");
                     } else {
                         $(errorMsg).text(data);
                     }

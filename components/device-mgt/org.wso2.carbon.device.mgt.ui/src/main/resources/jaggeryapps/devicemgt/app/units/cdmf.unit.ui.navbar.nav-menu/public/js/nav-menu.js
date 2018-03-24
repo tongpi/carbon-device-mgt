@@ -79,7 +79,7 @@ function hideNotificationCount(jqXHR) {
         // this means "no new notifications to show"
         $("#notification-bubble").hide();
     } else {
-        $("#notification-bubble").html("Error");
+        $("#notification-bubble").html("错误");
     }
 }
 
@@ -104,27 +104,26 @@ function loadNewNotifications() {
                             $(messageSideBar).html(template(viewModel));
                         } else {
                             $(messageSideBar).html(
-                                "<h4 class='text-center'>No New Notifications</h4>" +
+                                "<h4 class='text-center'>暂无新通知</h4>" +
                                 "<h5 class='text-center text-muted'>" +
-                                "Check this section for error notifications<br>related to device operations" +
+                                "检查以获取与设备操作相关的错误通知" +
                                 "</h5>"
                             );
                         }
                     } else {
-                        $(messageSideBar).html("<h4 class ='message-danger text-center'>Unexpected error occurred while loading new notifications</h4>");
+                        $(messageSideBar).html("<h4 class ='message-danger text-center'>加载新通知时发生异常错误。</h4>");
                     }
                 }
             };
             var errorCallback = function (jqXHR) {
                 if (jqXHR.status = 500) {
-                    $(messageSideBar).html("<h4 class ='message-danger text-center'>Unexpected error occurred while trying " +
-                        "to retrieve any new notifications</h4>");
+                    $(messageSideBar).html("<h4 class ='message-danger text-center'>尝试检索任何新通知时发生异常错误。</h4>");
                 }
             };
             invokerUtil.get(serviceURL, successCallback, errorCallback);
         });
     } else {
-        $(messageSideBar).html("<h4 class ='message-danger text-center'>You are not authorized to view notifications</h4>");
+        $(messageSideBar).html("<h4 class ='message-danger text-center'>你没有权限查看通知。</h4>");
     }
 }
 
@@ -446,9 +445,8 @@ $(document).ready(function () {
                     location.href = redirectUrl;
                 }
             }, function () {
-                var content = "<li class='message message-danger'><h4><i class='icon fw fw-error'></i>Warning</h4>" +
-                    "<p>Unexpected error occurred while loading notification. Please refresh the page and" +
-                    " try again</p></li>";
+                var content = "<li class='message message-danger'><h4><i class='icon fw fw-error'></i>警告</h4>" +
+                    "<p>加载通知时发生异常错误。请刷新页面重试。</p></li>";
                 $(messageSideBar).html(content);
             }
         );
@@ -472,9 +470,8 @@ $(document).ready(function () {
                     $('.message').remove();
                     $("#notification-bubble").html(0);
                 }, function () {
-                    var content = "<li class='message message-danger'><h4><i class='icon fw fw-error'></i>Warning</h4>" +
-                        "<p>Unexpected error occurred while loading notification. Please refresh the page and" +
-                        " try again</p></li>";
+                    var content = "<li class='message message-danger'><h4><i class='icon fw fw-error'></i>警告</h4>" +
+                        "<p>加载通知时发生异常错误。请刷新页面重试。</p></li>";
                     $(messageSideBar).html(content);
                 }
             );
@@ -506,13 +503,13 @@ function statisticLoad(redirectUrl) {
             var urix = backendEndBasePath + "/admin/publish-artifact/deploy/device_management";
             var device = {};
             invokerUtil.post(urix, device, function (data) {
-                title.html("Deploying statistic artifacts. Please wait...");
+                title.html("部署统计部件。请稍后...");
                 statusIcon.attr("class", defaultStatusClasses + " fw-check");
                 $(modalPopupContent).html(content.html());
                 showPopup();
                 poll(redirectUrl);
             }, function (jqXHR) {
-                title.html("Failed to deploy artifacts, Please contact administrator.");
+                title.html("部署部件失败，请联系管理员。");
                 statusIcon.attr("class", defaultStatusClasses + " fw-error");
                 $(modalPopupContent).html(content.html());
                 showPopup();

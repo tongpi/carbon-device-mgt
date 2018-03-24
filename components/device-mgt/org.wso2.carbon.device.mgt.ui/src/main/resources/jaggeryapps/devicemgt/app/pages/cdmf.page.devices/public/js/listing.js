@@ -99,14 +99,14 @@ function selectAllDevices(button) {
             addDeviceSelectedClass(this);
         });
         $(button).data('select', true);
-        $(button).html('Deselect All Devices');
+        $(button).html('取消全选设备');
     } else {
         $(deviceCheckbox).each(function (index) {
             $(this).prop('checked', false);
             addDeviceSelectedClass(this);
         });
         $(button).data('select', false);
-        $(button).html('Select All Devices');
+        $(button).html('全选设备');
     }
 }
 
@@ -159,7 +159,7 @@ function loadDevices(searchType, searchParam) {
     } else {
         $("#loading-content").remove();
         $('#device-table').addClass('hidden');
-        $('#device-listing-status-msg').text('Permission denied.');
+        $('#device-listing-status-msg').text('没有权限。');
         $("#device-listing-status").removeClass(' hidden');
         return;
     }
@@ -293,19 +293,19 @@ function loadDevices(searchType, searchParam) {
                 var html;
                 switch (status) {
                     case 'ACTIVE' :
-                        html = '<span><i class="fw fw-success icon-success"></i> Active</span>';
+                        html = '<span><i class="fw fw-success icon-success"></i> 已激活</span>';
                         break;
                     case 'INACTIVE' :
-                        html = '<span><i class="fw fw-warning icon-warning"></i> Inactive</span>';
+                        html = '<span><i class="fw fw-warning icon-warning"></i> 已闲置</span>';
                         break;
                     case 'BLOCKED' :
-                        html = '<span><i class="fw fw-remove icon-danger"></i> Blocked</span>';
+                        html = '<span><i class="fw fw-remove icon-danger"></i> 已锁定</span>';
                         break;
                     case 'REMOVED' :
-                        html = '<span><i class="fw fw-delete icon-danger"></i> Removed</span>';
+                        html = '<span><i class="fw fw-delete icon-danger"></i> 已移除</span>';
                         break;
                     case 'UNREACHABLE' :
-                        html = '<span><i class="fw fw-warning icon-warning"></i> Unreachable</span>';
+                        html = '<span><i class="fw fw-warning icon-warning"></i> 无法访问</span>';
                         break;
                 }
                 return html;
@@ -358,7 +358,7 @@ function loadDevices(searchType, searchParam) {
                             deviceIdentifier + '&deviceName=' + row.name + '" ' + 'data-click-event="remove-form"' +
                             ' class="btn padding-reduce-on-grid-view" data-placement="top" data-toggle="tooltip" data-original-title="Analytics"><span class="fw-stack">' +
                             '<i class="fw fw-circle-outline fw-stack-2x"></i><i class="fw fw-statistics fw-stack-1x"></i></span>' +
-                            '<span class="hidden-xs hidden-on-grid-view">Analytics</span>';
+                            '<span class="hidden-xs hidden-on-grid-view">分析</span>';
                     }
 
                     if (!groupId && groupingEnabled(row.deviceType)) {
@@ -369,7 +369,7 @@ function loadDevices(searchType, searchParam) {
                             + '" data-devicename="' +
                             row.name + '" data-placement="top" data-toggle="tooltip" data-original-title="Group"><span class="fw-stack"><i class="fw fw-circle-outline fw-stack-2x"></i>' +
                             '<i class="fw fw-group fw-stack-1x"></i></span>' +
-                            '<span class="hidden-xs hidden-on-grid-view">Group</span></a>';
+                            '<span class="hidden-xs hidden-on-grid-view">组</span></a>';
                     }
 
                     html +=
@@ -378,7 +378,7 @@ function loadDevices(searchType, searchParam) {
                         + '" data-devicename="' + row.name + '" data-placement="top" data-toggle="tooltip" data-original-title="Edit">'
                         + '<span class="fw-stack"><i class="fw fw-circle-outline fw-stack-2x"></i>'
                         + '<i class="fw fw-edit fw-stack-1x"></i></span>'
-                        + '<span class="hidden-xs hidden-on-grid-view">Edit</span></a>';
+                        + '<span class="hidden-xs hidden-on-grid-view">修改</span></a>';
                     var groupOwner = $('#group_owner').text();
                     if (groupId && groupOwner != "wso2.system.user") {
                         html +=
@@ -387,7 +387,7 @@ function loadDevices(searchType, searchParam) {
                             + '" data-devicename="' + row.name + '" data-placement="top" data-toggle="tooltip" data-original-title="Remove from group">'
                             + '<span class="fw-stack"><i class="fw fw-circle-outline fw-stack-2x"></i>'
                             + '<i class="fw fw-delete fw-stack-1x"></i></span>'
-                            + '<span class="hidden-xs hidden-on-grid-view">Remove from group</span>';
+                            + '<span class="hidden-xs hidden-on-grid-view">从组中移除</span>';
                     } else {
                         html +=
                             '<a href="#" data-click-event="remove-form" class="btn padding-reduce-on-grid-view remove-device-link" '
@@ -395,7 +395,7 @@ function loadDevices(searchType, searchParam) {
                             + '" data-devicename="' + row.name + '" data-placement="top" data-toggle="tooltip" data-original-title="Delete">'
                             + '<span class="fw-stack"><i class="fw fw-circle-outline fw-stack-2x"></i>'
                             + '<i class="fw fw-delete fw-stack-1x"></i></span>'
-                            + '<span class="hidden-xs hidden-on-grid-view">Delete</span>';
+                            + '<span class="hidden-xs hidden-on-grid-view">删除</span>';
                     }
                 }
                 return html;
@@ -679,7 +679,7 @@ function attachDeviceEvents() {
                 } else {
                     $("a#group-device-update-link").hide();
                     $("a#group-add-link").show();
-                    html += '<br/><h4>You don\'t have any existing device groups. Please add new device group first.</h4>'
+                    html += '<br/><h4>现在你没有设备组。 请先添加新的设备组。</h4>'
                 }
                 $('#user-groups').html(html);
                 $("select.select2[multiple=multiple]").select2({
@@ -857,7 +857,7 @@ function attachDeviceEvents() {
                 $("a#group-add-link").hide();
                 $("a#group-device-add-link").show();
             } else {
-                html += '<br/><h4>You don\'t have any existing device groups. Please add new device group first.</h4>';
+                html += '<br/><h4>现在你没有设备组。 请先添加新的设备组。</h4>';
                 $("a#group-add-link").show();
                 $("a#group-device-add-link").hide();
             }

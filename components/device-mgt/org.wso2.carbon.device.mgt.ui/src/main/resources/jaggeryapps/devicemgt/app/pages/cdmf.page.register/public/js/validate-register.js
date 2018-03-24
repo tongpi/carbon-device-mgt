@@ -121,13 +121,12 @@ $(document).ready(function(){
                            $("#add-user-btn").prop('disabled', false);
                            if (data == 200) {
                                $('.wr-validation-summary strong').html(
-                                       "<i class=\"icon fw fw-success\"></i> Successfully Submitted.");
+                                       "<i class=\"icon fw fw-success\"></i> 提交成功。");
                                $('.wr-validation-summary').removeClass("alert-danger");
                                $('.wr-validation-summary').addClass("alert-success");
                            } else if (data == 201) {
                                $('.wr-validation-summary strong').html(
-                                       "<i class=\"icon fw fw-success\"></i> User created succssfully. You will be " +
-                                       "redirected to login page.");
+                                       "<i class=\"icon fw fw-success\"></i> 用户已成功创建。 您将跳转到登录页面。");
                                $('.wr-validation-summary').removeClass("alert-danger");
                                $('.wr-validation-summary').addClass("alert-success");
                                $("#add-user-btn").prop('disabled', true);
@@ -136,14 +135,14 @@ $(document).ready(function(){
                                }, 2000);
                            } else if (data == 400) {
                                $('.wr-validation-summary strong').html(
-                                       "<i class=\"icon fw fw-error\"></i> Exception at backend.");
+                                       "<i class=\"icon fw fw-error\"></i>后台发生异常。");
                                $('.wr-validation-summary').removeClass("alert-danger");
                                $('.wr-validation-summary').addClass("alert-warning");
                            } else if (data == 403) {
-                               $('.wr-validation-summary strong').html("Action not permitted.");
+                               $('.wr-validation-summary strong').html("此操作不能允许。");
                            } else if (data == 409) {
                                $('.wr-validation-summary strong').html(
-                                       "<i class=\"icon fw fw-info\"></i> User name already exists.");
+                                       "<i class=\"icon fw fw-info\"></i> 用户名已存在。");
                                $('.wr-validation-summary').removeClass("alert-default");
                                $('.wr-validation-summary').addClass("alert-success");
                            }
@@ -154,7 +153,7 @@ $(document).ready(function(){
                        error: function (err) {
                            $("#add-user-btn").prop('disabled', false);
                            $('.wr-validation-summary strong').html(
-                                   "<i class=\"icon fw fw-error\"></i> An unexpected error occurred.");
+                                   "<i class=\"icon fw fw-error\"></i> 出现异常错误。");
                            $('.wr-validation-summary').removeClass("hidden");
                        }
                    });

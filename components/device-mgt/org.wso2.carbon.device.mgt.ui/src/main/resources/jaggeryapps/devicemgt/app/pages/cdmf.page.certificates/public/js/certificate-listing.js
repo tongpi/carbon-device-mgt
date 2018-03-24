@@ -54,9 +54,9 @@ function hidePopup() {
  */
 function removeCertificate(serialNumber) {
     var serviceUrl = base_api_url + "/admin/certificates/" + serialNumber;
-    modalDialog.header('Do you really want to remove this certificate ?');
+    modalDialog.header('你真的想删除这个证书吗？');
     modalDialog.footer('<div class="buttons"><a href="#" id="remove-certificate-yes-link" class="btn-operations">' +
-        'Remove</a><a href="#" id="remove-certificate-cancel-link" class="btn-operations btn-default">Cancel</a>' +
+        '删除</a><a href="#" id="remove-certificate-cancel-link" class="btn-operations btn-default">取消</a>' +
         '</div>');
     modalDialog.show();
 
@@ -68,7 +68,7 @@ function removeCertificate(serialNumber) {
                 var newCertificateListCount = $(".user-list > span").length;
                 $("#certificate-listing-status-msg").text("Total number of Certificates found : " +
                     newCertificateListCount);
-                modalDialog.header('Done. Certificate was successfully removed.');
+                modalDialog.header('完成。证书删除成功。');
                 modalDialog.footer('<div class="buttons"><a href="#" id="remove-certificate-success-link" ' +
                     'class="btn-operations">Ok</a></div>');
                 $("a#remove-certificate-success-link").click(function () {
@@ -76,9 +76,9 @@ function removeCertificate(serialNumber) {
                 });
             },
             function () {
-                modalDialog.header('An unexpected error occurred. Please try again later.');
+                modalDialog.header('出现异常错误。请稍后再试。');
                 modalDialog.footer('<div class="buttons"><a href="#" id="remove-certificate-error-link" ' +
-                    'class="btn-operations">Ok</a></div>');
+                    'class="btn-operations">好的</a></div>');
                 modalDialog.showAsError();
                 $("a#remove-certificate-error-link").click(function () {
                     modalDialog.hide();
@@ -112,8 +112,8 @@ function InitiateViewOption() {
     if ($("#can-view").val()) {
         $(location).attr('href', $(this).data("url"));
     } else {
-        modalDialog.header('Unauthorized action!');
-        modalDialog.content('You do not have permission to view this certificate.');
+        modalDialog.header('未经授权的行为!');
+        modalDialog.content('您无权查看此证书。');
         modalDialog.showAsAWarning();
     }
 }
@@ -149,7 +149,7 @@ function loadCertificates(searchParam) {
                     $("#ast-container").html(content);
                 } else {
                     $('#certificate-table').addClass('hidden');
-                    $('#certificate-listing-status-msg').text('No certificate is available to be displayed.');
+                    $('#certificate-listing-status-msg').text('没有有效的证书可显示。');
                     $('#certificate-listing-status').removeClass('hidden');
                 }
 
@@ -168,7 +168,7 @@ function loadCertificates(searchParam) {
             function (message) {
                 $('#ast-container').addClass('hidden');
                 $('#certificate-listing-status-msg').
-                    text('Invalid search query. Try again with a valid search query');
+                    text('无效的搜索查询。 再次尝试使用有效的搜索查询。');
             }
         );
     });

@@ -1584,9 +1584,9 @@
     </dependencyManagement>
 
     <scm>
-        <url>https://github.com/wso2/carbon-device-mgt.git</url>
-        <developerConnection>scm:git:https://github.com/wso2/carbon-device-mgt.git</developerConnection>
-        <connection>scm:git:https://github.com/wso2/carbon-device-mgt.git</connection>
+        <url>https://github.com/tongpi/carbon-device-mgt.git</url>
+        <developerConnection>scm:git:https://github.com/tongpi/carbon-device-mgt.git</developerConnection>
+        <connection>scm:git:https://github.com/tongpi/carbon-device-mgt.git</connection>
         <tag>v3.0.236</tag>
     </scm>
 

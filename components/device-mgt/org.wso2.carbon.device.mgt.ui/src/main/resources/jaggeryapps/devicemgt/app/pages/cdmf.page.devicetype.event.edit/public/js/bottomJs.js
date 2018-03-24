@@ -129,7 +129,7 @@ $(document).ready(function () {
 		var deviceTypeName = $("#deviceTypeName").val();
 		var deviceTypeDescription = $("#deviceTypeDescription").val();
 		if (!deviceTypeName || deviceTypeName.trim() == "" ) {
-			$(errorMsg).text("Device Type Name Cannot be empty.");
+			$(errorMsg).text("设备类型名称不能为空。");
 			$(errorMsgWrapper).removeClass("hidden");
 			return;
 		}
@@ -164,12 +164,12 @@ $(document).ready(function () {
 		        },
 		        function (jqXHR) {
 		            if (jqXHR.status == 500) {
-		                $(errorMsg).text("Failed to deploy event definition, Please Contact Administrator");
+		                $(errorMsg).text("定义项目部署失败，请联系管理员。");
 		                $(errorMsgWrapper).removeClass("hidden");
 		            }
 
 					if (jqXHR.status == 409) {
-						$(errorMsg).text("Device type definition cannot be updated");
+						$(errorMsg).text("设备类型定义无法更新。");
 						$(errorMsgWrapper).removeClass("hidden");
 					}
 		        }

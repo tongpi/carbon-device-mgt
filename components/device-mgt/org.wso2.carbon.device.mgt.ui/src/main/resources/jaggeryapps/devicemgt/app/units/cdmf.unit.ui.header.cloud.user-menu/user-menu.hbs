@@ -122,7 +122,7 @@
 </ul>
 
 <div class="cloud-menu-content hide">
-    <div id="popover-head" class="hide">Navigate to Cloud</div>
+    <div id="popover-head" class="hide">导航到云服务器</div>
     <div id="popover-content" class="hide">
         <div class="cloud-apps">
             {{#each Expand.Clouds}}
@@ -136,7 +136,7 @@
             <div class="clearfix"></div>
         </div>
         <div class="cloud-actions">
-            <h3>Manage your cloud</h3>
+            <h3>管理你的云服务</h3>
             {{#each Expand.Actions}}
                 {{#if this.dropDown}}
                     <a href="{{this.url}}" target="{{this.target}}" class="cloud-block-invert add-padding-top-3x">
@@ -157,7 +157,7 @@
        		<span class="fw-stack">
        	    <i class="fw fw-circle-outline fw-stack-2x"></i>
        		    <i class="fw fw-alert fw-stack-1x"></i>
-       		</span> Trial Expired
+       		</span> 试用期已满
        	    </span>
             </h3>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i
@@ -167,15 +167,15 @@
             <div id="notification-error-msg" class="alert alert-danger hidden" role="alert">
                 <i class="icon fw fw-error"></i><span></span>
             </div>
-            <div id="user-groups">Was it a successful trial? Your trial unfortunately expired, however it is really easy to upgrade to a paid plan and keep using WSO2 Device Cloud</div>
+            <div id="user-groups">这是一个成功的试验吗？ 您的试用版不幸已过期，但升级到付费计划并继续使用WSO2 设备云服务非常简单。</div>
         </div>
         <div class="modal-footer">
             <div class="buttons">
                 <a data-url="{{Main.Account.dropDown.[Upgrade Now].url}}" id="expire-upgrade-now-link" class="btn-operations">
-                    Upgrade Now
+                    	现在升级
                 </a>
                 <a data-url="{{Main.Account.dropDown.[Request Extension].url}}" id="expire-req-ext-link" class="btn-operations">
-                    Request Extension
+                    	请求扩展
                 </a>
             </div>
         </div>

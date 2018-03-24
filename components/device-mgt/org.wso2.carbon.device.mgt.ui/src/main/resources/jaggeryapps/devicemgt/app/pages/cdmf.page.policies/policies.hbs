@@ -36,7 +36,7 @@
     <li>
         <!--suppress HtmlUnknownTarget -->
         <a href="{{@app.context}}/policies">
-            Policies
+            	策略
         </a>
     </li>
 {{/zone}}
@@ -51,7 +51,7 @@
                         <i class="fw fw-add fw-stack-1x"></i>
                         <i class="fw fw-circle-outline fw-stack-2x"></i>
                     </span>
-                    Add New Policy
+                    	添加新策略
                 </a>
             </li>
         {{/equal}}
@@ -65,7 +65,7 @@
                         <i class="fw fw-throttling-policy fw-stack-1x"></i>
                         <i class="fw fw-circle-outline fw-stack-2x"></i>
                     </span>
-                    Policy Priority
+                    	策略优先级
                 </a>
             </li>
         {{/equal}}
@@ -76,7 +76,7 @@
                 <i class="fw fw-check fw-stack-1x"></i>
                 <i class="fw fw-circle-outline fw-stack-2x"></i>
             </span>
-            Apply Changes To Devices
+            	将更改应用于设备
         </a>
     </li>
 {{/zone}}
@@ -91,7 +91,7 @@
                 <h3 class="text-muted">
                     <i class="fw fw-policy fw-3x"></i>
                 </h3>
-                <h3 class="text-muted">You don't have any device policies. Let's add a new policy!</h3>
+                <h3 class="text-muted">您没有任何设备策略。 让我们添加一个新策略！</h3>
                 {{#if permissions.ADD_ADMIN_POLICY}}
                     <h3>
                         <!--suppress HtmlUnknownTarget -->
@@ -100,7 +100,7 @@
                                 <i class="fw fw-circle-outline fw-stack-2x"></i>
                                 <i class="fw fw-add fw-stack-1x"></i>
                             </span>
-                            Add New Policy
+                            	添加新策略
                         </a>
                     </h3>
                 {{/if}}
@@ -110,7 +110,7 @@
     {{#equal noPolicy false}}
         <div id="loading-content" class="col-centered">
             <i class="fw fw-settings fw-spin fw-2x"></i>
-            Loading policies . . .
+           	 加载策略中 . . .
             <br>
         </div>
         <table class="table table-striped table-hover list-table display responsive nowrap data-table grid-view hidden"
@@ -119,12 +119,12 @@
             <tr class="sort-row">
                 <th class="no-sort"></th>
                 <th class="no-sort"></th>
-                <th>By Platform</th>
-                <th>By Ownership Type</th>
-                <th>By Role</th>
-                <th>By User</th>
+                <th>平台</th>
+                <th>所有权类型</th>
+                <th>角色</th>
+                <th>用户</th>
                 <th>By Compliance Type</th>
-                <th>By Status</th>
+                <th>状态</th>
                 <th class="no-sort"></th>
             </tr>
             <tr class="filter-row filter-box">
@@ -160,7 +160,7 @@
                                             <i class="fw fw-circle-outline fw-stack-2x"></i>
                                             <i class="glyphicon glyphicon-floppy-saved"></i>
                                         </span>
-                                Publish
+                                	发布
                             </a>
                         </li>
                         <li class="square">
@@ -170,7 +170,7 @@
                                             <i class="fw fw-circle-outline fw-stack-2x"></i>
                                             <i class="glyphicon glyphicon-floppy-remove"></i>
                                         </span>
-                                Unpublish
+                                	取消发布
                             </a>
                         </li>
                     </ul>
@@ -263,12 +263,12 @@
     <div id="content-filter-types" style="display: none">
         <div class="sort-title">Sort By</div>
         <div class="sort-options">
-            <a href="#">By Platform<span class="ico-sort-asc"></span></a>
-            <a href="#">By Ownership Type</a>
-            <a href="#">By Role</a>
-            <a href="#">By User</a>
+            <a href="#">平台<span class="ico-sort-asc"></span></a>
+            <a href="#">所有权类型</a>
+            <a href="#">角色</a>
+            <a href="#">用户</a>
             <a href="#">By Compliance Type</a>
-            <a href="#">By Status</a>
+            <a href="#">状态</a>
         </div>
     </div>
 {{/zone}}

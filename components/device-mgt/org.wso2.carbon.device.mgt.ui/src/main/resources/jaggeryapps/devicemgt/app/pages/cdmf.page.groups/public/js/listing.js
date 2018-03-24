@@ -64,14 +64,14 @@ function selectAllDevices(button) {
             addGroupSelectedClass(this);
         });
         $(button).data('select', true);
-        $(button).html('Deselect All Groups');
+        $(button).html('取消选择所有组');
     } else {
         $(groupCheckbox).each(function (index) {
             $(this).prop('checked', false);
             addGroupSelectedClass(this);
         });
         $(button).data('select', false);
-        $(button).html('Select All Groups');
+        $(button).html('选择所有组');
     }
 }
 
@@ -128,7 +128,7 @@ function loadGroups() {
     } else {
         $("#loading-content").remove();
         $('#device-table').addClass('hidden');
-        $('#device-listing-status-msg').text('Permission denied.');
+        $('#device-listing-status-msg').text('无权限。');
         $("#device-listing-status").removeClass(' hidden');
         return;
     }
@@ -198,7 +198,7 @@ function loadGroups() {
                             'data-group-owner="' + row.owner
                             + '" data-placement="top" data-toggle="tooltip" data-original-title="Share"><span class="fw-stack"><i class="fw fw-circle-outline fw-stack-2x"></i><i class="fw fw-share fw-stack-1x"></i></span>'
                             +
-                            '<span class="hidden-xs hidden-on-grid-view">Share</span></a>';
+                            '<span class="hidden-xs hidden-on-grid-view">分享</span></a>';
                     }
                     if ($.hasPermission("UPDATE_GROUP")) {
                         html +=
@@ -207,7 +207,7 @@ function loadGroups() {
                             'data-group-owner="' + row.owner + '" data-group-description="' + row.description
                             + '" data-group-id="' + row.groupId
                             + '" data-placement="top" data-toggle="tooltip" data-original-title="Edit"><span class="fw-stack"><i class="fw fw-circle-outline fw-stack-2x"></i>' +
-                            '<i class="fw fw-edit fw-stack-1x"></i></span><span class="hidden-xs hidden-on-grid-view">Edit</span></a>';
+                            '<i class="fw fw-edit fw-stack-1x"></i></span><span class="hidden-xs hidden-on-grid-view">修改</span></a>';
                     }
                     if ($.hasPermission("REMOVE_GROUP")) {
                         html +=
@@ -216,7 +216,7 @@ function loadGroups() {
                             'data-group-owner="' + row.owner
                             + '" data-placement="top" data-toggle="tooltip" data-original-title="Delete"><span class="fw-stack"><i class="fw fw-circle-outline fw-stack-2x"></i><i class="fw fw-delete fw-stack-1x"></i>'
                             +
-                            '</span><span class="hidden-xs hidden-on-grid-view">Delete</span></a>';
+                            '</span><span class="hidden-xs hidden-on-grid-view">删除</span></a>';
                     }
                 }
                 return html;
@@ -266,7 +266,7 @@ function loadGroups() {
             thisTable.removeClass("table-selectable");
         },
         {
-            "placeholder": "Search By Group Name",
+            "placeholder": "按组名称搜索",
             "searchKey": "name"
         }
     );
@@ -411,8 +411,7 @@ function attachEvents() {
             } else {
                 var errorMsgWrapper = "#notification-error-msg";
                 var errorMsg = "#notification-error-msg span";
-                $(errorMsg).text("To create a new role with the combination of roles, at least two roles should be" +
-                    " selected.");
+                $(errorMsg).text("要使用角色组合创建新角色，至少应选择两个角色。");
                 $(errorMsgWrapper).removeClass("hidden");
             }
         });
@@ -540,7 +539,7 @@ function listAllRoles(groupId) {
                     $("#notification-error-msg").addClass("hidden");
                 });
             } else {
-                $("#rolesListing").html("No roles available");
+                $("#rolesListing").html("没有可用的角色");
             }
         } else {
             displayErrors(xhr);
@@ -562,7 +561,7 @@ function addNewRole(roles) {
         } else {
             var errorMsgWrapper = "#notification-error-msg";
             var errorMsg = "#notification-error-msg span";
-            $(errorMsg).text("Role name cannot be empty.");
+            $(errorMsg).text("角色名称不能为空。");
             $(errorMsgWrapper).removeClass("hidden");
         }
     });

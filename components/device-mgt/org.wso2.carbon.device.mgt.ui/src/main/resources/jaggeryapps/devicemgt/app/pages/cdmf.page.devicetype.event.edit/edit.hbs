@@ -30,13 +30,13 @@
     <li>
         <!--suppress HtmlUnknownTarget -->
         <a href="{{@app.context}}/device-types">
-            Device Types
+            	设备类型
         </a>
     </li>
     <li>
         <!--suppress HtmlUnknownTarget -->
         <a href="{{@app.context}}/device-type/edit-event?type={{name}}">
-            Event
+            	项目
         </a>
     </li>
 {{/zone}}
@@ -60,7 +60,7 @@
                             <input aria-describedby="basic-addon1" type="text" id="deviceTypeName"
                                    data-error-msg="invalid device type name" class="form-control hidden-input" value="{{name}}"/>
 
-                            <label class="wr-input-label">Transport</label>
+                            <label class="wr-input-label">传输协议</label>
                             <div class="wr-input-control">
                                 <!--suppress HtmlFormInputWithoutLabel -->
                                 <select id="transport" class="form-control select">
@@ -76,7 +76,7 @@
                             </div>
 
                             <label class="wr-input-label">
-                                Event Attributes (eg: alarm_status, temperature)
+                                	项目属性 (eg: alarm_status, temperature)
                             </label>
                             <br>
                             <div class="form-group event_field_wrapper">
@@ -124,9 +124,9 @@
 
                         <br>
                         {{#if event}}
-                            <button id="add-event-btn" class="wr-btn">Update</button>
+                            <button id="add-event-btn" class="wr-btn">修改</button>
                         {{else}}
-                            <button id="add-event-btn" class="wr-btn">Add</button>
+                            <button id="add-event-btn" class="wr-btn">添加</button>
                         {{/if}}
 
                         <div id="devicetype-create-success-msg" class="alert hidden" role="alert">
@@ -136,11 +136,11 @@
                 </div>
                 <div id="devicetype-created-msg" class="container col-centered wr-content hidden">
                     <div class="wr-form">
-                        <p class="page-sub-title">Device Type Event was added successfully.</p>
-                        <b>"View Device Type List"</b> to complete the process and go back to the devie type list.
+                        <p class="page-sub-title">设备类型项目添加成功。</p>
+                        <b>"查看设备类型列表"</b>完成该过程并返回到设备类型列表。
                         <hr/>
                         <button class="wr-btn" onclick="window.location.href='{{@app.context}}/device-types'">
-                            View Device Type List
+                            	查看设备类型列表
                         </button>
                     </div>
                 </div>
@@ -154,11 +154,11 @@
                     <div class="modal-content clearfix">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fw fw-cancel"></i></button>
-                            <h3 class="modal-title" id="deviceModalLabel">Successfully Deployed Event Definition</h3>
+                            <h3 class="modal-title" id="deviceModalLabel">定义项目部署成功。</h3>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" onclick="location.href='{{@app.context}}/device/enroll'">Go To Enrolment Page</button>
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary" onclick="location.href='{{@app.context}}/device/enroll'">返回登记页面</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                         </div>
                     </div>
                 </div>
@@ -166,10 +166,10 @@
 
     {{else}}
         <h1 class="page-sub-title">
-            Permission Denied
+            	无权限
         </h1>
         <br>
-        You not authorized to edit device type.
+        	您无权修改设备类型。
         <br>
     {{/if}}
 {{/zone}}

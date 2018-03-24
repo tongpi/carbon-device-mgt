@@ -30,13 +30,13 @@
     <li>
         <!--suppress HtmlUnknownTarget -->
         <a href="{{@app.context}}/device-types">
-            Device Types
+            	设备类型
         </a>
     </li>
     <li>
         <!--suppress HtmlUnknownTarget -->
         <a href="{{@app.context}}/device-type/edit?type={{name}}">
-            Edit
+            	修改
         </a>
     </li>
 {{/zone}}
@@ -62,26 +62,26 @@
 
                             <div class="wr-input-control">
                                 <label class="wr-input-label">
-                                Description *
+                                	描述 *
                                 </label>
                                 <br>
                                 <textarea aria-describedby="basic-addon1" type="text" id="deviceTypeDescription"
-                                          data-error-msg="invalid device type description"
+                                          data-error-msg="无效的设备类型描述"
                                           class="form-control" rows="3" cols="70">{{type.deviceTypeMetaDefinition.description}}</textarea>
                             </div>
                             
                             <div class="wr-input-control">
-                                <label class="wr-input-label">Push Notification Transport</label>
+                                <label class="wr-input-label">推送通知传输</label>
                                 <div class="wr-input-control">
                                     <!--suppress HtmlFormInputWithoutLabel -->
                                     <select id="pushNotification" class="form-control select">
                                         {{#if type.deviceTypeMetaDefinition.pushNotificationConfig}}
-                                            <option>NONE</option>
+                                            <option>无</option>
                                             {{#if_eq type.deviceTypeMetaDefinition.pushNotificationConfig.type "MQTT"}}
                                                 <option selected>MQTT</option>
                                             {{/if_eq}}
                                         {{else}}
-                                            <option selected>NONE</option>
+                                            <option selected>无</option>
                                             <option>MQTT</option>
                                         {{/if}}
                                     </select>
@@ -89,7 +89,7 @@
                             </div>
 
                             <label class="wr-input-label">
-                                Features
+                                	特点
                             </label>
                             <br>
                             <div class="form-group feature_field_wrapper">
@@ -105,7 +105,7 @@
                                             </div>
                                             <div class="col-xs-4">
                                             <textarea aria-describedby="basic-addon1" type="text" id="feature-description"
-                                                      placeholder="description" data-error-msg="invalid feature description" class="form-control" rows="1" cols="30">{{this.description}}</textarea>
+                                                      placeholder="description" data-error-msg="无效的特点描述" class="form-control" rows="1" cols="30">{{this.description}}</textarea>
                                             </div>
                                             <button type="button" class="wr-btn wr-btn-horizontal remove_feature_button"><i class="fa fa-minus"></i></button>
                                         </div>
@@ -123,7 +123,7 @@
                                         <div class="col-xs-4">
                                             <textarea aria-describedby="basic-addon1" type="text" id="feature-description"
                                                       placeholder="description"
-                                                      data-error-msg="invalid feature description"
+                                                      data-error-msg="无效的特点描述"
                                                       class="form-control" rows="1" cols="30"></textarea>
                                         </div>
                                         <button type="button" class="wr-btn wr-btn-horizontal add_feature_button"><i class="fa fa-plus"></i></button>
@@ -133,7 +133,7 @@
 
                             <br>
                             <label class="wr-input-label">
-                                Attributes
+                                	属性
                             </label>
                             <br>
                             <div class="form-group attribute_field_wrapper">
@@ -213,15 +213,14 @@
 
                             <span class="roleNameError hidden glyphicon glyphicon-remove form-control-feedback"></span>
                             <label class="error roleNameEmpty hidden" for="summary">
-                                Device Type Name is required, should be in minimum 3 characters long and not include any
-                                whitespaces or "@" character or "/" character.
+                                	设备类型名称必填，至少为3个字符，并且不包含空格或"@"或"/"。
                             </label>
 
                         </div>
 
                         </div>
                         <br>
-                        <button id="add-devicetype-btn" class="wr-btn">Update</button>
+                        <button id="add-devicetype-btn" class="wr-btn">修改</button>
                         <div id="devicetype-create-success-msg" class="alert hidden" role="alert">
                             <i class="icon fw fw-success"></i><span></span>
                         </div>
@@ -229,11 +228,11 @@
                 </div>
                 <div id="devicetype-created-msg" class="container col-centered wr-content hidden">
                     <div class="wr-form">
-                        <p class="page-sub-title">Devicetype was added successfully.</p>
-                        <b>"View Device Type List"</b> to complete the process and go back to the devie type list.
+                        <p class="page-sub-title">设备类型添加成功。</p>
+                        <b>"查看设备类型列表"</b> 完成过程并且返回设备类型列表页面。
                         <hr/>
                         <button class="wr-btn" onclick="window.location.href='{{@app.context}}/device-types'">
-                            View Device Type List
+                            	查看设备类型列表
                         </button>
                     </div>
                 </div>
@@ -242,11 +241,11 @@
                         <div class="modal-content clearfix">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fw fw-cancel"></i></button>
-                                <h3 class="modal-title" id="deviceModalLabel">Device Type Definition Updated</h3>
+                                <h3 class="modal-title" id="deviceModalLabel">设备类型定义已更新</h3>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" onclick="location.href='{{@app.context}}/device/enroll'">Go To Enrolment Page</button>
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary" onclick="location.href='{{@app.context}}/device/enroll'">返回登记页面</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                             </div>
                         </div>
                     </div>
@@ -258,10 +257,10 @@
         <!-- /content/body -->
     {{else}}
         <h1 class="page-sub-title">
-            Permission Denied
+            	无权限
         </h1>
         <br>
-        You not authorized to edit device type.
+        	您无权修改设备类型。
         <br>
     {{/if}}
 {{/zone}}

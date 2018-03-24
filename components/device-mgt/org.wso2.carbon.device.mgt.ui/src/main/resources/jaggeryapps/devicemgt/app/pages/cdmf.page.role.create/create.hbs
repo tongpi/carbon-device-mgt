@@ -26,13 +26,13 @@
     <li>
         <!--suppress HtmlUnknownTarget -->
         <a href="{{@app.context}}/roles">
-            Roles
+            	角色
         </a>
     </li>
     <li>
         <!--suppress HtmlUnknownTarget -->
         <a href="{{@app.context}}/role/add">
-            Add
+            	添加
         </a>
     </li>
 {{/zone}}
@@ -46,7 +46,7 @@
                 <div id="role-create-form" data-cloud={{isCloud}} class="container col-centered wr-content
                 ">
                 <div class="wr-form">
-                    <p class="page-sub-title">Add Role</p>
+                    <p class="page-sub-title">添加角色</p>
                     <hr/>
                     <div class="row">
                         <div class="col-lg-8">
@@ -54,13 +54,13 @@
                                 <div class="col-md-6 col-xs-6">
                                     <div class="itm-wiz itm-wiz-current" data-step="policy-platform">
                                         <div class="wiz-no">1</div>
-                                        <div class="wiz-lbl hidden-xs"><span>Add a role</span></div>
+                                        <div class="wiz-lbl hidden-xs"><span>添加角色</span></div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-xs-6">
                                     <div class="itm-wiz" data-step="policy-profile">
                                         <div class="wiz-no">2</div>
-                                        <div class="wiz-lbl hidden-xs"><span>Assign permissions</span></div>
+                                        <div class="wiz-lbl hidden-xs"><span>分配权限</span></div>
                                     </div>
                                 </div>
                                 <br class="c-both"/>
@@ -82,7 +82,7 @@
                             </div>
 
                             <label class="wr-input-label">
-                                Role Name *
+                                	角色名称 *
                             </label>
                             <br>
                             <label class="wr-input-label">
@@ -91,7 +91,7 @@
                             {{#if isCloud}}
                             <div id="roleNameField" class="form-group wr-input-control input-group">
                                 <!--suppress HtmlFormInputWithoutLabel -->
-                                <span class="input-group-addon" id="basic-addon1">devicemgt</span>
+                                <span class="input-group-addon" id="basic-addon1">设备管理</span>
                                 <input aria-describedby="basic-addon1" type="text" id="roleName"
                                        data-regex="{{roleNameJSRegEx}}"
                                        data-error-msg="{{roleNameRegExViolationErrorMsg}}" class="form-control"/>
@@ -109,7 +109,7 @@
                         </div>
                             {{#if canViewUsers}}
                                 <label class="wr-input-label">
-                                    User list
+                                    	用户列表
                                 </label>
 
                                 <div class="wr-input-control">
@@ -120,17 +120,16 @@
                         </div>
                         </div>
                         <br>
-                        <button id="add-role-btn" class="wr-btn">Add Role</button>
+                        <button id="add-role-btn" class="wr-btn">添加角色</button>
                     </div>
                 </div>
                 <div id="role-created-msg" class="container col-centered wr-content hidden">
                     <div class="wr-form">
-                        <p class="page-sub-title">Role was added successfully.</p>
-                        <br>Please click <b>"Add Another Role"</b>, if you wish to add another role or click
-                        <b>"View Role List"</b> to complete the process and go back to the role list.
+                        <p class="page-sub-title">添加角色成功。</p>
+                        <br>如果你想要继续添加角色，请点击 <b>"继续添加角色"</b>,点击<b>"查看角色列表"</b>完成过程和回到角色列表。
                         <hr/>
                         <button class="wr-btn" onclick="window.location.href='{{@app.context}}/roles'">
-                            View Role List
+                            	查看角色列表
                         </button>
                         <!--suppress HtmlUnknownTarget -->
                         <a href="{{@app.context}}/role/add" class="cu-btn-inner">
@@ -138,7 +137,7 @@
                             <i class="fw fw-circle-outline fw-stack-2x"></i>
                             <i class="fw fw-add fw-stack-1x"></i>
                         </span>
-                            Add Another Role
+                            	继续添加角色
                         </a>
                     </div>
                 </div>
@@ -149,10 +148,10 @@
         <!-- /content/body -->
     {{else}}
         <h1 class="page-sub-title">
-            Permission Denied
+            	无权限
         </h1>
         <br>
-        You not authorized to enter Role Management Section.
+        	您无权进入角色管理部分。
         <br>
     {{/if}}
 {{/zone}}

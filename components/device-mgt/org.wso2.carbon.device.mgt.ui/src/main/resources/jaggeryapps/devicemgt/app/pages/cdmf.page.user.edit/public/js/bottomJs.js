@@ -200,28 +200,28 @@ $(document).ready(function () {
         var errorMsgWrapper = "#user-create-error-msg";
         var errorMsg = "#user-create-error-msg span";
         if (!username) {
-            $(errorMsg).text("Username is a required field. It cannot be empty.");
+            $(errorMsg).text("用户名必填，不能为空。");
             $(errorMsgWrapper).removeClass("hidden");
         } else if (!inputIsValid(usernameInput.data("regex"), username)) {
             $(errorMsg).text(usernameInput.data("errormsg"));
             $(errorMsgWrapper).removeClass("hidden");
         } else if (!firstname) {
-            $(errorMsg).text("Firstname is a required field. It cannot be empty.");
+            $(errorMsg).text("名字必填，不能为空。");
             $(errorMsgWrapper).removeClass("hidden");
         } else if (!inputIsValid(firstnameInput.data("regex"), firstname)) {
             $(errorMsg).text(firstnameInput.data("errormsg"));
             $(errorMsgWrapper).removeClass("hidden");
         } else if (!lastname) {
-            $(errorMsg).text("Lastname is a required field. It cannot be empty.");
+            $(errorMsg).text("姓氏必填，不能为空。");
             $(errorMsgWrapper).removeClass("hidden");
         } else if (!inputIsValid(lastnameInput.data("regex"), lastname)) {
             $(errorMsg).text(lastnameInput.data("errormsg"));
             $(errorMsgWrapper).removeClass("hidden");
         } else if (!emailAddress) {
-            $(errorMsg).text("Email is a required field. It cannot be empty.");
+            $(errorMsg).text("邮箱必填，不能为空。");
             $(errorMsgWrapper).removeClass("hidden");
         } else if (!emailIsValid(emailAddress)) {
-            $(errorMsg).text("Provided email is invalid.");
+            $(errorMsg).text("邮箱无效。");
             $(errorMsgWrapper).removeClass("hidden");
         } else {
             var addUserFormData = {};

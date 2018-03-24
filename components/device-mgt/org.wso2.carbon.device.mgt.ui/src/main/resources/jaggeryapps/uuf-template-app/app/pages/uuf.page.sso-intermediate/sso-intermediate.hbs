@@ -24,8 +24,7 @@
 {{#zone "content"}}
     <div class="jumbotron">
         <p>
-            You are now being redirected to Identity Server. If the redirection fails, please click
-            on the button below.
+           	您现在正被重定向到身份服务器。如果重定向失败，请单击下面的按钮。
         </p>
 
         <div>
@@ -34,7 +33,7 @@
                        value="{{@page.params.encodedSAMLAuthRequest}}" />
                 <input type="hidden" name="RelayState" value="{{@page.params.relayState}}" />
                 <input type="hidden" name="SSOAuthSessionID" value="{{@page.params.sessionId}}" />
-                <button type="submit" class="btn btn-primary">Redirect manually</button>
+                <button type="submit" class="btn btn-primary">手动重定向</button>
             </form>
         </div>
     </div>

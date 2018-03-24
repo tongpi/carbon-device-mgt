@@ -42,7 +42,7 @@ function onRequest(context) {
         page["policyListToView"] = policyListToView;
         var policyCount = policyListToView.length;
         if (policyCount == 0) {
-            page["policyListingStatusMsg"] = "No policy is available to be displayed.";
+            page["policyListingStatusMsg"] = "没有可用的策略显示。";
             page["noPolicy"] = true;
         } else {
             page["noPolicy"] = false;
@@ -50,7 +50,7 @@ function onRequest(context) {
         }
     } else {
         // here, response["status"] == "error"
-        page["policyListingStatusMsg"] = "An unexpected error occurred. Please try again later.";
+        page["policyListingStatusMsg"] = "出现异常错误。请稍后再试。";
         page["noPolicy"] = true;
     }
 

@@ -133,10 +133,9 @@ $(document).ready(function () {
                         var parentInput = $(this).parents("ul:eq(1) > li").find('input:eq(0)');
                         if(parentInput && parentInput.is(':checked')){
                             modalDialog.header('');
-                            modalDialog.content('Can\'t deselect child permissions when parent permission is ' +
-                                'selected.');
+                            modalDialog.content('选择父权限后，无法取消选择子权限。');
                             modalDialog.footer('<div class="buttons"><a href="#" id="child-deselect-error-link" ' +
-                                'class="btn-operations">Ok</a></div>');
+                                'class="btn-operations">好的</a></div>');
                             modalDialog.showAsAWarning();
                             $("a#child-deselect-error-link").click(function () {
                                 modalDialog.hide();

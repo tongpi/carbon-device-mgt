@@ -63,8 +63,7 @@ function loadNotifications() {
                             $('#unread-notifications_wrapper').find('.dataTablesTop' +
                                 ' .dataTables_toolbar').html(
                                 "<a\ class=\"btn btn-primary\"" +
-                                " data-click-event=\"clear-notification\">Clear All" +
-                                " Notifications</a>"
+                                " data-click-event=\"clear-notification\">清除所有通知</a>"
                             );
                         }
                     }
@@ -150,9 +149,9 @@ $(document).ready(function () {
             // on error
             function (jqXHR) {
                 if (jqXHR.status == 403) {
-                    $(errorMsg).text("Action was not permitted.");
+                    $(errorMsg).text("操作不允许。");
                 } else if (jqXHR.status == 500) {
-                    $(errorMsg).text("An unexpected error occurred. Please try refreshing the page in a while.");
+                    $(errorMsg).text("发生异常错误，稍后请尝试刷新页面。");
                 }
                 $(errorMsgWrapper).removeClass("hidden");
             }
@@ -182,12 +181,10 @@ $(document).ready(function () {
                     $("#notification-bubble").html(0);
                     var undreadNotifications = $("#unread-notifications");
                     undreadNotifications.find("tbody").empty();
-                    undreadNotifications.find("tbody").append("<tr><td colspan=''>No data" +
-                        " available in table</td></tr>");
+                    undreadNotifications.find("tbody").append("<tr><td colspan=''>暂无可用数据</td></tr>");
                 }, function () {
-                    var content = "<li class='message message-danger'><h4><i class='icon fw fw-error'></i>Warning</h4>" +
-                        "<p>Unexpected error occurred while loading notification. Please refresh the page and" +
-                        " try again</p></li>";
+                    var content = "<li class='message message-danger'><h4><i class='icon fw fw-error'></i>警告</h4>" +
+                        "<p>加载通知时发生异常错误，请刷新页面再次尝试。</p></li>";
                     $(messageSideBar).html(content);
                 }
             );

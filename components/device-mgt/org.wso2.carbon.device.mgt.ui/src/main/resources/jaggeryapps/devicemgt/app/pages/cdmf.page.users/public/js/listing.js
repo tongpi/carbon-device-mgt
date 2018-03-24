@@ -61,17 +61,16 @@ $("a#invite-user-link").click(function () {
     var inviteUserAPI = apiBasePath + "/users/send-invitation";
 
     if (usernameList.length == 0) {
-        modalDialog.header("Operation cannot be performed !");
-        modalDialog.content("Please select a user or a list of users to send invitation emails.");
-        modalDialog.footer('<div class="buttons"> <a href="javascript:modalDialog.hide()" class="btn-operations">Ok' +
+        modalDialog.header("无法执行操作 !");
+        modalDialog.content("请选择一个或多个用户发送邀请电子邮件。");
+        modalDialog.footer('<div class="buttons"> <a href="javascript:modalDialog.hide()" class="btn-operations">好的' +
             '</a> </div>');
         modalDialog.showAsError();
     } else {
         modalDialog.header("");
-        modalDialog.content("An invitation mail will be sent to the selected user(s) to initiate an enrolment " +
-            "process. Do you wish to continue ?");
-        modalDialog.footer('<div class="buttons"><a href="#" id="invite-user-yes-link" class="btn-operations">yes</a>' +
-            '<a href="#" id="invite-user-cancel-link" class="btn-operations btn-default">No</a></div>');
+        modalDialog.content("邀请邮件将发送给选定的用户以开始注册过程。 您想继续吗 ?");
+        modalDialog.footer('<div class="buttons"><a href="#" id="invite-user-yes-link" class="btn-operations">是的</a>' +
+            '<a href="#" id="invite-user-cancel-link" class="btn-operations btn-default">不了</a></div>');
         modalDialog.show();
 
     }
@@ -81,10 +80,10 @@ $("a#invite-user-link").click(function () {
             inviteUserAPI,
             usernameList,
             function () {
-                modalDialog.header("User invitation email for enrollment was successfully sent.");
+                modalDialog.header("用于注册的邀请用户电子邮件已成功发送。");
                 modalDialog.content("");
                 modalDialog.footer('<div class="buttons"><a href="#" id="invite-user-success-link" ' +
-                    'class="btn-operations">Ok </a></div>');
+                    'class="btn-operations">好的 </a></div>');
                 $("a#invite-user-success-link").click(function () {
                     modalDialog.hide();
                 });
@@ -92,10 +91,10 @@ $("a#invite-user-link").click(function () {
             function (data) {
                 var msg = JSON.parse(data.responseText);
                 modalDialog.header('<span class="fw-stack"> <i class="fw fw-circle-outline fw-stack-2x"></i> <i class="fw ' +
-                    'fw-error fw-stack-1x"></i> </span> Unexpected Error !');
+                    'fw-error fw-stack-1x"></i> </span> 异常错误 !');
                 modalDialog.content(msg.message);
                 modalDialog.footer('<div class="buttons"><a href="#" id="invite-user-error-link" ' +
-                    'class="btn-operations">Ok </a></div>');
+                    'class="btn-operations">好的 </a></div>');
                 $("a#invite-user-error-link").click(function () {
                     modalDialog.hide();
                 });
@@ -127,10 +126,10 @@ function getSelectedUsernames() {
  */
 function resetPassword(username) {
     modalDialog.header('<span class="fw-stack"> <i class="fw fw-circle-outline fw-stack-2x"></i> <i class="fw fw-key ' +
-        'fw-stack-1x"></i> </span> Reset Password');
+        'fw-stack-1x"></i> </span> 重置密码');
     modalDialog.content($("#modal-content-reset-password").html());
-    modalDialog.footer('<div class="buttons"> <a href="#" id="reset-password-yes-link" class="btn-operations"> Save ' +
-        '</a> <a href="#" id="reset-password-cancel-link" class="btn-operations btn-default"> Cancel </a> </div>');
+    modalDialog.footer('<div class="buttons"> <a href="#" id="reset-password-yes-link" class="btn-operations"> 保存 ' +
+        '</a> <a href="#" id="reset-password-cancel-link" class="btn-operations btn-default"> 取消 </a> </div>');
     modalDialog.show();
 
     $("a#reset-password-yes-link").click(function () {
@@ -139,16 +138,16 @@ function resetPassword(username) {
         var errorMsgWrapper = ".modal #notification-error-msg";
         var errorMsg = ".modal #notification-error-msg span";
         if (!newPassword) {
-            $(errorMsg).text("New password is a required field. It cannot be empty.");
+            $(errorMsg).text("新密码不能为空。");
             $(errorMsgWrapper).removeClass("hidden");
         } else if (!confirmedPassword) {
-            $(errorMsg).text("Retyping the new password is required.");
+            $(errorMsg).text("重新输入新密码。");
             $(errorMsgWrapper).removeClass("hidden");
         } else if (confirmedPassword != newPassword) {
-            $(errorMsg).text("New password doesn't match the confirmation.");
+            $(errorMsg).text("新密码不匹配请确认。");
             $(errorMsgWrapper).removeClass("hidden");
         } else if (!inputIsValid(/^[\S]{5,30}$/, confirmedPassword)) {
-            $(errorMsg).text("Password should be minimum 5 characters long, should not include any whitespaces.");
+            $(errorMsg).text("至少为5个字符，并且不包含空格。");
             $(errorMsgWrapper).removeClass("hidden");
         } else {
             var resetPasswordFormData = {};
@@ -168,10 +167,10 @@ function resetPassword(username) {
                 // The success callback
                 function (data, textStatus, jqXHR) {
                     if (jqXHR.status == 200) {
-                        modalDialog.header("Password reset is successful.");
+                        modalDialog.header("密码重置成功。");
                         modalDialog.content("");
                         modalDialog.footer('<div class="buttons"> <a href="javascript:modalDialog.hide()" ' +
-                            'class="btn-operations">Ok</a> </div>');
+                            'class="btn-operations">好的</a> </div>');
                     }
                 },
                 // The error callback
@@ -204,10 +203,10 @@ function removeUser(username) {
     if (domain) {
         removeUserAPI += '?domain=' + encodeURIComponent(domain);
     }
-    modalDialog.header("Remove User");
-    modalDialog.content("Do you really want to remove this user ?");
-    modalDialog.footer('<div class="buttons"> <a href="#" id="remove-user-yes-link" class="btn-operations">Remove</a> ' +
-        '<a href="#" id="remove-user-cancel-link" class="btn-operations btn-default">Cancel</a> </div>');
+    modalDialog.header("删除用户");
+    modalDialog.content("您真的要删除该用户吗 ?");
+    modalDialog.footer('<div class="buttons"> <a href="#" id="remove-user-yes-link" class="btn-operations">删除</a> ' +
+        '<a href="#" id="remove-user-cancel-link" class="btn-operations btn-default">取消</a> </div>');
     modalDialog.showAsAWarning();
 
     $("a#remove-user-cancel-link").click(function () {
@@ -224,19 +223,19 @@ function removeUser(username) {
                     }
                     $('[id="user-' + username + '"]').remove();
                     // update modal-content with success message
-                    modalDialog.header("User Removed.");
-                    modalDialog.content("Done. User was successfully removed.");
+                    modalDialog.header("用户已删除。");
+                    modalDialog.content("用户成功被删除。");
                     modalDialog.footer('<div class="buttons"> <a href="javascript:modalDialog.hide()" ' +
-                        'class="btn-operations">Ok</a> </div>');
+                        'class="btn-operations">好的</a> </div>');
 
                 }
             },
             function () {
                 modalDialog.hide();
-                modalDialog.header("Operation cannot be performed !");
-                modalDialog.content("An unexpected error occurred. Please try again later.");
+                modalDialog.header("无法执行操作 !");
+                modalDialog.content("一个异常问题发生。 请稍后再试。");
                 modalDialog.footer('<div class="buttons"> <a href="javascript:modalDialog.hide()" ' +
-                    'class="btn-operations">Ok</a> </div>');
+                    'class="btn-operations">好的</a> </div>');
                 modalDialog.showAsError();
             }
         );
@@ -253,9 +252,9 @@ function InitiateViewOption() {
     if ($("#can-view").val()) {
         $(location).attr('href', $(this).data("url"));
     } else {
-        modalDialog.header("Unauthorized action!");
-        modalDialog.content("You don't have permissions to view users");
-        modalDialog.footer('<div class="buttons"> <a href="javascript:modalDialog.hide()" class="btn-operations">Ok</a> </div>');
+        modalDialog.header("未经授权的操作!");
+        modalDialog.content("您无权查看用户");
+        modalDialog.footer('<div class="buttons"> <a href="javascript:modalDialog.hide()" class="btn-operations">好的</a> </div>');
         modalDialog.showAsError();
     }
 }
@@ -352,7 +351,7 @@ function loadUsers() {
                     '<span class="fw-stack"> ' +
                     '<i class="fw fw-circle-outline fw-stack-2x"></i>' +
                     '<i class="fw fw-edit fw-stack-1x"></i>' +
-                    '</span><span class="hidden-xs hidden-on-grid-view">Edit</span></a>';
+                    '</span><span class="hidden-xs hidden-on-grid-view">修改</span></a>';
 
                 var resetPasswordbtn = '<a data-toggle="tooltip" data-placement="top" title="Reset Password" href="#" data-username="' + data.filter + '" data-userid="' + data.filter + '" ' +
                     'data-click-event="edit-form" ' +
@@ -361,7 +360,7 @@ function loadUsers() {
                     '<span class="fw-stack">' +
                     '<i class="fw fw-circle-outline fw-stack-2x"></i>' +
                     '<i class="fw fw-key fw-stack-1x"></i>' +
-                    '</span><span class="hidden-xs hidden-on-grid-view">Reset Password</span></a>';
+                    '</span><span class="hidden-xs hidden-on-grid-view">重置密码</span></a>';
 
                 var removebtn = '<a data-toggle="tooltip" data-placement="top" title="Remove User" href="#" data-username="' + data.filter + '" data-userid="' + data.filter + '" ' +
                     'data-click-event="remove-form" ' +
@@ -370,7 +369,7 @@ function loadUsers() {
                     '<span class="fw-stack">' +
                     '<i class="fw fw-circle-outline fw-stack-2x"></i>' +
                     '<i class="fw fw-delete fw-stack-1x"></i>' +
-                    '</span><span class="hidden-xs hidden-on-grid-view">Remove</span></a>';
+                    '</span><span class="hidden-xs hidden-on-grid-view">删除</span></a>';
 
                 var returnbtnSet = '';
                 var adminUser = $("#user-table").data("user");
@@ -392,7 +391,7 @@ function loadUsers() {
     ];
 
     var options = {
-        "placeholder": "Search By Username",
+        "placeholder": "按用户名搜索",
         "searchKey": "filter"
     };
 

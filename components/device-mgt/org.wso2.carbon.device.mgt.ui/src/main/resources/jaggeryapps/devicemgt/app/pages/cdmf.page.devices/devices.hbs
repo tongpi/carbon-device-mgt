@@ -29,7 +29,7 @@
     {{#if group}}
         <li>
             <a href="{{@app.context}}/groups">
-                Groups
+                	组
             </a>
         </li>
         <li>
@@ -40,7 +40,7 @@
     {{else}}
         <li>
             <a href="{{@app.context}}/devices">
-                Devices
+                	设备
             </a>
         </li>
     {{/if}}
@@ -54,7 +54,7 @@
                 <i class="fw fw-add fw-stack-1x"></i>
                 <i class="fw fw-circle-outline fw-stack-2x"></i>
             </span>
-                Assign from My Devices
+                	从我的设备分配
             </a>
         </li>
         <!--<li>
@@ -74,7 +74,7 @@
                 <i class="fw fw-add fw-stack-1x"></i>
                 <i class="fw fw-circle-outline fw-stack-2x"></i>
             </span>
-                    Enroll Device
+                    	登记设备
                 </a>
             </li>
         {{/if}}
@@ -84,7 +84,7 @@
 {{#zone "content"}}
     {{#if group}}
         <h1 class="page-sub-title">
-            {{group.name}} group
+            {{group.name}} 组
         </h1>
         <div class="row no-gutter add-padding-5x add-margin-top-5x" style="border: 1px solid #e4e4e4;">
             <div class="media">
@@ -97,16 +97,16 @@
                     </div>
                     <div class="media-body asset-desc add-padding-left-5x">
                         <div style="background: #11375B; color: #fff; padding: 10px; margin-bottom: 5px">
-                            Overview
+                            	概观
                         </div>
                         <table class="table table-responsive table-striped" id="members" style="margin-bottom: 0px;">
                             <tbody>
                             <tr role="row" class="even">
-                                <td class="sorting_1" style="padding:10px 15px; width: 15%;">Owner</td>
+                                <td class="sorting_1" style="padding:10px 15px; width: 15%;">所有者</td>
                                 <td id="group_owner" style="padding:10px 15px;">{{group.owner}}</td>
                             </tr>
                             <tr role="row" class="odd">
-                                <td class="sorting_1" style="padding:10px 15px; width: 15%;">Shared with roles</td>
+                                <td class="sorting_1" style="padding:10px 15px; width: 15%;">共享的角色</td>
                                 <td style="padding:10px 15px;">
                                     {{#each roles}}
                                         {{this}}<br/>
@@ -114,11 +114,11 @@
                                 </td>
                             </tr>
                             <tr role="row" class="even">
-                                <td class="sorting_1" style="padding:10px 15px;width: 15%;">Device Count</td>
+                                <td class="sorting_1" style="padding:10px 15px;width: 15%;">设备数量</td>
                                 <td style="padding:10px 15px;">{{deviceCount}}</td>
                             </tr>
                             <tr role="row" class="odd">
-                                <td class="sorting_1" style="padding:10px 15px;width: 15%;">Description</td>
+                                <td class="sorting_1" style="padding:10px 15px;width: 15%;">描述</td>
                                 <td style="padding:10px 15px;">{{group.description}}</td>
                             </tr>
                             </tbody>
@@ -129,7 +129,7 @@
         </div>
         <br/>
         <h1 class="page-sub-title add-margin-top-5x">
-            Devices in {{group.name}} group
+           	设备在 {{group.name}} 组
         </h1>
     {{/if}}
     <div class="wr-device-list row">
@@ -141,7 +141,7 @@
                 {{#if deviceCount}}
                     <div id="loading-content" class="col-centered">
                         <i class="fw fw-wso2-logo fw-pulse fw-2x"></i>
-                        Loading devices . . .
+                        	加载设备中 . . .
                         <br>
                     </div>
                     <div id="device-listing-status" class="raw hidden">
@@ -160,11 +160,11 @@
                             <thead>
                             <tr class="sort-row">
                                 <th class="no-sort"></th>
-                                <th>By Device Name</th>
-                                <th>By Owner</th>
-                                <th>By Status</th>
-                                <th>By Platform</th>
-                                <th>By Ownership</th>
+                                <th>设备名称</th>
+                                <th>所有者</th>
+                                <th>状态</th>
+                                <th>平台</th>
+                                <th>所有权</th>
                                 <th class="no-sort"></th>
                             </tr>
                             <tr class="filter-row filter-box">
@@ -189,7 +189,7 @@
                                                         <i class="fw fw-circle-outline fw-stack-2x"></i>
                                                             <i class="fw fw-group fw-stack-1x"></i>
                                                     </span>
-                                                    Add to Group
+                                                    	添加到组
                                                 </a>
                                             </li>
                                         {{/unless}}
@@ -203,9 +203,9 @@
                                                     <i class="fw fw-delete fw-stack-1x"></i>
                                                 </span>
                                                 {{#if group}}
-                                                    Remove from group
+                                                    	从组中移除
                                                 {{else}}
-                                                    Remove Device
+                                                    	移除设备
                                                 {{/if}}
                                             </a>
                                         </li>
@@ -221,13 +221,13 @@
                     </div>
                     <br class="c-both"/>
                     <div id="content-filter-types" style="display: none">
-                        <div class="sort-title">Sort By</div>
+                        <div class="sort-title">排序</div>
                         <div class="sort-options">
-                            <a href="#">By Device Name<span class="ico-sort-asc"></span></a>
-                            <a href="#">By Owner</a>
-                            <a href="#">By Status</a>
-                            <a href="#">By Platform</a>
-                            <a href="#">By Ownership</a>
+                            <a href="#">设备名称<span class="ico-sort-asc"></span></a>
+                            <a href="#">所有者</a>
+                            <a href="#">状态</a>
+                            <a href="#">平台</a>
+                            <a href="#">所有权</a>
                         </div>
                     </div>
                 {{else}}
@@ -237,11 +237,10 @@
                                 <i class="fw fw-devices fw-3x"></i>
                             </h3>
                             <h3 class="text-muted">
-                                You don't have any
                                 {{#if group}}
-                                    devices assigned to this group. Let's add a device!
+             你没有分配给这个组的设备。让我们添加一个设备!
                                 {{else}}
-                                    enrolled devices. Let's enroll a device!
+                                 你没有登记的设备。让我们登记一个设备!
                                 {{/if}}
 
                             </h3>
@@ -253,7 +252,7 @@
                                                 <i class="fw fw-circle-outline fw-stack-2x"></i>
                                                 <i class="fw fw-add fw-stack-1x"></i>
                                             </span>
-                                        Assign from My Devices
+                                        	从我的设备分配
                                     </a>
                                 {{else}}
                                     {{#if permissions.enroll}}
@@ -263,7 +262,7 @@
                                                 <i class="fw fw-circle-outline fw-stack-2x"></i>
                                                 <i class="fw fw-add fw-stack-1x"></i>
                                             </span>
-                                            Enroll New Device
+                                            	登记新设备
                                         </a>
                                     {{/if}}
                                 {{/if}}
@@ -279,7 +278,7 @@
                                 <span class="fw-stack">
                                     <i class="fw fw-circle-outline fw-stack-2x"></i>
                                     <i class="fw fw-group fw-stack-1x"></i>
-                                </span> Device Grouping
+                                </span> 设备分组
                             </span>
                         </h3>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i
@@ -289,21 +288,21 @@
                         <div id="notification-error-msg" class="alert alert-danger hidden" role="alert">
                             <i class="icon fw fw-error"></i><span></span>
                         </div>
-                        <div id="user-groups">Loading...</div>
+                        <div id="user-groups">加载中...</div>
                     </div>
                     <div class="modal-footer">
                         <div class="buttons">
                             <a href="{{@app.context}}/group/add" id="group-add-link" class="btn-operations">
-                                Add device group
+                               	添加设备组
                             </a>
                             <a href="#" id="group-device-add-link" class="btn-operations">
-                                Add devices to group
+                                	给组添加设备
                             </a>
                             <a href="#" id="group-device-update-link" class="btn-operations">
-                                Update assignment
+                                	更新分配
                             </a>
                             <a href="#" id="group-device-cancel-link" class="btn-operations btn-default">
-                                Cancel
+                                	取消
                             </a>
                         </div>
                     </div>
@@ -313,7 +312,7 @@
                     <div class="modal-content">
                         <div class="row">
                             <div class="col-md-3 col-centered">
-                                <h3>Successfully added the device/s to the group!</h3>
+                                <h3>成功将设备添加到组中!</h3>
                             </div>
                         </div>
                     </div>
@@ -323,9 +322,9 @@
                     <div class="modal-header">
                         <h3 class="pull-left modal-title">
                             {{#if group}}
-                                Do you really want to remove this device(s) from '{{group.name}}' group?
+                              	 你真的想要从'{{group.name}}' 组中移除该设备吗？
                             {{else}}
-                                Do you really want to remove this device(s) from your Devices?
+                                	你真的想要从设备中移除该设备吗？
                             {{/if}}
                         </h3>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i
@@ -338,11 +337,11 @@
                     <div class="modal-footer">
                         <div class="buttons">
                             <a href="#" id="remove-device-yes-link" class="btn-operations">
-                                Yes
+                                	是的
                             </a>
 
                             <a href="#" id="remove-device-cancel-link" class="btn-operations">
-                                Cancel
+                                	取消
                             </a>
                         </div>
                     </div>
@@ -352,9 +351,9 @@
                     <div class="modal-header">
                         <h3 class="pull-left modal-title">
                             {{#if group}}
-                                Successfully removed from '{{group.name}}' group.
+                                	从'{{group.name}}'组移除成功。
                             {{else}}
-                                Successfully removed.
+                                	移除成功。
                             {{/if}}
                         </h3>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i
@@ -366,7 +365,7 @@
                     </div>
                     <div class="modal-footer">
                         <div class="buttons">
-                            <a href="javascript:hidePopup()" class="btn-operations">Ok</a>
+                            <a href="javascript:hidePopup()" class="btn-operations">好的</a>
                         </div>
                     </div>
                 </div>
@@ -374,7 +373,7 @@
                 <div id="edit-device-modal-content" class="hide">
                     <div class="modal-header">
                         <h3 class="pull-left modal-title">
-                            Please enter a new name for the device.
+                            	请输入设备的新名称。
                         </h3>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i
                                 class="fw fw-cancel"></i>
@@ -388,11 +387,11 @@
                     <div class="modal-footer">
                         <div class="buttons">
                             <a href="#" id="edit-device-yes-link" class="btn-operations">
-                                Rename
+                                	重命名
                             </a>
 
                             <a href="#" id="edit-device-cancel-link" class="btn-operations">
-                                Cancel
+                                	取消
                             </a>
                         </div>
                     </div>
@@ -401,7 +400,7 @@
                 <div id="edit-device-200-content" class="hide">
                     <div class="modal-header">
                         <h3 class="pull-left modal-title">
-                            Device was successfully updated.
+                            	设备更新成功。
                         </h3>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i
                                 class="fw fw-cancel"></i>
@@ -417,7 +416,7 @@
                                 <div class="content">
                                     <div class="row">
                                         <div class="col-lg-5 col-md-6 col-centered">
-                                            <h3>Device was successfully updated.</h3>
+                                            <h3>设备更新成功。</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -427,11 +426,11 @@
                                 <div class="modal-content">
                                     <div class="row">
                                         <div class="col-lg-5 col-md-6 col-centered">
-                                            <h3>Exception at backend. Try Later.</h3>
+                                            <h3>后端移除，稍后再试。</h3>
                                             <br/>
                                             <div class="buttons">
                                                 <a href="#" id="device-400-link" class="btn-operations">
-                                                    Ok
+                                                    	好的
                                                 </a>
                                             </div>
                                         </div>
@@ -443,11 +442,11 @@
                                 <div class="modal-content">
                                     <div class="row">
                                         <div class="col-lg-5 col-md-6 col-centered">
-                                            <h3>Operation not permitted.</h3>
+                                            <h3>不允许操作。</h3>
                                             <br/>
                                             <div class="buttons">
                                                 <a href="#" id="device-403-link" class="btn-operations">
-                                                    Ok
+                                                    	好的
                                                 </a>
                                             </div>
                                         </div>
@@ -459,17 +458,17 @@
                                 <div class="modal-content">
                                     <div class="row">
                                         <div class="col-lg-5 col-md-6 col-centered">
-                                            <h3>
-                                                You don't have any device group to add this device. Let's add a new
-                                                device group!</h3>
+                                            <h3> 
+                                            	你没有任何设备组来添加此设备。让我们添加一个新的设备组！
+                                            </h3>
                                             <br/>
                                             <div class="buttons">
                                                 <a href="{{@app.context}}/group/add" class="btn-operations">
-                                                    Add New Group
+                                                    	添加组
                                                 </a>
 
                                                 <a href="#" id="cancel-link" class="btn-operations">
-                                                    Cancel
+                                                    	取消
                                                 </a>
                                             </div>
                                         </div>
@@ -481,11 +480,11 @@
                                 <div class="modal-content">
                                     <div class="row">
                                         <div class="col-lg-5 col-md-6 col-centered">
-                                            <h3>Device does not exist.</h3>
+                                            <h3>设备不存在。</h3>
                                             <br/>
                                             <div class="buttons">
                                                 <a href="#" id="remove-device-409-link" class="btn-operations">
-                                                    Ok
+                                                    	好的
                                                 </a>
                                             </div>
                                         </div>
@@ -497,12 +496,11 @@
                                 <div class="modal-content">
                                     <div class="row">
                                         <div class="col-lg-5 col-md-6 col-centered">
-                                            <h3>Please select one or more devices in order to perform this
-                                                operation.</h3>
+                                            <h3>为了执行此操作，请选择一个或多个设备。</h3>
                                             <br/>
                                             <div class="buttons">
                                                 <a href="#" id="no-device-selected-link" class="btn-operations">
-                                                    Ok
+                                                    	好的
                                                 </a>
                                             </div>
                                         </div>

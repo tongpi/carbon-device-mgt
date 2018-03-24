@@ -116,7 +116,7 @@ function processAfterInitializationMap(geoFencingEnabled) {
     });
     attributionControl.onAdd = function (map) {
         var div = L.DomUtil.create("div", "leaflet-control-attribution");
-        div.innerHTML = "<a href='#' onclick='$(\"#attributionModal\").modal(\"show\"); return false;'>Attribution</a>";
+        div.innerHTML = "<a href='#' onclick='$(\"#attributionModal\").modal(\"show\"); return false;'>属性</a>";
         return div;
     };
     map.addControl(L.control.fullscreen({position: 'bottomright'}));
