@@ -30,13 +30,13 @@ var displayPolicy = function (policyPayloadObj) {
     $("#policy-description").text(policyPayloadObj["description"]);
     var policyStatus = "Active";
     if (policyPayloadObj["active"] === true && policyPayloadObj["updated"] === true) {
-        policyStatus = '<i class="fw fw-warning icon-success"></i> Active/Updated</span>';
+        policyStatus = '<i class="fw fw-warning icon-success"></i> 激活的/更新的</span>';
     } else if (policyPayloadObj["active"] === true && policyPayloadObj["updated"] === false) {
-        policyStatus = '<i class="fw fw-success icon-success"></i> Active</span>';
+        policyStatus = '<i class="fw fw-success icon-success"></i> 激活的</span>';
     } else if (policyPayloadObj["active"] === false && policyPayloadObj["updated"] === true) {
-        policyStatus = '<i class="fw fw-warning icon-warning"></i> Inactive/Updated</span>';
+        policyStatus = '<i class="fw fw-warning icon-warning"></i> 闲置的/更新的</span>';
     } else if (policyPayloadObj["active"] === false && policyPayloadObj["updated"] === false) {
-        policyStatus = '<i class="fw fw-error icon-danger"></i> Inactive</span>';
+        policyStatus = '<i class="fw fw-error icon-danger"></i> 闲置的</span>';
     }
 
     $("#policy-status").html(policyStatus);

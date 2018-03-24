@@ -24,13 +24,13 @@
                 <br>
 
                 <h1 class="page-sub-title">
-                    Platform Configurations
+                    	平台配置
                 </h1>
                 <br>
                 {{#if isCloud}}
-                    iOS Mobile Management Specific Server Settings for the Tenant
+                    	针对租户的iOS移动管理特定服务器设置
                 {{else}}
-                    General and Platform Specific Server Settings for the Tenant
+                    	租户的常规和平台特定服务器设置
                 {{/if}}
 
                 <br>
@@ -50,7 +50,7 @@
                                             <i class="fw fw-mobile fw-stack-1x fw-inverse"></i>
                                         </span>
                                     </span>
-                                    General Configurations
+                                    	一般配置
                                 </a>
                             {{/unless}}
                             {{#each deviceTypes}}
@@ -66,7 +66,7 @@
                                             <i class="fw fw-{{name}} fw-stack-1x fw-inverse"></i>
                                         </span>
                                     </span>
-                                    {{label}} Configurations
+                                    {{label}} 配置
                                 </a>
                             {{/each}}
                         </div>
@@ -78,7 +78,7 @@
                                     <div class="panel panel-default">
                                         <div id="general-config-heading" class="panel-heading" role="tab">
                                             <h2 class="sub-title panel-title">
-                                                Policy Monitoring
+                                                	策略监控
                                             </h2>
                                         </div>
                                         <div id="email-config-body" class="panel-collapse panel-body"
@@ -89,31 +89,31 @@
                                             </div>
                                             <div class="wr-input-control">
                                                 <label class="wr-input-label" for="email-config-host">
-                                                    Monitoring Frequency
+                                                    	监控频率
                                                         <span class="helper" title="SMTP Server Host">
                                                             <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
                                                         </span>
                                                     <br>
-                                                    ( Should be in seconds )
+                                                    ( 应为秒  )
                                                 </label>
                                                 <input id="monitoring-config-frequency" type="text"
                                                        class="form-control"
-                                                       placeholder="[ Required Field ]">
+                                                       placeholder="[必填项]">
                                             </div>
                                             <div class="wr-input-control wr-btn-grp">
-                                                <button id="save-general-btn" class="wr-btn">Save</button>
+                                                <button id="save-general-btn" class="wr-btn">保存</button>
                                             </div>
                                         </div>
                                         {{#if geoServicesEnabled}}
                                         <div id="general-config-heading" role="tab">
                                             <h2 class="sub-title panel-title">
-                                                Geo Analytics
+                                                Geo 分析
                                             </h2>
                                         </div>
                                         <div class="panel-collapse panel-body" role="tabpanel">
                                             <div class="wr-input-control">
                                                 <button class="wr-btn" onclick="artifactGeoUpload();">
-                                                    Deploy Geo Analytics Artifacts
+                                                    	部署 Geo 分析部件
                                                 </button>
                                             </div>
                                         </div>
@@ -135,15 +135,13 @@
 
             <div id="record-created-msg" class="container col-centered wr-content hidden">
                 <div class="wr-form">
-                    <p class="page-sub-title">Configuration was saved successfully.</p>
+                    <p class="page-sub-title">配置保存成功。</p>
                     <br>
-                    <br>Please click <b>"Go back to configurations"</b>, if you wish to save another
-                        configuration or click
-                    <b>"Exit"</b> to complete the process and go back to the dashboard.
+                    <br>如果你希望保存其他配置，<b>"返回到配置"</b>。或点击 <b>"退出"</b>完成，返回到面板。
                     <hr/>
                     <button class="wr-btn"
-                            onclick="window.location.href='{{@app.context}}/platform-configuration'">Go back to configurations</button>
-                    <button class="wr-btn" onclick="window.location.href='{{@app.context}}'">Exit</button>
+                            onclick="window.location.href='{{@app.context}}/platform-configuration'">返回到配置</button>
+                    <button class="wr-btn" onclick="window.location.href='{{@app.context}}'">退出</button>
                 </div>
             </div>
             <!-- /content -->
@@ -151,10 +149,10 @@
     </div>
     {{else}}
         <h1 class="page-sub-title">
-            Permission Denied
+            	无权限
         </h1>
         <br>
-        You not authorized to enter General and Platform Specific Server Setting Management Section.
+        	您无权进入常规和平台特定服务器设置管理部分。
         <br>
     {{/if}}
     <div id="geo-analytics-response-template" style="display: none">

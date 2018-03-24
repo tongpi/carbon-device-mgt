@@ -124,7 +124,7 @@ function displayErrors(message) {
     $('#error-msg').html(message.responseText);
     modalDialog.header('Unexpected error occurred!');
     modalDialog.content('<h4 id="error-msg">' + message.responseText + '</h4>');
-    modalDialog.footer('<div class="buttons"><a href="#" id="group-unexpected-error-link" class="btn-operations">Ok' +
+    modalDialog.footer('<div class="buttons"><a href="#" id="group-unexpected-error-link" class="btn-operations">好的' +
         '</a></div>');
     modalDialog.showAsError();
     $("a#group-unexpected-error-link").click(function () {

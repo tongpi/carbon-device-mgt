@@ -9,12 +9,12 @@
     </li>
     <li>
         <a href="{{@app.context}}/groups">
-            Groups
+            	组
         </a>
     </li>
     <li>
         <a href="{{@app.context}}/group/add">
-            Add
+            	添加
         </a>
     </li>
 {{/zone}}
@@ -27,9 +27,9 @@
 
             <p>Create new device group on
                 {{#if isCloud}}
-                    Device Cloud
+                    	设备云服务
                 {{else}}
-                    IoT Server
+                    	物联网服务器
                 {{/if}}
                 .
             </p>
@@ -41,18 +41,18 @@
 
             <hr/>
             <div class="form-login-box" >
-                <label class="wr-input-label" title="{{groupNameHelpMsg}}">Group Name
+                <label class="wr-input-label" title="{{groupNameHelpMsg}}">组名称
                     <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
                 </label>
 
                 <div class="form-group wr-input-control">
-                    <input type="text right" id="name" placeholder="Group Name" data-regex="{{groupNameJSRegEx}}"
+                    <input type="text right" id="name" placeholder="组名称" data-regex="{{groupNameJSRegEx}}"
                            data-errormsg="{{groupNameRegExViolationErrorMsg}}" class="form-control">
                     <span class="groupNameError hidden glyphicon glyphicon-remove form-control-feedback"></span>
                     <label class="error groupNameEmpty hidden" for="summary"></label>
                 </div>
 
-                <label class="wr-input-label">Description</label>
+                <label class="wr-input-label">描述</label>
 
                 <div class="wr-input-control">
                     <input type="text right" id="description" placeholder="Description">
@@ -60,10 +60,10 @@
 
                 <div class="wr-input-control">
                     <button class="wr-btn" id="add-group-btn">
-                        Add
+                        	添加
                     </button>
                     <button class="wr-btn" onclick="window.location = '{{@app.context}}/groups';return false;">
-                        Cancel
+                        	取消
                     </button>
                 </div>
             </div>
@@ -71,9 +71,9 @@
 
         <div id="group-created-msg" class="container col-centered wr-content hidden">
             <div class="wr-form">
-                <p class="page-sub-title">Group was created successfully.</p>
+                <p class="page-sub-title">组创建成功。</p>
 
-                <br>You will be redirected to the Group Listing page in a moment.
+                <br>您将立即重定向到“组列表”页面。
             </div>
         </div>
 

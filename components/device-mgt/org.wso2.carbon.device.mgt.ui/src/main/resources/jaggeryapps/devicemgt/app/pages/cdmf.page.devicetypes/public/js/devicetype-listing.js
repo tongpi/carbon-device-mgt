@@ -162,7 +162,7 @@ function loadDeviceTypes() {
 						'<i class="fw fw-circle fw-stack-2x"></i><i class="fw fw-edit fw-stack-1x fw-inverse"></i>' +
 						'</span>' +
 						'</span>' +
-						'<span class="hidden-xs hidden-on-grid-view">Edit</span>' +
+						'<span class="hidden-xs hidden-on-grid-view">修改</span>' +
 						'</a>';
 
 					var editEventLink = '<a onclick="javascript:loadDeviceTypeBasedActionURL(\'edit-event\', \'' + data.name + '\')" ' +
@@ -177,7 +177,7 @@ function loadDeviceTypes() {
 						'<i class="fw fw-circle fw-stack-2x"></i><i class="fw fw-edit fw-stack-1x fw-inverse"></i>' +
 						'</span>' +
 						'</span>' +
-						'<span class="hidden-xs hidden-on-grid-view">Edit Event</span>' +
+						'<span class="hidden-xs hidden-on-grid-view">修改项目</span>' +
 						'</a>';
 
 					innerhtml = editLink + editEventLink;

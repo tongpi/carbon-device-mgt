@@ -166,7 +166,7 @@ function loadRoles() {
                     '<i class="fw fw-circle fw-stack-2x"></i><i class="fw fw-edit fw-stack-1x fw-inverse"></i>' +
                     '</span>' +
                     '</span>' +
-                    '<span class="hidden-xs hidden-on-grid-view">Edit</span>' +
+                    '<span class="hidden-xs hidden-on-grid-view">修改</span>' +
                     '</a>';
 
                 var editPermissionLink = '<a onclick="javascript:loadRoleBasedActionURL(\'edit-permission\', \'' + data.name + '\')" ' +
@@ -183,7 +183,7 @@ function loadRoles() {
                     '<i class="fw fw-circle fw-stack-2x"></i><i class="fw fw-edit fw-stack-1x fw-inverse"></i>' +
                     '</span>' +
                     '</span>' +
-                    '<span class="hidden-xs hidden-on-grid-view">Edit Permission</span>' +
+                    '<span class="hidden-xs hidden-on-grid-view">修改权限</span>' +
                     '</a>';
 
                 var removeLink = '<a data-role="' + data.name + '" ' +
@@ -195,7 +195,7 @@ function loadRoles() {
                     '<i class="fw fw-circle-outline fw-stack-2x"></i>' +
                     '<i class="fw fw-delete fw-stack-1x"></i>' +
                     '</span>' +
-                    '<span class="hidden-xs hidden-on-grid-view">Remove</span>' +
+                    '<span class="hidden-xs hidden-on-grid-view">删除</span>' +
                     '</a>';
 
                 if (!isCloud && !isAdminRole) {
@@ -207,7 +207,7 @@ function loadRoles() {
     ];
 
     var options = {
-        "placeholder": "Search By Role Name",
+        "placeholder": "按角色名称搜索",
         "searchKey": "filter"
     };
     var settings = {
@@ -240,9 +240,9 @@ $("#role-grid").on("click", ".remove-role-link", function () {
     if (userStore) {
         removeRoleAPI += "?user-store=" + encodeURIComponent(userStore);
     }
-    modalDialog.header('Do you really want to remove this role ?');
-    modalDialog.footer('<div class="buttons"><a href="#" id="remove-role-yes-link" class="btn-operations">Remove</a>' +
-        '<a href="#" id="remove-role-cancel-link" class="btn-operations btn-default">Cancel</a></div>');
+    modalDialog.header('你真的想要删除这个角色吗?');
+    modalDialog.footer('<div class="buttons"><a href="#" id="remove-role-yes-link" class="btn-operations">删除</a>' +
+        '<a href="#" id="remove-role-cancel-link" class="btn-operations btn-default">取消</a></div>');
     modalDialog.show();
 
     $("a#remove-role-yes-link").click(function () {
@@ -253,18 +253,18 @@ $("#role-grid").on("click", ".remove-role-link", function () {
                     role = userStore + '/' + role;
                 }
                 $('[id="role-' + role + '"]').remove();
-                modalDialog.header('Done. Role was successfully removed.');
+                modalDialog.header('角色删除成功。');
                 modalDialog.footer('<div class="buttons"><a href="#" id="remove-role-success-link" ' +
-                    'class="btn-operations">Ok</a></div>');
+                    'class="btn-operations">好的</a></div>');
                 $("a#remove-role-success-link").click(function () {
                     modalDialog.hide();
                 });
             },
             function () {
                 // $(modalPopupContent).html($('#remove-role-error-content').html());
-                modalDialog.header('An unexpected error occurred. Please try again later.');
+                modalDialog.header('出现异常错误，请稍后再试。');
                 modalDialog.footer('<div class="buttons"><a href="#" id="remove-role-error-link" ' +
-                    'class="btn-operations">Ok</a></div>');
+                    'class="btn-operations">好的</a></div>');
                 modalDialog.showAsError();
                 $("a#remove-role-error-link").click(function () {
                     modalDialog.hide();

@@ -25,12 +25,12 @@
     </li>
     <li>
         <a href="{{@app.context}}/users">
-            Users
+            	用户
         </a>
     </li>
     <li>
         <a href="{{@app.context}}/user/add">
-            Add
+            	新增
         </a>
     </li>
 {{/zone}}
@@ -43,17 +43,16 @@
                 <!-- content -->
                 <div id="user-create-form" class="container col-centered wr-content">
                     <div class="wr-form">
-                        <p class="page-sub-title">Add User</p>
-                        <p>Please note that * sign represents required fields of data.</p>
+                        <p class="page-sub-title">新增用户</p>
+                        <p>请注意带 * 标记的为必填项。</p>
                         <hr/>
                         <div class="row">
                             <div class="col-lg-8">
                                 <div id="user-create-error-msg" class="alert alert-danger hidden" role="alert">
                                     <i class="icon fw fw-error"></i><span></span>
                                 </div>
-                                <label class="wr-input-label"
-                                       title="Select the domain of the user store from the drop-down given below. The domain of the default user store is PRIMARY">
-                                    User Store Domain
+                                <label class="wr-input-label" title="从下面的下拉框中选择用户存储区。默认用户存储区的域是 PRIMARY">
+                                    	用户存储区域
                                     <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
                                 </label>
                                 <div class="wr-input-control">
@@ -65,7 +64,7 @@
                                     </select>
                                 </div>
                                 <label class="wr-input-label" title="{{usernameHelpMsg}}">
-                                    User Name *
+                                    	用户名 *
                                     <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
                                 </label>
                                 <div id="usernameInputField" class="form-group wr-input-control">
@@ -73,39 +72,36 @@
                                            data-regex="{{usernameJSRegEx}}"
                                            data-errormsg="{{usernameRegExViolationErrorMsg}}" class="form-control"/>
                                     <span class=" usernameError hidden glyphicon glyphicon-remove form-control-feedback"></span>
-                                    <label class="error usernameEmpty hidden" for="summary">This field is required.
-                                        Username should be at least 3 characters long with no white spaces.</label>
+                                    <label class="error usernameEmpty hidden" for="summary">必填项。用户名至少为3个字符并且不包含空格。</label>
                                 </div>
-                                <label class="wr-input-label">First Name *</label>
+                                <label class="wr-input-label">名字 *</label>
                                 <div id="firstNameField" class="form-group wr-input-control">
                                     <input type="text" id="firstname" data-regex="{{firstnameJSRegEx}}"
                                            data-errormsg="{{firstnameRegExViolationErrorMsg}}" class="form-control"/>
                                     <span class="glyphicon glyphicon-remove form-control-feedback hidden fnError"></span>
-                                    <label class=" hidden error fnError" for="summary">This field is required.</label>
+                                    <label class=" hidden error fnError" for="summary">必填项。</label>
                                 </div>
-                                <label class="wr-input-label">Last Name *</label>
+                                <label class="wr-input-label">姓氏 *</label>
                                 <div id="lastNameField" class="form-group wr-input-control">
                                     <input type="text" id="lastname" data-regex="{{lastnameJSRegEx}}"
                                            data-errormsg="{{lastnameRegExViolationErrorMsg}}" class="form-control"/>
                                     <span class="glyphicon glyphicon-remove form-control-feedback hidden lnError"></span>
-                                    <label class=" hidden error lnError" for="summary">This field is required.</label>
+                                    <label class=" hidden error lnError" for="summary">必填项。</label>
                                 </div>
-                                <label class="wr-input-label" title="Ex: dan@abc.com">
-                                    Email Address *
+                                <label class="wr-input-label" title="如: dan@abc.com">
+                                    	邮箱地址 *
                                     <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
                                 </label>
                                 <div id="emailField" class=" form-group wr-input-control">
                                     <input type="email" id="emailAddress" class="form-control"/>
                                     <span class="glyphicon glyphicon-remove form-control-feedback hidden emailError"></span>
-                                    <label class=" hidden error email-required" for="summary">This field is
-                                        required.</label>
-                                    <label class=" hidden error email-invalid" for="summary">Invalid Email
-                                        Address.</label>
+                                    <label class=" hidden error email-required" for="summary">必填项。</label>
+                                    <label class=" hidden error email-invalid" for="summary">邮箱地址无效。</label>
                                 </div>
                                 {{#if canViewRoles}}
                                     <label class="wr-input-label"
-                                           title="Optional field that can have 0-to-many roles for the user">
-                                        User Roles
+                                           title="可选字段，可以为用户选择多个的角色。">
+                                        	用户角色
                                         <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
                                     </label>
                                     <div class="wr-input-control">
@@ -119,7 +115,7 @@
                             </div>
                         </div>
                         <br>
-                        <button id="add-user-btn" class="wr-btn">Add User</button>
+                        <button id="add-user-btn" class="wr-btn">新增用户</button>
                     </div>
                 </div>
 
@@ -128,7 +124,7 @@
                         <i class="icon fw fw-error"></i><span></span>
                     </div>
                     <h4>
-                        An invitation mail will be sent to this user to initiate device enrollment.
+                        	邀请邮件将发送给此用户以开始设备登记。
                     </h4>
                 </div>
                 <div id="modal-content-user-created-with-message" class="hide">
@@ -141,10 +137,10 @@
         </div>
     {{else}}
         <h1 class="page-sub-title">
-            Permission Denied
+            	无权限
         </h1>
         <br>
-        You not authorized to enter User Management Section.
+        	您无权限进入用户管理部分。
         <br>
     {{/if}}
 {{/zone}}

@@ -84,12 +84,11 @@
                                     <label>{{label}}</label>
                                     <br />
                                 {{/each}}
-                                <button id="btnSend" type="button" onclick="submitForm('form-{{operation}}')" class="btn btn-default">&nbsp;&nbsp;&nbsp;&nbsp;Send
-                                                       to Device&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                                <button id="btnSend" type="button" onclick="submitForm('form-{{operation}}')" class="btn btn-default">&nbsp;&nbsp;&nbsp;&nbsp;发送到设备&nbsp;&nbsp;&nbsp;&nbsp;</button>
                                 <label id="lblSending" class="wr-input-label hidden"><i
-                                        class="fw fw-lifecycle fw-spin fw-2x"></i> Sending..</label>
+                                        class="fw fw-lifecycle fw-spin fw-2x"></i> 发送中..</label>
                                 <label id="lblSent" class="wr-input-label hidden"><i
-                                        class="fw fw-check fw-2x"></i> Sent</label>
+                                        class="fw fw-check fw-2x"></i> 已发送</label>
                             </form>
                         </div>
                     </div>
@@ -100,7 +99,7 @@
 {{else}}
     <div align="center">
         <h4 style="color: #D8000C"><i class="icon fw fw-error" style="color: #D8000C"></i>
-            Operations Loading Failed!</h4>
+            	操作加载失败！</h4>
     </div>
 {{/if}}
 

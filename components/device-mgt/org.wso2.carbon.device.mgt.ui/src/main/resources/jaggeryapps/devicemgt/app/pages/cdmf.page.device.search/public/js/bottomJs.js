@@ -40,23 +40,23 @@ $("#view-search-param").click(function () {
 });
 
 var dynamicForm = '<div class="dynamic-search-param row"><div class="row"><a class="close-button-div icon fw fw-error">' +
-                  '</a></div><div class="form-group wr-input-control col-md-2"><label class="wr-input-label ">State</label>' +
+                  '</a></div><div class="form-group wr-input-control col-md-2"><label class="wr-input-label ">状态</label>' +
                   '<select class="state no-tag form-control select2-custom"><option>AND</option><option>OR</option></select></div><div ' +
                   'class="form-group wr-input-control col-md-4"><label class="wr-input-label ">Key</label><select class=' +
-                  '"txt-key form-control select2-custom"><option value = "deviceModel">Device Model' +
-                  '</option><option value = "PhoneNumber">Phone Number</option><option value = "vendor">Vendor</option><option value = "osVersion">OS Version' +
-                  '</option><option value = "batteryLevel">Battery Level</option><option value =' +
+                  '"txt-key form-control select2-custom"><option value = "deviceModel">设备模型' +
+                  '</option><option value = "PhoneNumber">电话号码</option><option value = "vendor">供应商</option><option value = "osVersion">系统版本' +
+                  '</option><option value = "batteryLevel">电池容量</option><option value =' +
                   ' "internalTotalMemory">Internal Total Memory</option> <option value ="internalAvailableMemory">' +
-                  'Internal Available Memory</option> <option value = "externalTotalMemory">External Total Memory</option>' +
-                  ' <option value = "externalAvailableMemory">External Available Memory' +
-                  '</option> <option value = "connectionType">Connection Type</option> <option value =' +
+                  '内部可用内存</option> <option value = "externalTotalMemory">外部内存总量</option>' +
+                  ' <option value = "externalAvailableMemory">外部可用内存' +
+                  '</option> <option value = "connectionType">连接类型</option> <option value =' +
                   ' "ssid">SSID</option><option value = "cpuUsage">CPU Usage</option><option value = "totalRAMMemory">' +
-                  'Total RAM Memory</option> <option value = "availableRAMMemory">Available RAM Memory</option>' +
+                  'Total RAM Memory</option> <option value = "availableRAMMemory">可用的 RAM 内存</option>' +
                   '<option value = "pluggedIn">Plugged In</option></select></div>' +
                   '<div class="form-group wr-input-control col-md-2">' +
                   '<label class="wr-input-label ">Operator</label><select id = "operators" class="form-control' +
                   ' select2-custom no-tag operator"><option>=</option><option> !=</option><option> %</option>' +
-                  '</select></div><div class="form-group ' + 'wr-input-control col-md-4"><label class="wr-input-label">Value</label>' +
+                  '</select></div><div class="form-group ' + 'wr-input-control col-md-4"><label class="wr-input-label">价值</label>' +
                   '<input type="text" class="form-control txt-value"/></div></div>';
 
 var nonNumericKeyValuePair = ["deviceModel", "vendor", "osVersion", "connectionType", "ssid", "pluggedIn"];
@@ -135,8 +135,7 @@ $(document).ready(function () {
                     $("#advance-search-result").addClass("hidden");
                     $("#advance-search-form").removeClass(" hidden");
                     $('#device-listing-status').removeClass('hidden');
-                    $('#device-listing-status-msg').text('Error in user input values. ' + key + " requires a" +
-                        " numerical value as the search value");
+                    $('#device-listing-status-msg').text('用户输入值出错。 '+key+'需要一个数值作为搜索值。");
                 }
             }
         });
@@ -158,7 +157,7 @@ $(document).ready(function () {
                         $("#advance-search-result").addClass("hidden");
                         $("#advance-search-form").removeClass(" hidden");
                         $('#device-listing-status').removeClass('hidden');
-                        $('#device-listing-status-msg').text('No Device are available to be displayed.');
+                        $('#device-listing-status-msg').text('没有设备可显示。');
                         return;
                     }
                     data = JSON.parse(data);
@@ -167,7 +166,7 @@ $(document).ready(function () {
                         $("#advance-search-result").addClass("hidden");
                         $("#advance-search-form").removeClass(" hidden");
                         $('#device-listing-status').removeClass('hidden');
-                        $('#device-listing-status-msg').text('No Device are available to be displayed.');
+                        $('#device-listing-status-msg').text('没有设备可显示。');
                         return;
                     }
                     var viewModel = {};
@@ -198,7 +197,7 @@ $(document).ready(function () {
                         $("#ast-container").html(content);
                     } else {
                         $('#device-listing-status').removeClass('hidden');
-                        $('#device-listing-status-msg').text('No Device are available to be displayed.');
+                        $('#device-listing-status-msg').text('没有设备可显示。');
                     }
                     $("#loading-content").addClass('hidden');
                     if (isInit) {
@@ -215,7 +214,7 @@ $(document).ready(function () {
                         $("#advance-search-result").addClass("hidden");
                         $("#advance-search-form").removeClass(" hidden");
                         $('#device-listing-status').removeClass('hidden');
-                        $('#device-listing-status-msg').text('Server is unable to perform the search please enroll at least one device or check the search query');
+                        $('#device-listing-status-msg').text('服务器无法执行搜索，请至少登记一个设备或检查搜索查询');
                     }
                 );
             });

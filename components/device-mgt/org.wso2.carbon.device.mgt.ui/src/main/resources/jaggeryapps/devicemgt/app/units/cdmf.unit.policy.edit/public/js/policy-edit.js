@@ -342,11 +342,11 @@ validateStep["policy-naming"] = function () {
     // starting validation process and updating validationStatus
     if (!policyName) {
         validationStatus["error"] = true;
-        validationStatus["mainErrorMsg"] = "Policy name is empty. You cannot proceed.";
+        validationStatus["mainErrorMsg"] = "策略名称为空，你不能继续。";
     } else if (!inputIsValidAgainstLength(policyName, 1, 30)) {
         validationStatus["error"] = true;
         validationStatus["mainErrorMsg"] =
-            "Policy name exceeds maximum allowed length.";
+            "策略名称超出允许的最大长度。";
     } else {
         validationStatus["error"] = false;
     }
@@ -375,11 +375,11 @@ validateStep["policy-naming-publish"] = function () {
     // starting validation process and updating validationStatus
     if (!policyName) {
         validationStatus["error"] = true;
-        validationStatus["mainErrorMsg"] = "Policy name is empty. You cannot proceed.";
+        validationStatus["mainErrorMsg"] = "策略名称为空，你不能继续。";
     } else if (!inputIsValidAgainstLength(policyName, 1, 30)) {
         validationStatus["error"] = true;
         validationStatus["mainErrorMsg"] =
-            "Policy name exceeds maximum allowed length.";
+            "策略名称超出允许的最大长度。";
     } else {
         validationStatus["error"] = false;
     }

@@ -12,16 +12,16 @@
             <td data-display="{{name}}" data-grid-label="Name">{{name}}</td>
             <td data-display="{{status}}" data-grid-label="Status">
                 {{#equal status "Active/Updated"}}
-                    <i class="fw fw-warning icon-success"></i> Active/Updated</span>
+                    <i class="fw fw-warning icon-success"></i> 活跃的/更新的</span>
                 {{/equal}}
                 {{#equal status "Active"}}
-                    <i class="fw fw-success icon-success"></i> Active</span>
+                    <i class="fw fw-success icon-success"></i> 活跃的</span>
                 {{/equal}}
                 {{#equal status "Inactive/Updated"}}
-                    <i class="fw fw-warning icon-warning"></i> Inactive/Updated</span>
+                    <i class="fw fw-warning icon-warning"></i> 闲置的/更显的</span>
                 {{/equal}}
                 {{#equal status "Inactive"}}
-                    <i class="fw fw-error icon-danger"></i> Inactive</span>
+                    <i class="fw fw-error icon-danger"></i> 闲置的</span>
                 {{/equal}}
             </td>
             <td class="text-right content-fill text-left-on-grid-view no-wrap">
@@ -32,7 +32,7 @@
                                 <i class="fw fw-circle-outline fw-stack-2x"></i>
                                 <i class="fw fw-view fw-stack-1x"></i>
                             </span>
-                    <span class="hidden-xs hidden-on-grid-view">View</span>
+                    <span class="hidden-xs hidden-on-grid-view">查看</span>
                 </a>
                 <a href="../policy/edit?id={{id}}&type={{platform}}"
                    data-id="{{id}}" data-click-event="remove-form"

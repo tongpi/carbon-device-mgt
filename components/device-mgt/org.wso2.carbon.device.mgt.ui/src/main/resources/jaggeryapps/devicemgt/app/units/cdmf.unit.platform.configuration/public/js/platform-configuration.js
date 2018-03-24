@@ -67,10 +67,10 @@ $(document).ready(function () {
         var errorMsg = "#email-config-error-msg span";
 
         if (!notifierFrequency) {
-            $(errorMsg).text("Monitoring frequency is a required field. It cannot be empty.");
+            $(errorMsg).text("监视频率必填，不能为空。");
             $(errorMsgWrapper).removeClass("hidden");
         } else if (!isPositiveInteger(notifierFrequency)) {
-            $(errorMsg).text("Provided monitoring frequency is invalid. ");
+            $(errorMsg).text("提供的监视频率无效。 ");
             $(errorMsgWrapper).removeClass("hidden");
         } else {
             var addConfigFormData = {};
@@ -95,22 +95,22 @@ $(document).ready(function () {
                             $("#config-save-form").addClass("hidden");
                             $("#record-created-msg").removeClass("hidden");
                         } else if (data == 500) {
-                            $(errorMsg).text("Exception occurred at backend.");
+                            $(errorMsg).text("后台发生异常。");
                         } else if (data == 403) {
-                            $(errorMsg).text("Action was not permitted.");
+                            $(errorMsg).text("操作不允许。");
                         } else {
-                            $(errorMsg).text("An unexpected error occurred.");
+                            $(errorMsg).text("发生异常错误。");
                         }
 
                         $(errorMsgWrapper).removeClass("hidden");
                     }, function (data) {
                         data = data.status;
                         if (data == 500) {
-                            $(errorMsg).text("Exception occurred at backend.");
+                            $(errorMsg).text("后台发生异常。");
                         } else if (data == 403) {
-                            $(errorMsg).text("Action was not permitted.");
+                            $(errorMsg).text("操作不允许。");
                         } else {
-                            $(errorMsg).text("An unexpected error occurred.");
+                            $(errorMsg).text("发生异常错误。");
                         }
                         $(errorMsgWrapper).removeClass("hidden");
                     }
@@ -138,7 +138,7 @@ var artifactGeoUpload = function () {
     var statusIcon = content.find("#status-icon");
     var data = {};
     invokerUtil.post(urix, data, function (data) {
-        title.html("Deploying statistic artifacts. Please wait...");
+        title.html("部署统计部件，请稍后...");
         statusIcon.attr("class", defaultStatusClasses + " fw-check");
         $(modalPopupContent).html(content.html());
         showPopup();
@@ -148,7 +148,7 @@ var artifactGeoUpload = function () {
         }, 5000);
 
     }, function (jqXHR) {
-        title.html("Failed to deploy artifacts, Please contact administrator.");
+        title.html("部署部件失败，请联系管理员。");
         statusIcon.attr("class", defaultStatusClasses + " fw-error");
         $(modalPopupContent).html(content.html());
         showPopup();

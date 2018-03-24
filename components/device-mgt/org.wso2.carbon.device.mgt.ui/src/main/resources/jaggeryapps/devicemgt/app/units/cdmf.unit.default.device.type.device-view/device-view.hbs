@@ -46,7 +46,7 @@
     {{#if features}}
         <div class="operation-container">
             <div class="operation-title">
-                <h4>Device Operations</h4>
+                <h4>设备操作</h4>
             </div>
             {{unit "cdmf.unit.default.device.operation-bar" device=device features=features}}
         </div>
@@ -56,13 +56,12 @@
 {{#zone "device-view-tabs"}}
     {{#if attributes}}
     <li class="active"><a class="list-group-item" href="#device_statistics" role="tab"
-                          data-toggle="tab" aria-controls="device_statistics">Device
-                                                                              Statistics</a>
+                          data-toggle="tab" aria-controls="device_statistics">设备统计</a>
     </li>
     {{/if}}
     {{#if features}}
     <li><a class="list-group-item" href="#event_log" role="tab" data-toggle="tab"
-           aria-controls="event_log">Operations Log</a></li>
+           aria-controls="event_log">操作日志</a></li>
     {{/if}}
 {{/zone}}
 
@@ -70,14 +69,14 @@
     {{#if attributes}}
     <div class="panel panel-default tab-pane active"
          id="device_statistics" role="tabpanel" aria-labelledby="device_statistics">
-        <div class="panel-heading">Device Event</div>
+        <div class="panel-heading">设备项目</div>
         {{unit "cdmf.unit.default.device.type.realtime.analytics-view" device=device attributes=attributes}}
     </div>
     {{/if}}
     {{#if features}}
     <div class="panel panel-default tab-pane" id="event_log" role="tabpanel"
          aria-labelledby="event_log">
-        <div class="panel-heading">Operations Log <span><a href="#"
+        <div class="panel-heading">操作日志 <span><a href="#"
                                                            id="refresh-operations"><i
                 class="fw fw-refresh"></i></a></span></div>
         <div class="panel-body">
@@ -86,7 +85,7 @@
 
                 <i class="fw fw-settings fw-spin fw-2x"></i>
 
-                Loading Operations Log . . .
+                	加载操作日志中 . . .
                 <br>
                 <br>
             </div>
@@ -97,12 +96,12 @@
                         <thead class="block">
                             <tr class="sort-row">
                                 <!-- <th class="content-fill no-sort"></th> -->
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
+                                <th>名称</th>
+                                <th>位置</th>
+                                <th>办公室</th>
                                 <!-- <th>Age</th>
-                                <th>Start date</th>
-                                <th>Salary</th>
+                                <th>开始日期</th>
+                                <th>薪水</th>
                                 <th class="no-sort"></th> -->
                             </tr>
                         </thead>
@@ -116,10 +115,10 @@
     </div>
     {{/if}}
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-double grey-bg">
-        <h2 class="uppercase">Device Communication</h2>
+        <h2 class="uppercase">设备通信</h2>
         <hr>
         {{#if event}}
-            <h3 class="uppercase">publish device events :</h3>
+            <h3 class="uppercase">发布设备项目 :</h3>
             {{#if_eq event.transport "MQTT"}}
                     <div class="code-segment">
                         <span>MQTT Topic :</span>
@@ -127,7 +126,7 @@
                     </div>
                 {{#if eventSample}}
                     <div class="code-segment">
-                        <span>Device Event Payload :</span>
+                        <span>设备项目有效载荷 :</span>
                         <code>{{eventSample}}</code>
                     </div>
                 {{/if}}
@@ -143,7 +142,7 @@
             {{/if_eq}}
         {{/if}}
         </br>
-        <h3 class="uppercase">Retrieve operations</h3>
+        <h3 class="uppercase">检索操作</h3>
         {{#if type.deviceTypeMetaDefinition.pushNotificationConfig}}
             {{#if_eq type.deviceTypeMetaDefinition.pushNotificationConfig.type "MQTT"}}
                 <div class="code-segment">
@@ -172,11 +171,11 @@
                     </div>
                 </div>
                 <div class="code-segment">
-                    <span>Operation Response :</span>
+                    <span>操作响应 :</span>
                     <code>{{tenantDomain}}/{{device.type}}/{{device.deviceIdentifier}}/update/operation</code>
                 </div>
                 <div class="code-segment">
-                    <span>Payload :</span>
+                    <span>有效载荷 :</span>
                     <code>{"id": 1,"status": "COMPLETED", "operationResponse": "this is my response"}</code>
                 </div>
                 <br/>
@@ -184,15 +183,15 @@
             {{/if_eq}}
         {{else}}
             <div class="code-segment">
-                <span>Retrieve pending operation :</span>
+                <span>检索挂起的操作 :</span>
                 <code>curl -k -X GET {{httpsGateway}}/api/device-mgt/v1.0/device/agent/pending/operations/{{device.type}}/{{device.deviceIdentifier}} -H 'authorization: Bearer %accessToken%' -H 'content-type: application/json'</code>
             </div>
             <div class="code-segment">
-                <span>Retrieve next pending operation :</span>
+                <span>检索下一个挂起的操作 :</span>
                 <code>curl -k -X GET {{httpsGateway}}/api/device-mgt/v1.0/device/agent/next-pending/{{device.type}}/{{device.deviceIdentifier}} -H 'authorization: Bearer %accessToken%' -H 'content-type: application/json'</code>
             </div>
             <div class="code-segment">
-                <span>Update operation :</span>
+                <span>更新操作 :</span>
                 <code>curl -k -X PUT {{httpsGateway}}/api/device-mgt/v1.0/device/agent/operations/{{device.type}}/{{device.deviceIdentifier}} -H 'authorization: Bearer %accessToken%' -H 'content-type: application/json' -d '{"id": 1,"status": "COMPLETED", "payload": "this is my response"}'</code>
             </div>
 

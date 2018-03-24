@@ -57,20 +57,19 @@ $(document).ready(function () {
             var errorMsgWrapper = "#change-password-error-msg";
             var errorMsg = "#change-password-error-msg span";
             if (!currentPassword) {
-                $(errorMsg).text("Typing your current password is required. It cannot be empty.");
+                $(errorMsg).text("输入您当前的密码是必需的。 它不能为空。");
                 $(errorMsgWrapper).removeClass("hidden");
             } else if (!newPassword) {
-                $(errorMsg).text("Typing your new password is required. It cannot be empty.");
+                $(errorMsg).text("输入您当前的密码是必需的。 它不能为空。");
                 $(errorMsgWrapper).removeClass("hidden");
             } else if (!retypedNewPassword) {
-                $(errorMsg).text("Confirming your new password is required. It cannot be empty.");
+                $(errorMsg).text("新密码必填不能为空。");
                 $(errorMsgWrapper).removeClass("hidden");
             } else if (retypedNewPassword != newPassword) {
-                $(errorMsg).text("Password confirmation failed. Please check.");
+                $(errorMsg).text("密码确认失败，请检查。");
                 $(errorMsgWrapper).removeClass("hidden");
             } else if (!inputIsValid(/^[\S]{5,30}$/, newPassword)) {
-                $(errorMsg).text("Password should be minimum 5 characters long and " +
-                    "should not include any whitespaces. Please check.");
+                $(errorMsg).text("密码至少为5个字符且不能包含空格，请检查。");
                 $(errorMsgWrapper).removeClass("hidden");
             } else {
                 var changePasswordFormData = {};
@@ -92,7 +91,7 @@ $(document).ready(function () {
                         }
                     }, function (jqXHR) {
                         if (jqXHR.status == 400) {
-                            $(errorMsg).text("Your current password does not match with the provided value.");
+                            $(errorMsg).text("您当前的密码与所提供的值不匹配。");
                             $(errorMsgWrapper).removeClass("hidden");
                         } else {
                             var response = JSON.parse(jqXHR.responseText).message;

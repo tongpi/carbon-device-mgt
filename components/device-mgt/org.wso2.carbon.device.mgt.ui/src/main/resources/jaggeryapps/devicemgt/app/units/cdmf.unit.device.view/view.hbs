@@ -42,13 +42,13 @@
                                           <h4>{{device.vendor}} {{device.model}}</h4>
                                         {{/if}}
                                         <h4>Ownership - <strong>{{device.ownership}}</strong></h4>
-                                        <h4>Device is
+                                        <h4>设备是
                                           <strong>
-                                            {{#equal device.status "ACTIVE"}}Active{{/equal}}
-                                            {{#equal device.status "INACTIVE"}}Inactive{{/equal}}
-                                            {{#equal device.status "BLOCKED"}}Blocked{{/equal}}
-                                            {{#equal device.status "REMOVED"}}Removed{{/equal}}
-                                            {{#equal device.status "UNREACHABLE"}}Unreachable{{/equal}}
+                                            {{#equal device.status "ACTIVE"}}活跃的{{/equal}}
+                                            {{#equal device.status "INACTIVE"}}闲置的{{/equal}}
+                                            {{#equal device.status "BLOCKED"}}阻塞的{{/equal}}
+                                            {{#equal device.status "REMOVED"}}已移除{{/equal}}
+                                            {{#equal device.status "UNREACHABLE"}}未找到{{/equal}}
                                           </strong>
                                         </h4>
                                 {{/defineZone}}
@@ -61,7 +61,7 @@
                   {{#defineZone "device-opetations"}}
                     <div class="operation-container">
                       <div class="operation-title">
-                          <h4>Device Operations</h4>
+                          <h4>设备操作</h4>
                       </div>
                       {{unit "cdmf.unit.device.operation-bar" device=device}}
                   </div>
@@ -72,7 +72,7 @@
               <div class="col-lg-7">
                   <ul class="nav nav-tabs">
                     {{#defineZone "device-view-tabs"}}
-                      <li class="active"><a data-toggle="tab" href="#event_log">Operations Log</a></li>
+                      <li class="active"><a data-toggle="tab" href="#event_log">操作日志</a></li>
                       {{#defineZone "device-details-tab-injected"}}
                       {{/defineZone}}
                     {{/defineZone}}
@@ -84,13 +84,13 @@
                             <div class="action-btn-container">
                                 <div class="action-btn show filter">
                                     <a href="javascript:void(0);" id="refresh-operations">
-                                        <i class="fw fw-refresh"></i> Refresh Log
+                                        <i class="fw fw-refresh"></i> 刷新日志
                                     </a>
                                 </div>
                             </div>
                           </div>
                           <div id="operations-spinner" class="wr-advance-operations-init hidden">
-                              <i class="fw fw-wso2-logo fw-pulse fw-2x"></i> Loading Operations Log...
+                              <i class="fw fw-wso2-logo fw-pulse fw-2x"></i> 加载操作日志中...
                           </div>
                           <div class="clearfix"></div>
                             <div class="operation-log-container">
@@ -99,12 +99,12 @@
                                     <thead class="block">
                                         <tr class="sort-row">
                                             <!-- <th class="content-fill no-sort"></th> -->
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
+                                            <th>名称</th>
+                                            <th>位置</th>
+                                            <th>办公室</th>
                                             <!-- <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th>开始日期</th>
+                                            <th>薪水</th>
                                             <th class="no-sort"></th> -->
                                         </tr>
                                     </thead>
@@ -123,18 +123,18 @@
             <!-- /row -->
         {{else}}
             <h1 class="page-sub-title">
-                Permission Denied
+                	无权限
             </h1>
             <br>
-            You are not authorized to view specified device in the system.
+            	您无权查看系统中的指定设备。
         {{/if}}
     {{else}}
         <h1 class="page-sub-title">
-            Device not found
+            	未找到设备
         </h1>
         </h1>
         <br>
-        You have tried to access either a removed or non-existing device.
+      	 您尝试访问的设备已删除或不存在。
     {{/if}}
 {{/zone}}
 {{#zone "bottomJs"}}

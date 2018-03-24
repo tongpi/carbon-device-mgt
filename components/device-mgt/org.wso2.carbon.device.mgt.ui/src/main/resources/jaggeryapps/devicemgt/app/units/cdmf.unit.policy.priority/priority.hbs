@@ -21,7 +21,7 @@
 <div class="row wr-device-board">
     <div class="col-lg-12 wr-secondary-bar">
             <span class="page-sub-title">
-                Policy List by priority order
+                	按优先级顺序的策略列表
             </span>
     </div>
     <div class="row">
@@ -52,26 +52,26 @@
                                     <div class="row no-gutter">
                                         <div class="wr-desc-list-configs highlight col-xs-12 col-sm-4 col-md-4 col-lg-4">
                                             <div>
-                                                <b>Ownership Type : </b> {{ownershipType}}
+                                                <b>所有权类型: </b> {{ownershipType}}
                                             </div>
                                         </div>
                                         {{#equal roles "None"}}
                                             <div class="wr-desc-list-configs highlight col-xs-12 col-sm-4 col-md-4 col-lg-4">
                                                 <div>
-                                                    <b>Assigned User(s) : </b> {{users}}
+                                                    <b>分配的用户 : </b> {{users}}
                                                 </div>
                                             </div>
                                         {{/equal}}
                                         {{#equal users "None"}}
                                             <div class="wr-desc-list-configs highlight col-xs-12 col-sm-4 col-md-4 col-lg-4">
                                                 <div>
-                                                    <b>Assigned Role(s) : </b> {{roles}}
+                                                    <b>分配的角色 : </b> {{roles}}
                                                 </div>
                                             </div>
                                         {{/equal}}
                                         <div class="wr-desc-list-configs col-xs-12 col-sm-4 col-md-4 col-lg-4">
                                             <div>
-                                                <b>Compliance Type :</b> {{compliance}}
+                                                <b>服从类型 :</b> {{compliance}}
                                             </div>
                                         </div>
                                     </div>
@@ -83,9 +83,9 @@
             {{#equal noPolicy false}}
                 <div id="save-new-priorities-button" class="wr-input-control wr-btn-grp">
                     <button class="wr-btn hide" id="sortUpdateBtn" data-policycount="{{policyCount}}"
-                            data-enabled="{{saveNewPrioritiesButtonEnabled}}" disabled>Save New Priority Order
+                            data-enabled="{{saveNewPrioritiesButtonEnabled}}" disabled>保存新的优先顺序
                     </button>
-                    <button class="wr-btn" id="applyChangesBtn">Apply Changes to Devices</button>
+                    <button class="wr-btn" id="applyChangesBtn">将更改应用到设备</button>
                 </div>
             {{/equal}}
         </div>

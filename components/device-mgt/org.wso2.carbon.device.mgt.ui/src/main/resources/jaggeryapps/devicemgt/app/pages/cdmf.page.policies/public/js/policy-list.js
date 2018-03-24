@@ -134,9 +134,9 @@ $(document).ready(function () {
     // click-event function for applyChangesButton
     $(applyChangesButtonId).click(function () {
         var serviceURL = "/api/device-mgt/v1.0/policies/apply-changes";
-        modalDialog.header('Do you really want to apply changes to all policies?');
-        modalDialog.footer('<div class="buttons"><a href="#" id="change-policy-yes-link" class="btn-operations">Yes' +
-            '</a><a href="#" id="change-policy-cancel-link" class="btn-operations btn-default">No</a></div>');
+        modalDialog.header('您真的要对所有策略应用更改吗？');
+        modalDialog.footer('<div class="buttons"><a href="#" id="change-policy-yes-link" class="btn-operations">是的' +
+            '</a><a href="#" id="change-policy-cancel-link" class="btn-operations btn-default">不了</a></div>');
         modalDialog.show();
 
         $("a#change-policy-yes-link").click(function () {
@@ -146,9 +146,9 @@ $(document).ready(function () {
                 // on success
                 function (data, textStatus, jqXHR) {
                     if (jqXHR.status == 200) {
-                        modalDialog.header('Done. Changes applied successfully.');
+                        modalDialog.header('更改应用成功');
                         modalDialog.footer('<div class="buttons"><a href="#" id="change-policy-success-link" ' +
-                            'class="btn-operations">Ok</a></div>');
+                            'class="btn-operations">好的</a></div>');
                         $("a#change-policy-success-link").click(function () {
                             modalDialog.hide();
                             location.reload();
@@ -158,9 +158,9 @@ $(document).ready(function () {
                 // on error
                 function (jqXHR) {
                     console.log(stringify(jqXHR.data));
-                    modalDialog.header('An unexpected error occurred. Please try again later.');
+                    modalDialog.header('出现异常错误。请稍后再试。');
                     modalDialog.footer('<div class="buttons"><a href="#" id="change-policy-error-link" ' +
-                        'class="btn-operations">Ok</a></div>');
+                        'class="btn-operations">好的</a></div>');
                     modalDialog.showAsError();
                     $("a#change-policy-error-link").click(function () {
                         modalDialog.hide();
@@ -184,24 +184,23 @@ $(document).ready(function () {
             // pop-up an error saying
             // "You cannot select already inactive policies. Please deselect inactive policies and try again."
             modalDialog.header('Action cannot be performed !');
-            modalDialog.content('You cannot select already inactive policies to be unpublished. Please deselect ' +
-                'inactive policies and try again.');
-            modalDialog.footer('<div class="buttons"><a href="javascript:modalDialog.hide()" class="btn-operations">Ok</a>' +
+            modalDialog.content('您无法选择已停用的策略以取消发布。 请取消选择不活动的政策并重试。');
+            modalDialog.footer('<div class="buttons"><a href="javascript:modalDialog.hide()" class="btn-operations">好的</a>' +
                 '</div>');
             modalDialog.showAsAWarning();
         } else {
             var serviceURL = "/api/device-mgt/v1.0/policies/deactivate-policy";
             if (policyList.length == 0) {
-                modalDialog.header('Action cannot be performed !');
-                modalDialog.content('Please select a policy or a list of policies to un-publish.');
+                modalDialog.header('无法执行操作 !');
+                modalDialog.content('请选择要取消发布的策略或策略列表。');
                 modalDialog.footer('<div class="buttons"><a href="javascript:modalDialog.hide()" ' +
-                    'class="btn-operations">Ok</a></div>');
+                    'class="btn-operations">好的</a></div>');
                 modalDialog.showAsAWarning();
             } else {
-                modalDialog.header('Do you really want to unpublish the selected policy(s)?');
+                modalDialog.header('你真的想取消发布选定的策略吗？');
                 modalDialog.footer('<div class="buttons"><a href="#" id="unpublish-policy-yes-link" ' +
-                    'class="btn-operations">Yes</a><a href="#" id="unpublish-policy-cancel-link" ' +
-                    'class="btn-operations btn-default">No</a></div>');
+                    'class="btn-operations">是的</a><a href="#" id="unpublish-policy-cancel-link" ' +
+                    'class="btn-operations btn-default">不了</a></div>');
                 modalDialog.show();
             }
 
@@ -213,9 +212,9 @@ $(document).ready(function () {
                     // on success
                     function (data, textStatus, jqXHR) {
                         if (jqXHR.status == 200 && data) {
-                            modalDialog.header('Done. Selected policy was successfully unpublished.');
+                            modalDialog.header('完成。 选定的策略已成功取消发布。');
                             modalDialog.footer('<div class="buttons"><a href="#" id="unpublish-policy-success-link" ' +
-                                'class="btn-operations">Ok</a></div>');
+                                'class="btn-operations">好的</a></div>');
                             $("a#unpublish-policy-success-link").click(function () {
                                 modalDialog.hide();
                                 location.reload();
@@ -225,9 +224,9 @@ $(document).ready(function () {
                     // on error
                     function (jqXHR) {
                         console.log(stringify(jqXHR.data));
-                        modalDialog.header('An unexpected error occurred. Please try again later.');
+                        modalDialog.header('出现异常错误。请稍后再试。');
                         modalDialog.footer('<div class="buttons"><a href="#" id="unpublish-policy-error-link" ' +
-                            'class="btn-operations">Ok</a></div>');
+                            'class="btn-operations">好的</a></div>');
                         modalDialog.showAsError();
                         $("a#unpublish-policy-error-link").click(function () {
                             modalDialog.hide();
@@ -252,25 +251,24 @@ $(document).ready(function () {
             // if policies found in Active or Active/Updated states with in the selection,
             // pop-up an error saying
             // "You cannot select already active policies. Please deselect active policies and try again."
-            modalDialog.header('Action cannot be performed !');
-            modalDialog.content('You cannot select already active policies. Please deselect active policies and try ' +
-                'again.');
+            modalDialog.header('无法执行操作 !');
+            modalDialog.content('您不能选择已激活的策略。请取消选择已激活的策略，再次尝试。');
             modalDialog.footer('<div class="buttons"><a href="javascript:modalDialog.hide()" class="btn-operations">' +
-                'Ok</a></div>');
+                '好的</a></div>');
             modalDialog.showAsAWarning();
         } else {
             var serviceURL = "/api/device-mgt/v1.0/policies/activate-policy";
             if (policyList.length == 0) {
-                modalDialog.header('Action cannot be performed !');
-                modalDialog.content('Please select a policy or a list of policies to publish.');
+                modalDialog.header('无法执行操作!');
+                modalDialog.content('请选择要发布的策略或策略列表。');
                 modalDialog.footer('<div class="buttons"><a href="javascript:modalDialog.hide()" ' +
-                    'class="btn-operations">Ok</a></div>');
+                    'class="btn-operations">好的</a></div>');
                 modalDialog.showAsAWarning();
             } else {
-                modalDialog.header('Do you really want to publish the selected policy(s)?');
+                modalDialog.header('你真的想要发布已选的策略吗？');
                 modalDialog.footer('<div class="buttons"><a href="#" id="publish-policy-yes-link" ' +
-                    'class="btn-operations">Yes</a><a href="#" id="publish-policy-cancel-link" ' +
-                    'class="btn-operations btn-default">No</a></div>');
+                    'class="btn-operations">是的</a><a href="#" id="publish-policy-cancel-link" ' +
+                    'class="btn-operations btn-default">不了</a></div>');
                 modalDialog.show();
             }
             // on-click function for policy removing "yes" button
@@ -281,9 +279,9 @@ $(document).ready(function () {
                     // on success
                     function (data, textStatus, jqXHR) {
                         if (jqXHR.status == 200 && data) {
-                            modalDialog.header('Done. Selected policy was successfully published.');
+                            modalDialog.header('完成。 选定的策略已成功发布。');
                             modalDialog.footer('<div class="buttons"><a href="#" id="publish-policy-success-link" ' +
-                                'class="btn-operations">Ok</a></div>');
+                                'class="btn-operations">好的</a></div>');
                             $("a#publish-policy-success-link").click(function () {
                                 modalDialog.hide();
                                 location.reload();
@@ -293,9 +291,9 @@ $(document).ready(function () {
                     // on error
                     function (jqXHR) {
                         console.log(stringify(jqXHR.data));
-                        modalDialog.header('An unexpected error occurred. Please try again later.');
+                        modalDialog.header('出现异常错误。请稍后再试。');
                         modalDialog.footer('<div class="buttons"><a href="#" id="publish-policy-error-link" ' +
-                            'class="btn-operations">Ok</a></div>');
+                            'class="btn-operations">好的</a></div>');
                         modalDialog.showAsError();
                         $("a#publish-policy-error-link").click(function () {
                             modalDialog.hide();
@@ -320,16 +318,15 @@ $(document).ready(function () {
             // if policies found in Active or Active/Updated states with in the selection,
             // pop-up an error saying
             // "You cannot remove already active policies. Please deselect active policies and try again."
-            modalDialog.header('Action cannot be performed !');
-            modalDialog.content('You cannot select already active policies. Please deselect active policies and try ' +
-                'again.');
+            modalDialog.header('无法执行操作!');
+            modalDialog.content('您不能选择已激活的策略。请取消选择已激活的策略，再次尝试。');
             modalDialog.footer('<div class="buttons"><a href="javascript:modalDialog.hide()" class="btn-operations">' +
-                'Ok</a></div>');
+                '好的</a></div>');
             modalDialog.showAsAWarning();
         } else {
             var serviceURL = "/api/device-mgt/v1.0/policies/remove-policy";
             if (policyList.length == 0) {
-                modalDialog.header('Action cannot be performed !');
+                modalDialog.header('无法执行操作 !');
                 modalDialog.content('Please select a policy or a list of policies to remove.');
                 modalDialog.footer('<div class="buttons"><a href="javascript:modalDialog.hide()" ' +
                     'class="btn-operations">Ok</a></div>');
@@ -338,7 +335,7 @@ $(document).ready(function () {
                 modalDialog.header('Do you really want to remove the selected policy(s)?');
                 modalDialog.footer('<div class="buttons"><a href="#" id="remove-policy-yes-link" class=' +
                     '"btn-operations">Remove</a> <a href="#" id="remove-policy-cancel-link" ' +
-                    'class="btn-operations btn-default">Cancel</a></div>');
+                    'class="btn-operations btn-default">取消</a></div>');
                 modalDialog.show();
             }
 
@@ -352,7 +349,7 @@ $(document).ready(function () {
                         if (jqXHR.status == 200 && data) {
                             modalDialog.header('Done. Selected policy was successfully removed.');
                             modalDialog.footer('<div class="buttons"><a href="#" id="remove-policy-success-link" ' +
-                                'class="btn-operations">Ok</a></div>');
+                                'class="btn-operations">好的</a></div>');
                             $("a#remove-policy-success-link").click(function () {
                                 modalDialog.hide();
                                 location.reload();
@@ -362,9 +359,9 @@ $(document).ready(function () {
                     // on error
                     function (jqXHR) {
                         console.log(stringify(jqXHR.data));
-                        modalDialog.header('An unexpected error occurred. Please try again later.');
+                        modalDialog.header('出现异常错误。请稍后再试。');
                         modalDialog.footer('<div class="buttons"><a href="#" id="remove-policy-error-link" ' +
-                            'class="btn-operations">Ok</a></div>');
+                            'class="btn-operations">好的</a></div>');
                         modalDialog.showAsError();
                         $("a#remove-policy-error-link").click(function () {
                             modalDialog.hide();

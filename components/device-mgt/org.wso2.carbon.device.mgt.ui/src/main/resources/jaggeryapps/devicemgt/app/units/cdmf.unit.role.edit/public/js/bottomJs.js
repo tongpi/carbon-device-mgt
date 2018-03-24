@@ -175,16 +175,16 @@ $(document).ready(function () {
         var errorMsgWrapper = "#role-create-error-msg";
         var errorMsg = "#role-create-error-msg span";
         if (!roleName) {
-            $(errorMsg).text("Role name is a required field. It cannot be empty.");
+            $(errorMsg).text("角色名称必填不能为空。");
             $(errorMsgWrapper).removeClass("hidden");
         } else if (!inputIsValid(rolenameInput.data("regex"), roleName)) {
             $(errorMsg).text(rolenameInput.data("errormsg"));
             $(errorMsgWrapper).removeClass("hidden");
         } else if (!domain) {
-            $(errorMsg).text("Domain is a required field. It cannot be empty.");
+            $(errorMsg).text("域名必填不能为空。");
             $(errorMsgWrapper).removeClass("hidden");
         } else if (!inputIsValid(/^[^~?!#$:;%^*`+={}\[\]\\()|<>,'"]/, domain)) {
-            $(errorMsg).text("Provided domain is invalid.");
+            $(errorMsg).text("提供的域名无效。");
             $(errorMsgWrapper).removeClass("hidden");
         } else {
             var addRoleFormData = {};

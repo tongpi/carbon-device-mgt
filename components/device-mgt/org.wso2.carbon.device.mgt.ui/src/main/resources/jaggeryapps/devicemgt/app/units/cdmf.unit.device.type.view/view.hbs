@@ -18,7 +18,7 @@
 {{#defineZone "contentTitle"}}
     <div class="row wr-device-board">
         <div class="col-lg-12 wr-secondary-bar">
-            <span class="page-sub-title">{{@uriParams.deviceType}} Agent Download</span>
+            <span class="page-sub-title">{{@uriParams.deviceType}} 代理下载</span>
         </div>
     </div>
 {{/defineZone}}
@@ -65,17 +65,16 @@
     <div class="col-lg-12  margin-top-double">
         <h1 class="grey ">{{deviceType.displayName}}</h1>
         <hr>
-        <p class="margin-bottom-double light-grey ">{{#defineZone "deviceTypeHeading"}}Connect your {{deviceType.displayName}} device
-            to the WSO2 device cloud. {{/defineZone}}</p>
+        <p class="margin-bottom-double light-grey ">{{#defineZone "deviceTypeHeading"}}连接你的 {{deviceType.displayName}} 设备到 WSO2设备云上. {{/defineZone}}</p>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 padding-top">
         <img src="{{@app.context}}{{deviceType.image}}" class="img-responsive">
     </div>
     <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 padding-top">
         {{#if deviceType.ingredients}}
-        <h3 class="uppercase">Ingredients</h3>
+        <h3 class="uppercase">材料</h3>
         <hr>
-        <p class="grey margin-top">Hardware Requirements </p>
+        <p class="grey margin-top">硬件要求 </p>
         <br>
         <ul>
             {{#itr deviceType.ingredients}}
@@ -92,7 +91,7 @@
         {{#if deviceType.downloadBtnText}}
             <a href="#" class="download-link btn-operations" data-devicetype="{{@uriParams.deviceType}}" data-sketchtype="{{@uriParams.deviceType}}"><i class="fw fw-download"></i> {{{deviceType.downloadBtnText}}}</a>
         {{else}}
-            <a href="#" class="download-link btn-operations" data-devicetype="{{@uriParams.deviceType}}" data-sketchtype="{{@uriParams.deviceType}}"><i class="fw fw-download"></i> Download</a>
+            <a href="#" class="download-link btn-operations" data-devicetype="{{@uriParams.deviceType}}" data-sketchtype="{{@uriParams.deviceType}}"><i class="fw fw-download"></i> 下载</a>
         {{/if}}
 
         <br/><br/>
@@ -101,7 +100,7 @@
     {{#if deviceType.prepareSteps}}
     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-12 padding-double grey-bg ">
             <h3 class="uppercase">Prepare</h3><hr>
-            <p class="grey margin-top">Get your device ready</p>
+            <p class="grey margin-top">准备好你的设备</p>
             <br/>
             <ul>
                 {{#itr deviceType.prepareSteps}}
@@ -114,8 +113,8 @@
 
     {{#if deviceType.schematicDiagram}}
     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-12 padding-double">
-        <h3 class="uppercase">Schematic Diagram</h3><hr>
-        <p class="grey margin-top">Click on the image to zoom</p>
+        <h3 class="uppercase">示意图</h3><hr>
+        <p class="grey margin-top">点击图片放大</p>
         <center>
             <a href="{{@app.context}}{{deviceType.schematicDiagram}}" target="_blank">
                 <img src="{{@app.context}}{{deviceType.schematicDiagram}}" class="img-responsive" style="max-width: 500px; max-height: 500px">
@@ -127,8 +126,8 @@
 
     {{#if deviceType.quickStartup}}
     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-12 padding-double">
-        <h3 class="uppercase">Connect (Quick Start)</h3><hr>
-        <p class="grey margin-top">Internet of Things Foundation Quickstart connection</p>
+        <h3 class="uppercase">连接（快速启动）</h3><hr>
+        <p class="grey margin-top">物联网基础快速入门连接</p>
         <br/>
         <ul>
             {{#itr deviceType.quickStartup}}
@@ -155,10 +154,10 @@
         <div class="row">
             <div class="col-lg-5 col-md-6 col-centered">
                 <h3>
-                    Scan QR code to start enrollment
+                    	扫描二维码以开始注册。
                 </h3>
                 <h4>
-                    Please scan the QR code using your mobile device to retrieve enrollment URL.
+                    	请使用移动设备扫描二维码获取注册链接。
                 </h4>
 
                 <div class="panel panel-default">

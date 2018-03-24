@@ -259,16 +259,14 @@ function loadPolicyCompliance() {
                                                 }
                                             } else {
                                                 $("#policy-list-container").
-                                                html("<div class='panel-body'><br><p class='fw-warning'> This device " +
-                                                    "has no policy applied.<p></div>");
+                                                html("<div class='panel-body'><br><p class='fw-warning'> 该设备没有应用策略。<p></div>");
                                             }
                                         }
                                     },
                                     // error-callback
                                     function() {
                                         $("#policy-list-container").
-                                        html("<div class='panel-body'><br><p class='fw-warning'> Loading policy compliance related data " +
-                                            "was not successful. please try refreshing data in a while.<p></div>");
+                                        html("<div class='panel-body'><br><p class='fw-warning'> 加载策略遵从性相关数据不成功。请尝试刷新数据在一段时间。<p></div>");
                                     }
                                 );
                             }
@@ -278,8 +276,7 @@ function loadPolicyCompliance() {
                 // error-callback
                 function() {
                     $("#policy-list-container").
-                    html("<div class='panel-body'><br><p class='fw-warning'> Loading policy compliance related data " +
-                        "was not successful. please try refreshing data in a while.<p></div>");
+                    html("<div class='panel-body'><br><p class='fw-warning'> 加载策略遵从性相关数据不成功。请尝试刷新数据在一段时间。<p></div>");
                 }
             );
         }
@@ -316,15 +313,14 @@ function loadApplicationsList() {
                         var iconSource = $("#applications-list-container").data("public-uri") + "/img/android_app_icon.png";
                         $("#applications-list-container img").attr("src",iconSource);
                     } else {
-                        $("#applications-list-container").html("<div class='message message-info'><h4><i class='icon fw fw-info'></i>No applications found.</h4>" +
-                            "<p>Please try refreshing the list in a while.</p></div>");
+                        $("#applications-list-container").html("<div class='message message-info'><h4><i class='icon fw fw-info'></i>没有找到应用程序。</h4>" +
+                            "<p>稍后请尝试刷新列表。</p></div>");
                     }
                 }
             },
             // error-callback
             function () {
-                $("#applications-list-container").html("<div class='panel-body'><br><p class='fw-warning'>&nbsp;Loading application list " +
-                    "was not successful. please try refreshing the list in a while.<p></div>");
+                $("#applications-list-container").html("<div class='panel-body'><br><p class='fw-warning'>&nbsp;加载应用程序列表失败。 稍后请尝试刷新列表。<p></div>");
             });
     });
 }

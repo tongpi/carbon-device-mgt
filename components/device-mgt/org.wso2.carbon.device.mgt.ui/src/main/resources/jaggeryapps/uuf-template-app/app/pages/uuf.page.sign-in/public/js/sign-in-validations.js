@@ -12,12 +12,12 @@ $(document).ready(function(){
         },
         messages: {
             username: {
-                required: "Please enter a username",
-                minlength: "Your username must consist of at least 3 characters"
+                required: "请输入用户名",
+                minlength: "用户名至少为3个字符长度"
             },
             password: {
-                required: "Please provide a password",
-                minlength: "Your password must be at least 3 characters long"
+                required: "请输入密码",
+                minlength: "密码至少为3个字符长度"
             }
         }
     });

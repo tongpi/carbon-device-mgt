@@ -111,7 +111,7 @@ function loadNewNotificationsOnSideViewPanel() {
 function loadNewNotifications() {
     var messageSideBar = ".sidebar-messages";
     if ($("#right-sidebar").attr("is-authorized") == "false") {
-        $(messageSideBar).html("<h4 class ='message-danger'>You are not authorized to view notifications.</h4>");
+        $(messageSideBar).html("<h4 class ='message-danger'>你无权限查看通知。</h4>");
     } else {
         var notifications = $("#notifications");
         var currentUser = notifications.data("currentUser");
@@ -131,22 +131,19 @@ function loadNewNotifications() {
                                 viewModel["appContext"] = context;
                                 $(messageSideBar).html(template(viewModel));
                             } else {
-                                $(messageSideBar).html("<h4 class='text-center'>No New Notifications</h4>" +
+                                $(messageSideBar).html("<h4 class='text-center'>暂无新通知</h4>" +
                                     "<h5 class='text-center text-muted'>" +
-                                    "Check this section for error notifications<br>related to device operations" +
-                                    "</h5>");
+                                    "检查以获取与设备操作相关的错误通知</h5>");
                             }
                         } else {
-                            $(messageSideBar).html("<h4 class ='message-danger'>Unexpected error " +
-                                "occurred while loading new notifications.</h4>");
+                            $(messageSideBar).html("<h4 class ='message-danger'>加载新通知时发生异常错误。</h4>");
                         }
                     }
                 },
                 // on error
                 function (jqXHR) {
                     if (jqXHR.status = 500) {
-                        $(messageSideBar).html("<h4 class ='message-danger'>Unexpected error occurred while trying " +
-                            "to retrieve any new notifications.</h4>");
+                        $(messageSideBar).html("<h4 class ='message-danger'>尝试检索新通知时发生异常错误。</h4>");
                     }
                 }
             );
@@ -381,8 +378,7 @@ $(document).ready(function () {
             // on error
             function () {
                 var content = "<li class='message message-danger'><h4><i class='icon fw fw-error'></i>Warning</h4>" +
-                    "<p>Unexpected error occurred while loading notification. Please refresh the page and" +
-                    " try again</p></li>";
+                    "<p>加载通知时发生异常错误，请刷新页面重试。</p></li>";
                 $(messageSideBar).html(content);
             }
         );
@@ -403,7 +399,7 @@ $(document).ready(function () {
 		var deviceId = $("#deviceId").val();
 		var deviceDescription = $("#deviceDescription").val();
 		if (!deviceType || deviceType.trim() == "" || !deviceName || deviceName.trim() == "" || !deviceId || deviceId.trim() == "") {
-			$(errorMsg).text("Device ID/Name Cannot be empty.");
+			$(errorMsg).text("设备 标识符/名称 不能为空。");
 			$(errorMsgWrapper).removeClass("hidden");
 			return;
 		}
@@ -446,7 +442,7 @@ $(document).ready(function () {
 							$("#modalDevice").modal('show');
 						},
 						error: function(xhr, status, error) {
-							$(errorMsg).text("Device Created, But failed to download the agent configuration.");
+							$(errorMsg).text("设备已创建，但未能下载代理配置。");
 							$(errorMsgWrapper).removeClass("hidden");
 						}
 					});
