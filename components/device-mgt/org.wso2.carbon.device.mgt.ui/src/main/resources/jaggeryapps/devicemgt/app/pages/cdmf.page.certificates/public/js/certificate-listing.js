@@ -66,11 +66,11 @@ function removeCertificate(serialNumber) {
             function () {
                 $("#" + serialNumber).remove();
                 var newCertificateListCount = $(".user-list > span").length;
-                $("#certificate-listing-status-msg").text("Total number of Certificates found : " +
+                $("#certificate-listing-status-msg").text("找到的证书总数： " +
                     newCertificateListCount);
                 modalDialog.header('完成。证书删除成功。');
                 modalDialog.footer('<div class="buttons"><a href="#" id="remove-certificate-success-link" ' +
-                    'class="btn-operations">Ok</a></div>');
+                    'class="btn-operations">好的</a></div>');
                 $("a#remove-certificate-success-link").click(function () {
                     modalDialog.hide();
                 });

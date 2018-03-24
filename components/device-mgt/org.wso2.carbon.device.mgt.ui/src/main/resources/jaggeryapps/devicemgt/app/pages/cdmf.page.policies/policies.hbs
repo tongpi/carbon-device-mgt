@@ -149,7 +149,7 @@
                                                 <i class="fw fw-circle-outline fw-stack-2x"></i>
                                                 <i class="fw fw-delete fw-stack-1x"></i>
                                             </span>
-                                    Remove
+                                    删除
                                 </a>
                             </li>
                         {{/if}}
@@ -193,16 +193,16 @@
                         <h4>{{name}}</h4>
                         <div>({{platform}})</div>
                         {{#equal status "Active/Updated"}}
-                            <span><i class="fw fw-warning icon-success"></i> Active/Updated</span>
+                            <span><i class="fw fw-warning icon-success"></i> 激活/更新</span>
                         {{/equal}}
                         {{#equal status "Active"}}
-                            <span><i class="fw fw-success icon-success"></i> Active</span>
+                            <span><i class="fw fw-success icon-success"></i> 激活</span>
                         {{/equal}}
                         {{#equal status "Inactive/Updated"}}
-                            <span><i class="fw fw-warning icon-warning"></i> Inactive/Updated</span>
+                            <span><i class="fw fw-warning icon-warning"></i> 闲置/更新</span>
                         {{/equal}}
                         {{#equal status "Inactive"}}
-                            <span><i class="fw fw-error icon-danger"></i> Inactive</span>
+                            <span><i class="fw fw-error icon-danger"></i> 闲置</span>
                         {{/equal}}
                     </td>
                     <td class="remove-padding-top"
@@ -249,7 +249,7 @@
                                     <i class="fw fw-circle-outline fw-stack-2x"></i>
                                     <i class="fw fw-edit fw-stack-1x"></i>
                                 </span>
-                            <span class="hidden-xs hidden-on-grid-view">Re-Configure</span>
+                            <span class="hidden-xs hidden-on-grid-view">重新配置</span>
                         </a>
                     </td>
                 </tr>
@@ -261,13 +261,13 @@
     <br class="c-both"/>
 
     <div id="content-filter-types" style="display: none">
-        <div class="sort-title">Sort By</div>
+        <div class="sort-title">排序方式</div>
         <div class="sort-options">
             <a href="#">平台<span class="ico-sort-asc"></span></a>
             <a href="#">所有权类型</a>
             <a href="#">角色</a>
             <a href="#">用户</a>
-            <a href="#">By Compliance Type</a>
+            <a href="#">按合规类型</a>
             <a href="#">状态</a>
         </div>
     </div>

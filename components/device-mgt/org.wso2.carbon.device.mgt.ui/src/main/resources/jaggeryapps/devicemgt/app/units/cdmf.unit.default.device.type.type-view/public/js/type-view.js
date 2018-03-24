@@ -377,7 +377,7 @@ $(document).ready(function () {
             },
             // on error
             function () {
-                var content = "<li class='message message-danger'><h4><i class='icon fw fw-error'></i>Warning</h4>" +
+                var content = "<li class='message message-danger'><h4><i class='icon fw fw-error'></i>警告</h4>" +
                     "<p>加载通知时发生异常错误，请刷新页面重试。</p></li>";
                 $(messageSideBar).html(content);
             }

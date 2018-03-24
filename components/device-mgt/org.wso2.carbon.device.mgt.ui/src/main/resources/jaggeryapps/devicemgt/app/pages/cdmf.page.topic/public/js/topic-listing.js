@@ -196,7 +196,7 @@ function loadTopics(searchType, searchParam) {
             $('#topics-grid').removeClass('hidden');
             $("#loading-content").remove();
         }, {
-            "placeholder": "Search By Topic Name",
+            "placeholder": "按主题名称搜索",
             "searchKey": "name"
         }
     );

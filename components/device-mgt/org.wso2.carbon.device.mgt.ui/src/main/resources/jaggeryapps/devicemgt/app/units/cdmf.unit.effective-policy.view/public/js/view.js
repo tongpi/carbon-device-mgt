@@ -40,7 +40,7 @@ var displayPolicy = function (policyPayloadObj) {
     $("#policy-status").html(policyStatus);
 
     if (!policyPayloadObj.users) {
-        $("#policy-users").text("NONE");
+        $("#policy-users").text("无");
     }
     else if (policyPayloadObj.users.length > 0) {
         $("#policy-users").text(policyPayloadObj.users.toString().split(",").join(", "));
@@ -49,7 +49,7 @@ var displayPolicy = function (policyPayloadObj) {
     }
 
     if (!policyPayloadObj.deviceGroups) {
-        $("#policy-groups").text("NONE");
+        $("#policy-groups").text("无");
     } else if (policyPayloadObj.deviceGroups.length > 0) {
         var deviceGroups = policyPayloadObj.deviceGroups;
         var assignedGroups = [];
@@ -60,11 +60,11 @@ var displayPolicy = function (policyPayloadObj) {
         }
         $("#policy-groups").text(assignedGroups.toString().split(",").join(", "));
     } else {
-        $("#policy-groups").text("NONE");
+        $("#policy-groups").text("无");
     }
 
     if (!policyPayloadObj.roles) {
-        $("#policy-roles").text("NONE");
+        $("#policy-roles").text("无");
     }
     else if (policyPayloadObj.roles.length > 0) {
         $("#policy-roles").text(policyPayloadObj.roles.toString().split(",").join(", "));

@@ -669,7 +669,7 @@ function attachDeviceEvents() {
                     }
                 }
                 if (hasGroups) {
-                    html = '<br/><h4>Please select device group(s)</h4><br/>' +
+                    html = '<br/><h4>请选择设备组</h4><br/>' +
                         '<div class="wr-input-control">' +
                         '<select id="groups" class="form-control select2" multiple="multiple">' +
                         html + '</select></div>';

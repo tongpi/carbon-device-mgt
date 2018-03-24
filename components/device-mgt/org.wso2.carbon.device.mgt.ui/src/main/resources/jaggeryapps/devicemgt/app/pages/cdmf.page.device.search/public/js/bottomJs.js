@@ -41,20 +41,20 @@ $("#view-search-param").click(function () {
 
 var dynamicForm = '<div class="dynamic-search-param row"><div class="row"><a class="close-button-div icon fw fw-error">' +
                   '</a></div><div class="form-group wr-input-control col-md-2"><label class="wr-input-label ">状态</label>' +
-                  '<select class="state no-tag form-control select2-custom"><option>AND</option><option>OR</option></select></div><div ' +
-                  'class="form-group wr-input-control col-md-4"><label class="wr-input-label ">Key</label><select class=' +
+                  '<select class="state no-tag form-control select2-custom"><option>和</option><option>或者</option></select></div><div ' +
+                  'class="form-group wr-input-control col-md-4"><label class="wr-input-label ">密钥</label><select class=' +
                   '"txt-key form-control select2-custom"><option value = "deviceModel">设备模型' +
                   '</option><option value = "PhoneNumber">电话号码</option><option value = "vendor">供应商</option><option value = "osVersion">系统版本' +
                   '</option><option value = "batteryLevel">电池容量</option><option value =' +
-                  ' "internalTotalMemory">Internal Total Memory</option> <option value ="internalAvailableMemory">' +
+                  ' "internalTotalMemory">内部总内存</option> <option value ="internalAvailableMemory">' +
                   '内部可用内存</option> <option value = "externalTotalMemory">外部内存总量</option>' +
                   ' <option value = "externalAvailableMemory">外部可用内存' +
                   '</option> <option value = "connectionType">连接类型</option> <option value =' +
-                  ' "ssid">SSID</option><option value = "cpuUsage">CPU Usage</option><option value = "totalRAMMemory">' +
-                  'Total RAM Memory</option> <option value = "availableRAMMemory">可用的 RAM 内存</option>' +
-                  '<option value = "pluggedIn">Plugged In</option></select></div>' +
+                  ' "ssid">SSID</option><option value = "cpuUsage">CPU使用率</option><option value = "totalRAMMemory">' +
+                  'RAM内存总数</option> <option value = "availableRAMMemory">可用的 RAM 内存</option>' +
+                  '<option value = "pluggedIn">插入</option></select></div>' +
                   '<div class="form-group wr-input-control col-md-2">' +
-                  '<label class="wr-input-label ">Operator</label><select id = "operators" class="form-control' +
+                  '<label class="wr-input-label ">操作者</label><select id = "operators" class="form-control' +
                   ' select2-custom no-tag operator"><option>=</option><option> !=</option><option> %</option>' +
                   '</select></div><div class="form-group ' + 'wr-input-control col-md-4"><label class="wr-input-label">价值</label>' +
                   '<input type="text" class="form-control txt-value"/></div></div>';

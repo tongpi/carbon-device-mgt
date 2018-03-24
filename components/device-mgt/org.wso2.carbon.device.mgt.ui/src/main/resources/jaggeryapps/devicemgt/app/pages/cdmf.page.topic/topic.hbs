@@ -29,7 +29,7 @@
     <li>
         <!--suppress HtmlUnknownTarget -->
         <a href="{{@app.context}}/topics">
-            Dashboard
+            仪表板
         </a>
     </li>
     <li>
@@ -48,7 +48,7 @@
                 <span id="permission" data-permission="{{permissions.list}}"></span>
                 <div id="loading-content" class="col-centered">
                     <i class="fw fw-settings fw-spin fw-2x"></i>
-                    Loading subscriptions . . .
+                    加载订阅 . . .
                     <br>
                 </div>
                 <div id="topics-listing-status" class="raw hidden">
@@ -67,12 +67,12 @@
                         <thead>
                         <tr class="sort-row">
                             <th class="no-sort"></th>
-                            <th>By TopicName</th>
-                            <th>By RemainingMsgCount</th>
-                            <th>By Active</th>
-                            <th>By Durable</th>
-                            <th>By SubscriberQueueName</th>
-                            <th>By SubscriptionIdentifier</th>
+                            <th>按主题名称</th>
+                            <th>按保存信息数</th>
+                            <th>按激活数</th>
+                            <th>按持续时间</th>
+                            <th>按订阅队列名称</th>
+                            <th>按订阅标识符</th>
                         </tr>
                         <tr class="filter-row filter-box">
                             <th class="no-sort"></th>
@@ -95,12 +95,12 @@
                 <div id="content-filter-types" style="display: none">
                     <div class="sort-title">Sort By</div>
                     <div class="sort-options">
-                        <a href="#">By SubscribedQueueOrTopicName<span class="ico-sort-asc"></span></a>
-                        <a href="#">By localNumberOfMessagesRemainingForSubscriber</a>
-                        <a href="#">By localActive</a>
-                        <a href="#">By localDurable</a>
-                        <a href="#">By localSubscriberQueueName</a>
-                        <a href="#">By localSubscriptionIdentifier</a>
+                        <a href="#">按订阅队列或者主题名称<span class="ico-sort-asc"></span></a>
+                        <a href="#">按订阅者保存的本地消息数</a>
+                        <a href="#">按本地激活</a>
+                        <a href="#">按本地持续时间</a>
+                        <a href="#">按本地订阅队列名称</a>
+                        <a href="#">按本地订阅标识符</a>
                     </div>
                 </div>
             </div>

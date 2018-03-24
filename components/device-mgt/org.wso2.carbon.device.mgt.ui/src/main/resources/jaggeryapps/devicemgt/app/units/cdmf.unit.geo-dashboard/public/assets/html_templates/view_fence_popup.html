@@ -24,8 +24,8 @@
     <h3 class="popover-title" id="viewAreaName"></h3>
     <div class="popover-content">
         <form role="form" style="width: auto" id="exitAlertForm">
-            <button type="button" id="exportGeoJson" download="geoJson.json" onclick="exportToGeoJSON(this,JSON.stringify(map._layers[$(this).attr('leaflet_id')].toGeoJSON(),null, '\t'))" class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="left" title="Export selected area as a geoJson file">Export</button>
-            <button type="button" id="hideViewFence" class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="left" title="Hide this fence" onclick="map.removeLayer(map._layers[$(this).attr('leaflet_id')])" >Hide</button>
+            <button type="button" id="exportGeoJson" download="geoJson.json" onclick="exportToGeoJSON(this,JSON.stringify(map._layers[$(this).attr('leaflet_id')].toGeoJSON(),null, '\t'))" class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="left" title="Export selected area as a geoJson file">导出</button>
+            <button type="button" id="hideViewFence" class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="left" title="Hide this fence" onclick="map.removeLayer(map._layers[$(this).attr('leaflet_id')])" >隐藏</button>
         </form>
     </div>
 </div>
@@ -33,8 +33,8 @@
     <h3 class="popover-title" id="viewAreaName"></h3>
     <div class="popover-content">
         <form role="form" style="width: auto" class="" id="withinAlertForm">
-            <button type="button" id="exportGeoJson" download="geoJson.json" onclick="exportToGeoJSON(this,JSON.stringify(map._layers[$(this).attr('leaflet_id')].toGeoJSON(),null, '\t'))" class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="left" title="Export selected area as a geoJson file">Export</button>
-            <button type="button" id="hideViewFence" class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="left" title="Hide this fence" onclick="map.removeLayer(map._layers[$(this).attr('leaflet_id')])" >Hide</button>
+            <button type="button" id="exportGeoJson" download="geoJson.json" onclick="exportToGeoJSON(this,JSON.stringify(map._layers[$(this).attr('leaflet_id')].toGeoJSON(),null, '\t'))" class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="left" title="Export selected area as a geoJson file">导出</button>
+            <button type="button" id="hideViewFence" class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="left" title="Hide this fence" onclick="map.removeLayer(map._layers[$(this).attr('leaflet_id')])" >隐藏</button>
         </form>
     </div>
 </div>
@@ -42,9 +42,9 @@
     <h3 class="popover-title" id="viewAreaName"></h3>
     <div class="popover-content">
         <form role="form" style="width: auto" id="stationaryAlertForm">
-            <h6>Stationery time(Seconds)<span id="viewAreaTime" class="label label-primary pull-right">N/A</span></h6>
-            <button type="button" id="exportGeoJson" download="geoJson.json" onclick="exportToGeoJSON(this,JSON.stringify(map._layers[$(this).attr('leaflet_id')].toGeoJSON(),null, '\t'))" class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="left" title="Export selected area as a geoJson file">Export</button>
-            <button type="button" id="hideViewFence" class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="left" title="Hide this fence" onclick="map.removeLayer(map._layers[$(this).attr('leaflet_id')])" >Hide</button>
+            <h6>固定的时间(秒数)<span id="viewAreaTime" class="label label-primary pull-right">N/A</span></h6>
+            <button type="button" id="exportGeoJson" download="geoJson.json" onclick="exportToGeoJSON(this,JSON.stringify(map._layers[$(this).attr('leaflet_id')].toGeoJSON(),null, '\t'))" class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="left" title="Export selected area as a geoJson file">导出</button>
+            <button type="button" id="hideViewFence" class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="left" title="Hide this fence" onclick="map.removeLayer(map._layers[$(this).attr('leaflet_id')])" >隐藏</button>
         </form>
     </div>
 </div>

@@ -312,7 +312,7 @@ validateStep["policy-criteria"] = function () {
         validationStatus["error"] = false;
     } else {
         validationStatus["error"] = true;
-        validationStatus["mainErrorMsg"] = selectedField + " is a required field. It cannot be empty";
+        validationStatus["mainErrorMsg"] = selectedField + " 是必填字段。 它不能为空";
     }
 
     var wizardIsToBeContinued;
