@@ -74,14 +74,14 @@ function selectAllDevices(button) {
             addDeviceSelectedClass(this);
         });
         $(button).data('select', true);
-        $(button).html('Deselect All Devices');
+        $(button).html('取消选择所有设备');
     } else {
         $(deviceCheckbox).each(function (index) {
             $(this).prop('checked', false);
             addDeviceSelectedClass(this);
         });
         $(button).data('select', false);
-        $(button).html('Select All Devices');
+        $(button).html('选择所有设备');
     }
 }
 

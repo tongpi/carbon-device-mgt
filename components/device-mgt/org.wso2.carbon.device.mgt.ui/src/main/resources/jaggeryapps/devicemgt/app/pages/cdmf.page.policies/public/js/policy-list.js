@@ -327,14 +327,14 @@ $(document).ready(function () {
             var serviceURL = "/api/device-mgt/v1.0/policies/remove-policy";
             if (policyList.length == 0) {
                 modalDialog.header('无法执行操作 !');
-                modalDialog.content('Please select a policy or a list of policies to remove.');
+                modalDialog.content('请选择要删除的策略或策略列表。');
                 modalDialog.footer('<div class="buttons"><a href="javascript:modalDialog.hide()" ' +
-                    'class="btn-operations">Ok</a></div>');
+                    'class="btn-operations">好的</a></div>');
                 modalDialog.showAsAWarning();
             } else {
-                modalDialog.header('Do you really want to remove the selected policy(s)?');
+                modalDialog.header('你真的想删除选定的策略吗?');
                 modalDialog.footer('<div class="buttons"><a href="#" id="remove-policy-yes-link" class=' +
-                    '"btn-operations">Remove</a> <a href="#" id="remove-policy-cancel-link" ' +
+                    '"btn-operations">删除</a> <a href="#" id="remove-policy-cancel-link" ' +
                     'class="btn-operations btn-default">取消</a></div>');
                 modalDialog.show();
             }
@@ -347,7 +347,7 @@ $(document).ready(function () {
                     // on success
                     function (data, textStatus, jqXHR) {
                         if (jqXHR.status == 200 && data) {
-                            modalDialog.header('Done. Selected policy was successfully removed.');
+                            modalDialog.header('完成。 选定的策略已成功删除。');
                             modalDialog.footer('<div class="buttons"><a href="#" id="remove-policy-success-link" ' +
                                 'class="btn-operations">好的</a></div>');
                             $("a#remove-policy-success-link").click(function () {

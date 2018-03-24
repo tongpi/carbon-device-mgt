@@ -47,7 +47,7 @@ var log = new Log('exception_module');
             throw exception;
         } else if (type == constants.LOG_EXCEPTION_AND_TERMINATE) {
             log.error(exception);
-            var msg = 'An error occurred while serving the request!';
+            var msg = '提供请求时发生错误!';
             var e = exceptionModule.buildExceptionObject(msg, constants.STATUS_CODES.INTERNAL_SERVER_ERROR);
             throw e;
         } else if (type == constants.LOG_EXCEPTION_AND_CONTINUE) {

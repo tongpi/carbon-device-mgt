@@ -87,9 +87,9 @@ $(document).ready(function () {
             // on success
             function (data, textStatus, jqXHR) {
                 if (jqXHR.status == 200) {
-                    modalDialog.header('Done. New Policy priorities were successfully updated.');
+                    modalDialog.header('完成。 新的策略优先权已成功更新。');
                     modalDialog.footer('<div class="buttons"><a href="javascript:void(0)" ' +
-                        'id="save-policy-priorities-success-link" class="btn-operations">Ok</a></div>');
+                        'id="save-policy-priorities-success-link" class="btn-operations">好的</a></div>');
                     modalDialog.show();
                     $("a#save-policy-priorities-success-link").click(function () {
                         modalDialog.hide();
@@ -100,9 +100,9 @@ $(document).ready(function () {
             // on error
             function (jqXHR) {
                 if (jqXHR.status == 400 || jqXHR.status == 500) {
-                    modalDialog.header('An unexpected error occurred. Please try again later.');
+                    modalDialog.header('一个意料之外的问题发生了。 请稍后再试。');
                     modalDialog.footer('<div class="buttons"><a href="javascript:void(0)" ' +
-                        'id="save-policy-priorities-error-link" class="btn-operations">Ok</a></div>');
+                        'id="save-policy-priorities-error-link" class="btn-operations">好的</a></div>');
                     modalDialog.showAsError();                    
                     $("a#save-policy-priorities-error-link").click(function () {
                         modalDialog.hide();
@@ -114,10 +114,10 @@ $(document).ready(function () {
 
     $(applyChangesBtn).click(function () {
         var applyPolicyChangesAPI = "/api/device-mgt/v1.0/policies/apply-changes";
-        modalDialog.header('Do you really want to apply changes to all policies?');
+        modalDialog.header('你真的想要对所有策略进行更改吗？');
         modalDialog.footer('<div class="buttons"><a href="javascript:void(0)" id="apply-changes-yes-link" ' +
-            'class="btn-operations">Yes</a><a href="javascript:void(0)" id="apply-changes-cancel-link" ' +
-            'class="btn-operations">No</a></div>');
+            'class="btn-operations">是的</a><a href="javascript:void(0)" id="apply-changes-cancel-link" ' +
+            'class="btn-operations">不了</a></div>');
         modalDialog.show();
 
         $("a#apply-changes-yes-link").click(function () {
@@ -127,9 +127,9 @@ $(document).ready(function () {
                 // on success
                 function (data, textStatus, jqXHR) {
                     if (jqXHR.status == 200) {
-                        modalDialog.header('Done. Changes applied successfully.');
+                        modalDialog.header('完成。 更改已成功应用。');
                         modalDialog.footer('<div class="buttons"><a href="javascript:void(0)" ' +
-                            'id="apply-changes-success-link" class="btn-operations">Ok</a></div>');
+                            'id="apply-changes-success-link" class="btn-operations">好的</a></div>');
                         modalDialog.show();
                         $("a#apply-changes-success-link").click(function () {
                             modalDialog.hide();
@@ -139,9 +139,9 @@ $(document).ready(function () {
                 // on error
                 function (jqXHR) {
                     if (jqXHR.status == 500) {
-                        modalDialog.header('An unexpected error occurred. Please try again later.');
+                        modalDialog.header('一个意料之外的问题发生了。 请稍后再试。');
                         modalDialog.footer('<div class="buttons"><a href="javascript:void(0)" ' +
-                            'id="apply-changes-error-link" class="btn-operations">Ok</a></div>');
+                            'id="apply-changes-error-link" class="btn-operations">好的</a></div>');
                         modalDialog.showAsError();
                         $("a#apply-changes-error-link").click(function () {
                             modalDialog.hide();

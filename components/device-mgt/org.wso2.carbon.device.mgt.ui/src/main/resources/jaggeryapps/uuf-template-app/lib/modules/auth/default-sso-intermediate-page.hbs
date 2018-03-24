@@ -22,20 +22,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sign In | WSO2</title>
+    <title>登陆 | WSO2</title>
 </head>
 <body>
 <div>
     <p>
-        You are now being redirected to Identity Server. If the redirection fails, please click on
-        the button below.
+        您现在正被重定向到Identity Server。 如果重定向失败，请点击下面的按钮。
     </p>
 
     <form method="post" action="{{identityProviderUrl}}">
         <input type="hidden" name="SAMLRequest" value="{{encodedSAMLAuthRequest}}" />
         <input type="hidden" name="RelayState" value="{{relayState}}" />
         <input type="hidden" name="SSOAuthSessionID" value="{{sessionId}}" />
-        <button type="submit">Redirect manually</button>
+        <button type="submit">手动重定向</button>
     </form>
 </div>
 <script type="text/javascript">document.forms[0].submit();</script>

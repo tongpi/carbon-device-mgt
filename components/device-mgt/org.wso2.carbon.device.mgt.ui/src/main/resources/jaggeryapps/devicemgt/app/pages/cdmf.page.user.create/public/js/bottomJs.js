@@ -295,7 +295,7 @@ $(document).ready(function () {
                             modalDialog.content($("#modal-content-user-created").html());
                         }
                         modalDialog.footer('<div class="buttons"> ' +
-                            '<a href="/devicemgt/users" id="reset-password-yes-link" class="btn-operations"> OK' +
+                            '<a href="/devicemgt/users" id="reset-password-yes-link" class="btn-operations"> 好的' +
                             '</a></div>');
                         modalDialog.show();
                         generateQRCode("#user-created-msg .qr-code");

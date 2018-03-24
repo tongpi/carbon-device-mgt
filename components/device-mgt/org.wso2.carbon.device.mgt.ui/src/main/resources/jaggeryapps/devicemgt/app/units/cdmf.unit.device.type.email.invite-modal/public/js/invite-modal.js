@@ -11,10 +11,10 @@ function toggleEmailInvite(){
                        '<span class="fw-stack fw-move-right fw-move-bottom">' +
                        '<i class="fw fw-circle-outline fw-stack-2x"></i>' +
                        '<i class="fw fw-circle fw-stack-2x fw-stroke text-info"></i>' +
-                       '<i class="fw fw-add fw-stack-1x fw-inverse"></i></span></span>Send Invites</h4>');
+                       '<i class="fw fw-add fw-stack-1x fw-inverse"></i></span></span>发送邀请</h4>');
     modalDialog.content($("#invite-by-email-body").html());
     modalDialog.footer('<div class="buttons">' +
-                       '<a href="javascript:sendInvites()" class="btn-operations btn-default">Send Invite(s)</a>' +
+                       '<a href="javascript:sendInvites()" class="btn-operations btn-default">发送邀请</a>' +
                        '</div>');
     modalDialog.show();
     //$('.modal-content .select2-container').remove();
@@ -65,19 +65,19 @@ function sendInvites(){
             deviceEmailObj,
             function () {
                 modalDialog.header("Invitations sent");
-                modalDialog.content("<h4>Invitation email for enrollment was successfully sent.</h4>");
+                modalDialog.content("<h4>用于注册的邀请电子邮件已成功发送。</h4>");
                 modalDialog.footer('<div class="buttons"> <a href="#" id="invite-user-success-link" ' +
-                                   'class="btn-operations">Ok </a> </div>');
+                                   'class="btn-operations">好的 </a> </div>');
                 $("a#invite-user-success-link").click(function () {
                     modalDialog.hide();
                 });
             },
             function () {
                 modalDialog.header('<span class="fw-stack"> <i class="fw fw-circle-outline fw-stack-2x"></i> <i class="fw ' +
-                                   'fw-error fw-stack-1x"></i> </span> Unexpected Error !');
-                modalDialog.content('An unexpected error occurred. Try again later.');
+                                   'fw-error fw-stack-1x"></i> </span> 意外的错误 ！');
+                modalDialog.content('一个意料之外的问题发生了。');
                 modalDialog.footer('<div class="buttons"> <a href="#" id="invite-user-error-link" ' +
-                                   'class="btn-operations">Ok </a> </div>');
+                                   'class="btn-operations">好的 </a> </div>');
                 $("a#invite-user-error-link").click(function () {
                     modalDialog.hide();
                 });

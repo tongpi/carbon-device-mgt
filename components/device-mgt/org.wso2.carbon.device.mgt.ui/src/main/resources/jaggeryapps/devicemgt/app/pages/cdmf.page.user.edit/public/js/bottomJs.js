@@ -256,9 +256,9 @@ $(document).ready(function () {
                 }, function (jqXHR) {
                     var payload = JSON.parse(jqXHR.responseText);
                     if (jqXHR.status == 409) {
-                        $(errorMsg).text("User : " + username + " doesn't exists. You cannot proceed.");
+                        $(errorMsg).text("用户 : " + username + " 不存在. 你不能继续.");
                     } else if (jqXHR.status == 500) {
-                        $(errorMsg).text("An unexpected error occurred at backend server. Please try again later.");
+                        $(errorMsg).text("后端服务器发生意外错误。 请稍后再试。");
                     } else {
                         $(errorMsg).text(payload.message);
                     }
