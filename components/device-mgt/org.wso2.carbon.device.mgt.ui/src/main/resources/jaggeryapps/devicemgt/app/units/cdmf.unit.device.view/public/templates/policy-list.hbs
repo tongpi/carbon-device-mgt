@@ -1,16 +1,16 @@
 <table class="table table-striped table-hover table-bordered display data-table" id="policy-table">
     <thead>
     <tr class="sort-row">
-        <th>Policy Name</th>
-        <th>Status</th>
+        <th>策略名称</th>
+        <th>状态</th>
         <th class="no-sort"></th>
     </tr>
     </thead>
     <tbody>
     {{#each policies}}
         <tr data-type="selectable" data-id="{{id}}">
-            <td data-display="{{name}}" data-grid-label="Name">{{name}}</td>
-            <td data-display="{{status}}" data-grid-label="Status">
+            <td data-display="{{name}}" data-grid-label="名称">{{name}}</td>
+            <td data-display="{{status}}" data-grid-label="状态">
                 {{#equal status "Active/Updated"}}
                     <i class="fw fw-warning icon-success"></i> 活跃的/更新的</span>
                 {{/equal}}
@@ -41,7 +41,7 @@
                                 <i class="fw fw-circle-outline fw-stack-2x"></i>
                                 <i class="fw fw-settings fw-stack-1x"></i>
                             </span>
-                    <span class="hidden-xs hidden-on-grid-view">Re-Configure</span>
+                    <span class="hidden-xs hidden-on-grid-view">重新配置</span>
                 </a>
             </td>
         </tr>

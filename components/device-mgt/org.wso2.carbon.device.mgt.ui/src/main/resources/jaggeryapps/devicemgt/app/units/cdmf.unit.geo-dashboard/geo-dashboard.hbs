@@ -247,15 +247,11 @@
                             <div class="panel-body">
                                 <p>以下形式的字符串:</p>
                                 <pre><code class="javascript"><span class="string">'http://{s}.somedomain.com/blabla/{z}/{x}/{y}.png'</span></code></pre>
-                                <p><code class="javascript">{s}</code> means one of the available subdomains (used
-                                                                       sequentially to help with browser parallel requests per domain limitation; subdomain
-                                                                       values are specified in options; <code class="javascript">a</code>, <code
-                                            class="javascript">b</code> or <code class="javascript">c</code> by default, can
-                                                                       be omitted), <code class="javascript">{z}</code> — zoom level, <code class="javascript">{x}</code>
-                                                                       and <code class="javascript">{y}</code> — tile coordinates.</p>
+                                <p><code class="javascript">{s}</code> 意味着一个可用的子域（按顺序用于帮助每个域限制的浏览器并行请求;子域值在选项中指定; <code class="javascript">a</code>, <code
+                                            class="javascript">b</code> 或 <code class="javascript">c</code> 默认, 可以省略), <code class="javascript">{z}</code> — zoom level, <code class="javascript">{x}</code>
+                                                                       和 <code class="javascript">{y}</code> — tile coordinates.</p>
 
-                                <p>You can use custom keys in the template, which will be <a
-                                        href="#util-template">evaluated</a> from TileLayer options, like this:</p>
+                                <p>您可以在模板中使用自定义键，这将从TileLayer选项<a href="#util-template">评估</a>，如下所示：</p>
                                 <pre><code class="javascript">L.tileLayer(<span class="string">'http://{s}.somedomain.com/{foo}/{z}/{x}/{y}.png'</span>,
                                 {foo: <span class="string">'bar'</span>});</code></pre>
 
@@ -264,7 +260,7 @@
                         <div class="input-group input-group-sm">
                             <span class="input-group-addon"><i class="fa fa-italic"></i></span>
                             <input autofocus="enable" id="tileName" type="text" class="form-control"
-                                   placeholder="Tile URL name">
+                                   placeholder="Tile 网址名称">
                         </div>
                         <br>
 
@@ -297,7 +293,7 @@
                                             <label class="col-sm-2 control-label" for="sub_domains">Sub-domains</label>
                                         </small>
                                         <input id="sub_domains" type="text" class="form-control"
-                                               placeholder="Enter sub-domains in CSV format">
+                                               placeholder="以CSV格式输入子域名">
                                     </div>
 
                                     <br/>
@@ -445,7 +441,7 @@
                             <label for="importGeoJsonFile">导入 GeoJson</label>
                             <input id="importGeoJsonFile" type="file">
                             <hr />
-                            <label for="enterGeoJson">Enter GeoJson</label>
+                            <label for="enterGeoJson">输入 GeoJson</label>
                             <textarea id="enterGeoJson" class="form-control" rows="10"></textarea>
                         </div>
                         <div class="pull-right">
@@ -476,7 +472,7 @@
                 <div class="modal-body">
                     <div class="col-lg-8 col-md-8 col-centered">
                         <div>
-                            <label for="importGeoJsonFile">Import GeoJson</label>
+                            <label for="importGeoJsonFile">导入 GeoJson</label>
                             <input id="importGeoJsonFile" type="file">
                             <hr />
                             <label for="enterGeoJson">输入 GeoJson</label>
@@ -501,8 +497,8 @@
                 <h6>Information</h6>
                 <p id="information" class="bg-primary" style="margin: 0px;padding: 0px;"></p>
                 {{#if geoServicesEnabled}}
-                <h6>Speed<span class="label label-primary pull-right"><span id="speed"></span> km/h</span></h6>
-                <h6>Heading<span id="heading" class="label label-primary pull-right"></span></h6>
+                <h6>速度<span class="label label-primary pull-right"><span id="speed"></span> km/h</span></h6>
+                <h6>前进方向<span id="heading" class="label label-primary pull-right"></span></h6>
                 <button type="button" class="btn btn-info btn-xs" onClick="toggleSpeedGraph();return false;">速度图</button>
                 <button type="button" class="btn btn-info btn-xs" onClick="focusOnRecentHistorySpatialObject();return false;">最近历史</button>
                 <button type="button" class="btn btn-info btn-xs" onClick="popupDateRange();">全部历史</button>
@@ -533,7 +529,7 @@
             <h3 class="popover-title">ID <span id="objectId"></span></h3>
 
             <div class="popover-content">
-                <h6>Information</h6>
+                <h6>信息</h6>
 
                 <p id="information" class="bg-primary" style="margin: 0px;padding: 0px;"></p>
             </div>

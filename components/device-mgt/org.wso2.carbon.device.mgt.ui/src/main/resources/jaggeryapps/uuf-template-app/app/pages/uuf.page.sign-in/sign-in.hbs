@@ -15,7 +15,7 @@
   specific language governing permissions and limitations
   under the License.
 }}
-{{#zone "title"}}Sign In | {{@app.conf.appName}}{{/zone}}
+{{#zone "title"}}登录 | {{@app.conf.appName}}{{/zone}}
 
 {{~#zone "content"}}
     <div class="col-sm-7 col-md-4 center-block" style="float: none; margin-top: 10%;">
@@ -36,11 +36,11 @@
                       action="{{#defineZone "signInForm-action" scope="protected"}}{{@app.context}}/uuf/login{{/defineZone}}">
                     <div class="form-group">
                         <input type="text" name="username" class="form-control"
-                               placeholder="User Name" required="required" autofocus="autofocus" />
+                               placeholder="用户名" required="required" autofocus="autofocus" />
                     </div>
                     <div class="form-group">
                         <input type="password" name="password" class="form-control" autocomplete="off"
-                               placeholder="Password" required="required" />
+                               placeholder="密码" required="required" />
                     </div>
                     {{#if referer}}
                         <input type="hidden" name="referer" value="{{referer}}" />

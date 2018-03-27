@@ -356,7 +356,7 @@ function loadDevices(searchType, searchParam) {
 
                         html += '<a href="' + statURL  +
                             deviceIdentifier + '&deviceName=' + row.name + '" ' + 'data-click-event="remove-form"' +
-                            ' class="btn padding-reduce-on-grid-view" data-placement="top" data-toggle="tooltip" data-original-title="Analytics"><span class="fw-stack">' +
+                            ' class="btn padding-reduce-on-grid-view" data-placement="top" data-toggle="tooltip" data-original-title="分析"><span class="fw-stack">' +
                             '<i class="fw fw-circle-outline fw-stack-2x"></i><i class="fw fw-statistics fw-stack-1x"></i></span>' +
                             '<span class="hidden-xs hidden-on-grid-view">分析</span>';
                     }
@@ -367,7 +367,7 @@ function loadDevices(searchType, searchParam) {
                             +
                             'data-deviceid="' + deviceIdentifier + '" data-devicetype="' + deviceType
                             + '" data-devicename="' +
-                            row.name + '" data-placement="top" data-toggle="tooltip" data-original-title="Group"><span class="fw-stack"><i class="fw fw-circle-outline fw-stack-2x"></i>' +
+                            row.name + '" data-placement="top" data-toggle="tooltip" data-original-title="组"><span class="fw-stack"><i class="fw fw-circle-outline fw-stack-2x"></i>' +
                             '<i class="fw fw-group fw-stack-1x"></i></span>' +
                             '<span class="hidden-xs hidden-on-grid-view">组</span></a>';
                     }
@@ -375,7 +375,7 @@ function loadDevices(searchType, searchParam) {
                     html +=
                         '<a href="#" data-click-event="remove-form" class="btn padding-reduce-on-grid-view edit-device-link" '
                         + 'data-deviceid="' + deviceIdentifier + '" data-devicetype="' + deviceType
-                        + '" data-devicename="' + row.name + '" data-placement="top" data-toggle="tooltip" data-original-title="Edit">'
+                        + '" data-devicename="' + row.name + '" data-placement="top" data-toggle="tooltip" data-original-title="修改">'
                         + '<span class="fw-stack"><i class="fw fw-circle-outline fw-stack-2x"></i>'
                         + '<i class="fw fw-edit fw-stack-1x"></i></span>'
                         + '<span class="hidden-xs hidden-on-grid-view">修改</span></a>';
@@ -384,7 +384,7 @@ function loadDevices(searchType, searchParam) {
                         html +=
                             '<a href="#" data-click-event="remove-form" class="btn padding-reduce-on-grid-view remove-device-link" '
                             + 'data-deviceid="' + deviceIdentifier + '" data-devicetype="' + deviceType
-                            + '" data-devicename="' + row.name + '" data-placement="top" data-toggle="tooltip" data-original-title="Remove from group">'
+                            + '" data-devicename="' + row.name + '" data-placement="top" data-toggle="tooltip" data-original-title="从组中移除">'
                             + '<span class="fw-stack"><i class="fw fw-circle-outline fw-stack-2x"></i>'
                             + '<i class="fw fw-delete fw-stack-1x"></i></span>'
                             + '<span class="hidden-xs hidden-on-grid-view">从组中移除</span>';
@@ -392,7 +392,7 @@ function loadDevices(searchType, searchParam) {
                         html +=
                             '<a href="#" data-click-event="remove-form" class="btn padding-reduce-on-grid-view remove-device-link" '
                             + 'data-deviceid="' + deviceIdentifier + '" data-devicetype="' + deviceType
-                            + '" data-devicename="' + row.name + '" data-placement="top" data-toggle="tooltip" data-original-title="Delete">'
+                            + '" data-devicename="' + row.name + '" data-placement="top" data-toggle="tooltip" data-original-title="删除">'
                             + '<span class="fw-stack"><i class="fw fw-circle-outline fw-stack-2x"></i>'
                             + '<i class="fw fw-delete fw-stack-1x"></i></span>'
                             + '<span class="hidden-xs hidden-on-grid-view">删除</span>';
@@ -429,23 +429,23 @@ function loadDevices(searchType, searchParam) {
                     $(this).attr('data-display', model);
                     break;
                 case 2:
-                    $(this).attr('data-grid-label', "Owner");
+                    $(this).attr('data-grid-label', "所有者");
                     $(this).attr('data-search', owner);
                     $(this).attr('data-display', owner);
                     break;
                 case 3:
-                    $(this).attr('data-grid-label', "Status");
+                    $(this).attr('data-grid-label', "状态");
                     $(this).attr('data-search', status);
                     $(this).attr('data-display', status);
                     break;
                 case 4:
-                    $(this).attr('data-grid-label', "Type");
+                    $(this).attr('data-grid-label', "类型");
                     $(this).attr('data-search', deviceType);
                     $(this).attr('data-display', getDeviceTypeLabel(deviceType));
                     break;
                 case 5:
                     if (category == 'mobile') {
-                        $(this).attr('data-grid-label', "Ownership");
+                        $(this).attr('data-grid-label', "所有权");
                         $(this).attr('data-search', ownership);
                         $(this).attr('data-display', ownership);
                     }
@@ -502,7 +502,7 @@ function loadDevices(searchType, searchParam) {
              if ($('.advance-search').length < 1) {
                  $(this).closest('.dataTables_wrapper').find('div[id$=_filter] input')
                      .after('<a href="' + context + '/devices/search"' +
-                         ' class="advance-search add-padding-3x">Advanced Search</a>');
+                         ' class="advance-search add-padding-3x">高级搜索</a>');
              }
 
         }, {

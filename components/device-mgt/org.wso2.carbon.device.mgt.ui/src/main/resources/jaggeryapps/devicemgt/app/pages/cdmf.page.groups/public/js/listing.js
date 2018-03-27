@@ -196,7 +196,7 @@ function loadGroups() {
                             '<a href="#" data-click-event="remove-form" class="btn padding-reduce-on-grid-view share-group-link" data-group-id="'
                             + row.groupId + '" ' +
                             'data-group-owner="' + row.owner
-                            + '" data-placement="top" data-toggle="tooltip" data-original-title="Share"><span class="fw-stack"><i class="fw fw-circle-outline fw-stack-2x"></i><i class="fw fw-share fw-stack-1x"></i></span>'
+                            + '" data-placement="top" data-toggle="tooltip" data-original-title="分享"><span class="fw-stack"><i class="fw fw-circle-outline fw-stack-2x"></i><i class="fw fw-share fw-stack-1x"></i></span>'
                             +
                             '<span class="hidden-xs hidden-on-grid-view">分享</span></a>';
                     }
@@ -206,7 +206,7 @@ function loadGroups() {
                             + row.name + '" ' +
                             'data-group-owner="' + row.owner + '" data-group-description="' + row.description
                             + '" data-group-id="' + row.groupId
-                            + '" data-placement="top" data-toggle="tooltip" data-original-title="Edit"><span class="fw-stack"><i class="fw fw-circle-outline fw-stack-2x"></i>' +
+                            + '" data-placement="top" data-toggle="tooltip" data-original-title="修改"><span class="fw-stack"><i class="fw fw-circle-outline fw-stack-2x"></i>' +
                             '<i class="fw fw-edit fw-stack-1x"></i></span><span class="hidden-xs hidden-on-grid-view">修改</span></a>';
                     }
                     if ($.hasPermission("REMOVE_GROUP")) {
@@ -214,7 +214,7 @@ function loadGroups() {
                             '<a href="#" data-click-event="remove-form" class="btn padding-reduce-on-grid-view remove-group-link" data-group-id="'
                             + row.groupId + '" ' +
                             'data-group-owner="' + row.owner
-                            + '" data-placement="top" data-toggle="tooltip" data-original-title="Delete"><span class="fw-stack"><i class="fw fw-circle-outline fw-stack-2x"></i><i class="fw fw-delete fw-stack-1x"></i>'
+                            + '" data-placement="top" data-toggle="tooltip" data-original-title="删除"><span class="fw-stack"><i class="fw fw-circle-outline fw-stack-2x"></i><i class="fw fw-delete fw-stack-1x"></i>'
                             +
                             '</span><span class="hidden-xs hidden-on-grid-view">删除</span></a>';
                     }
@@ -235,17 +235,17 @@ function loadGroups() {
                     //TODO : The following line encodes html entities. 
                     //Should check for a better solution since it only changes the presentation layer
                     $(this).text($("<textarea></textarea>").html(this.innerText).text())
-                    $(this).attr('data-grid-label', "Name");
+                    $(this).attr('data-grid-label', "名称");
                     $(this).attr('data-search', data.name);
                     $(this).attr('data-display', data.name);
                     break;
                 case 2:
-                    $(this).attr('data-grid-label', "Owner");
+                    $(this).attr('data-grid-label', "所有者");
                     $(this).attr('data-search', data.owner);
                     $(this).attr('data-display', data.owner);
                     break;
                 case 3:
-                    $(this).attr('data-grid-label', "Description");
+                    $(this).attr('data-grid-label', "描述");
                     $(this).attr('data-search', data.description);
                     $(this).attr('data-display', data.description);
                     break;

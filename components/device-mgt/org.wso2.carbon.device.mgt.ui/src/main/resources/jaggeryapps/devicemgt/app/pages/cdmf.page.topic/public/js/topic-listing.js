@@ -122,22 +122,22 @@ function loadTopics(searchType, searchParam) {
         $.each($('td', row), function (colIndex) {
             switch (colIndex) {
                 case 1:
-                    $(this).attr('data-grid-label', "Topic Name");
+                    $(this).attr('data-grid-label', "主题名称");
                     $(this).attr('data-search', topicName);
                     $(this).attr('data-display', topicName);
                     break;
                 case 2:
-                    $(this).attr('data-grid-label', "Remaining Messages");
+                    $(this).attr('data-grid-label', "剩余信息");
                     $(this).attr('data-search', remainingMesgCount);
                     $(this).attr('data-display', remainingMesgCount);
                     break;
                 case 3:
-                    $(this).attr('data-grid-label', "Active");
+                    $(this).attr('data-grid-label', "激活的");
                     $(this).attr('data-search', isActive);
                     $(this).attr('data-display', isActive);
                     break;
                 case 4:
-                    $(this).attr('data-grid-label', "Durable");
+                    $(this).attr('data-grid-label', "耐用的");
                     $(this).attr('data-search', isDurable);
                     $(this).attr('data-display', isDurable);
                     break;

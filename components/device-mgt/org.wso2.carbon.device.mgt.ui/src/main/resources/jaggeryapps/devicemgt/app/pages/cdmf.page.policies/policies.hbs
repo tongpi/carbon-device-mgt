@@ -123,19 +123,19 @@
                 <th>所有权类型</th>
                 <th>角色</th>
                 <th>用户</th>
-                <th>By Compliance Type</th>
+                <th>合规类型</th>
                 <th>状态</th>
                 <th class="no-sort"></th>
             </tr>
             <tr class="filter-row filter-box">
                 <th class="no-sort"></th>
                 <th class="no-sort"></th>
-                <th data-for="By Platform" class="select-filter data-platform"></th>
-                <th data-for="By Ownership Type" class="select-filter data-ownership"></th>
-                <th data-for="By Role" class="text-filter"></th>
-                <th data-for="By User" class="text-filter"></th>
-                <th data-for="By Compliance Type" class="select-filter data-compliance"></th>
-                <th data-for="By Status" class="select-filter data-status"></th>
+                <th data-for="平台" class="select-filter data-platform"></th>
+                <th data-for="所有权类型" class="select-filter data-ownership"></th>
+                <th data-for="角色" class="text-filter"></th>
+                <th data-for="用户" class="text-filter"></th>
+                <th data-for="按合规类型" class="select-filter data-compliance"></th>
+                <th data-for="状态" class="select-filter data-status"></th>
                 <th class="no-sort"></th>
             </tr>
             <tr class="bulk-action-row hidden">
@@ -212,25 +212,25 @@
                     <td class="remove-padding-top hidden"
                         data-search="{{ownershipType}}"
                         data-display="{{ownershipType}}"
-                        data-grid-label="Ownership">
+                        data-grid-label="所有权">
                         {{ownershipType}}
                     </td>
                     <td id="policy-roles" class="remove-padding-top"
                         data-search="{{roles}}"
                         data-display="{{roles}}"
-                        data-grid-label="Role(s)">
+                        data-grid-label="角色">
                         {{roles}}
                     </td>
                     <td id="policy-users" class="remove-padding-top"
                         data-search="{{users}}"
                         data-display="{{users}}"
-                        data-grid-label="User(s)">
+                        data-grid-label="用户">
                         {{users}}
                     </td>
                     <td class="remove-padding-top"
                         data-search="{{compliance}}"
                         data-display="{{compliance}}"
-                        data-grid-label="Compliance">
+                        data-grid-label="合规性">
                         {{compliance}}
                     </td>
                     <td id="policy-status" class="remove-padding-top"
@@ -242,7 +242,7 @@
                         <a href="{{@app.context}}/policy/edit?id={{id}}&deviceType={{platform}}"
                            data-id="{{id}}"
                            data-toggle="tooltip"
-                           data-original-title="Edit"
+                           data-original-title="修改"
                            data-click-event="remove-form"
                            class="btn padding-reduce-on-grid-view policy-update-link">
                                 <span class="fw-stack">
