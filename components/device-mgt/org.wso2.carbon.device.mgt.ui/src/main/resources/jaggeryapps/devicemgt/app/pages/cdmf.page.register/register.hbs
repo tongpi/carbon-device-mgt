@@ -1,14 +1,17 @@
-{{unit "cdmf.unit.ui.title" pageTitle="Register"}}
+﻿{{unit "cdmf.unit.ui.title" pageTitle="Register"}}
 
 {{#zone "content"}}
     {{unit "uuf.unit.lib.form-validation"}}
+<div  class="register-content">
+    <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-sm-offset-3 col-md-offset-3 col-lg-offset-4" style="float:right; margin-right:40px;">
+	      <div id="user-create-error-msg" class="alert alert-danger hidden" role="alert" style=" margin-top:-60px;">
+                <i class="icon fw fw-error"></i><span></span>
+            </div>
+<div class="register-box">
+        <!--<p class="page-sub-title">注册</p>
 
-    <div class="container col-xs-12 col-sm-10 col-md-8 col-lg-6 col-centered wr-content wr-login col-centered sign-panel">
-
-        <p class="page-sub-title">注册</p>
-
-        <p>在WSO2 IoT 创建一个新账户（所有项都必填）</p>
-        <hr/>
+        <hr/>-->
         <!-- validation -->
         <div class="wr-validation-summary hidden alert alert-danger">
             <strong></strong>
@@ -19,9 +22,7 @@
             </button>
         </div>
         <div class="form-login-box" id="registerForm" data-context="{{@app.context}}">
-            <div id="user-create-error-msg" class="alert alert-danger hidden" role="alert">
-                <i class="icon fw fw-error"></i><span></span>
-            </div>
+            <p>在WSO2 IoT 创建新账户（所有项都必填）</p>
             <div class="form-group">
                 <label for="first_name" class="wr-input-label">名字</label>
                 <input type="text" id="first_name" name="first_name" class="form-control" placeholder="名字"
@@ -60,14 +61,17 @@
             </div>
 
             <div class="wr-input-control">
-                <button class="wr-btn" id="add-user-btn">注册</button>
-                <button class="wr-btn" onclick="document.location.href='{{@app.context}}/login';">
+                <button class="wr-btn register-btn" id="add-user-btn">注册</button>
+                <button class="wr-btn cancel-btn" onclick="document.location.href='{{@app.context}}/login';">
                     	取消
                 </button>
             </div>
+</div>			
         </div>
 
     </div>
+	</div>
+</div>
 {{/zone}}
 
 {{#zone "bottomJs"}}

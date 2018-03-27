@@ -245,7 +245,7 @@ $.fn.datatables_extended_serverside_paging = function (settings, url, dataFilter
                     } else if (filterColumn.eq(column.index()).hasClass('text-filter')) {
                         var title = filterColumn.eq(column.index()).attr('data-for');
                         $(filterColumn.eq(column.index()).empty()).html('<input type="text" class="form-control" ' +
-                            'placeholder="Search ' + title + '" />');
+                            'placeholder="搜索 ' + title + '" />');
 
                         //noinspection SpellCheckingInspection
                         filterColumn.eq(column.index()).find('input').on('keyup', function () {
