@@ -41,10 +41,10 @@
                                         {{#if device.model}}
                                           <h4>{{device.vendor}} {{device.model}}</h4>
                                         {{/if}}
-                                        <h4>Ownership - <strong>{{device.ownership}}</strong></h4>
+                                        <h4>所有权 - <strong>{{device.ownership}}</strong></h4>
                                         <h4>设备是
                                           <strong>
-                                            {{#equal device.status "ACTIVE"}}活跃的{{/equal}}
+                                            {{#equal device.status "ACTIVE"}}激活的{{/equal}}
                                             {{#equal device.status "INACTIVE"}}闲置的{{/equal}}
                                             {{#equal device.status "BLOCKED"}}阻塞的{{/equal}}
                                             {{#equal device.status "REMOVED"}}已移除{{/equal}}

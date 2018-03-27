@@ -156,7 +156,7 @@ function loadRoles() {
                     'data-role="' + data.name + '" ' +
                     'data-click-event="edit-form" ' +
                     'data-toggle="tooltip" ' +
-                    'data-original-title="Edit Role"' +
+                    'data-original-title="修改角色"' +
                     'class="btn padding-reduce-on-grid-view edit-role-link"> ' +
                     '<span class="fw-stack">' +
                     '<i class="fw fw-circle-outline fw-stack-2x"></i>' +
@@ -173,7 +173,7 @@ function loadRoles() {
                     'data-role="' + data.name + '" ' +
                     'data-click-event="edit-form " ' +
                     'data-toggle="tooltip" ' +
-                    'data-original-title="Edit Permission"' +
+                    'data-original-title="修改权限"' +
                     'class="btn padding-reduce-on-grid-view edit-permission-link">' +
                     '<span class="fw-stack">' +
                     '<i class="fw fw-circle-outline fw-stack-2x"></i>' +
@@ -189,7 +189,7 @@ function loadRoles() {
                 var removeLink = '<a data-role="' + data.name + '" ' +
                     'data-click-event="remove-form" ' +
                     'data-toggle="tooltip" ' +
-                    'data-original-title="Remove"' +
+                    'data-original-title="删除"' +
                     'class="btn padding-reduce-on-grid-view remove-role-link">' +
                     '<span class="fw-stack">' +
                     '<i class="fw fw-circle-outline fw-stack-2x"></i>' +
