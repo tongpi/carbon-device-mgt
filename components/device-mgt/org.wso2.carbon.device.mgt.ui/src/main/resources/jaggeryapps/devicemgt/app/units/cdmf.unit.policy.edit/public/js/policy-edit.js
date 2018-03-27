@@ -182,7 +182,7 @@ skipStep["policy-platform"] = function (policyPayloadObj) {
     policyNameInput.val(policyPayloadObj["policyName"]);
     policyDescriptionInput.val(policyPayloadObj["description"]);
     // updating next-page wizard title with selected platform
-    $("#policy-profile-page-wizard-title").text("EDIT " + policy["platform"] + " POLICY - " + policy["name"]);
+    $("#policy-profile-page-wizard-title").text("修改 " + policy["platform"] + " 策略 - " + policy["name"]);
 
     var deviceType = policy["platform"];
     var policyOperations = $("#policy-operations");
@@ -242,7 +242,7 @@ stepForwardFrom["policy-profile"] = function () {
         policy["profile"] = generatePolicyProfile();
     }
     // updating next-page wizard title with selected platform
-    $("#policy-criteria-page-wizard-title").text("EDIT " + policy["platform"] + " POLICY - " + policy["name"]);
+    $("#policy-criteria-page-wizard-title").text("修改 " + policy["platform"] + " 策略 - " + policy["name"]);
 };
 
 /**
@@ -270,7 +270,7 @@ stepForwardFrom["policy-criteria"] = function () {
     policy["selectedNonCompliantAction"] = $("#action-input").find(":selected").data("action");
     policy["selectedOwnership"] = $("#ownership-input").val();
     // updating next-page wizard title with selected platform
-    $("#policy-naming-page-wizard-title").text("EDIT " + policy["platform"] + " POLICY - " + policy["name"]);
+    $("#policy-naming-page-wizard-title").text("修改 " + policy["platform"] + " 策略 - " + policy["name"]);
 };
 
 /**

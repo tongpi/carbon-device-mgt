@@ -136,7 +136,7 @@ stepForwardFrom["policy-platform"] = function (actionButton) {
     policy["platform"] = $(actionButton).data("platform");
     policy["platformId"] = $(actionButton).data("platform-type");
     // updating next-page wizard title with selected platform
-    $("#policy-profile-page-wizard-title").text("ADD " + policy["platform"] + " POLICY");
+    $("#policy-profile-page-wizard-title").text("添加 " + policy["platform"] + " 策略");
 
     var deviceType = policy["platform"];
     var policyOperationsTemplateSrc = $(actionButton).data("template");
@@ -185,7 +185,7 @@ stepForwardFrom["policy-profile"] = function () {
         policy["profile"] = generatePolicyProfile();
     }
     // updating next-page wizard title with selected platform
-    $("#policy-criteria-page-wizard-title").text("ADD " + policy["platform"] + " POLICY");
+    $("#policy-criteria-page-wizard-title").text("添加 " + policy["platform"] + " 策略");
 };
 
 /**
@@ -225,7 +225,7 @@ stepForwardFrom["policy-criteria"] = function () {
 
     policy["selectedNonCompliantAction"] = $("#action-input").find(":selected").data("action");
     //updating next-page wizard title with selected platform
-    $("#policy-naming-page-wizard-title").text("ADD " + policy["platform"] + " POLICY");
+    $("#policy-naming-page-wizard-title").text("添加 " + policy["platform"] + " 策略");
 };
 
 /**
