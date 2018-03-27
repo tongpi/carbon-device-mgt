@@ -1,0 +1,138 @@
+@charset "UTF-8";
+/*
+~   Copyright (c) WSO2 Inc. (http://wso2.com) All Rights Reserved.
+~
+~   Licensed under the Apache License, Version 2.0 (the "License");
+~   you may not use this file except in compliance with the License.
+~   You may obtain a copy of the License at
+~
+~        http://www.apache.org/licenses/LICENSE-2.0
+~
+~   Unless required by applicable law or agreed to in writing, software
+~   distributed under the License is distributed on an "AS IS" BASIS,
+~   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+~   See the License for the specific language governing permissions and
+~   limitations under the License.
+*/
+.login-bg{
+	margin:0;
+	padding:0;
+	background: #282b37 url(../img/login_bg.png) no-repeat center top;
+}
+.login-content{
+	width:1120px;
+	margin:0 auto;
+	padding: 270px 0 0;
+}
+.login-box{   
+	width: 369px;
+	height:421px;
+	background: url(../img/login_box.png) no-repeat left top;
+}
+.login-form{
+	width:280px;
+	margin: 0 auto;
+	padding-top: 155px;
+}
+.login-form label{
+	display:none;
+}
+.login-form .form-control{
+	height: 40px;
+	padding:0 10px 0 45px;
+	line-height: 40px;
+	font-size:14px;
+	color:#afb0b6;
+	background: #fff;
+	border:none;
+	border-radius: 4px;
+}
+.login-form .user{
+    background-image: url(../img/icon_user.png);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+.login-form .password{
+    background-image: url(../img/icon_password.png);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+.text-register{
+	line-height: 20px;
+    text-align: right;
+}
+.text-register a{
+	color: #05dde2;
+	text-decoration: none;
+}
+.text-register a:hover{
+	text-decoration: underline;
+}
+.login-form .login-btn{
+	display:block;
+	width:100%;
+	height: 40px;
+	margin: 0 auto;
+	line-height: 40px;
+	font-size:16px;
+	color:#fff;
+	text-align: center;
+	background: #08d5da;
+	border:none;
+	border-radius: 4px;
+}
+.login-form .wr-btn-grp{
+	margin-top:20px;
+}
+.login-form .login-btn:hover {
+    background-color: #05clc6;
+}
+/*注册页面*/
+.register-content{
+	width:1120px;
+	margin:0 auto;
+	padding: 130px 0 0;
+}
+.register-box{   
+	width: 369px;
+	height:652px;
+	color:#fff;
+	background: url(../img/register_box.png) no-repeat left top;
+}
+.register-box .form-login-box{
+	width:300px;
+	margin: 0 auto;
+	padding-top: 120px;
+}
+.register-box  p{
+	color: #05dde2;
+}
+.register-box label{
+	color: #afb0b6;
+}
+.register-box .form-control{
+	border-radius: 4px;
+}
+.register-box .wr-input-control{
+	text-align:center;
+}
+.register-box .register-btn{
+	color:#fff;
+	text-align: center;
+	background: #08d5da;
+	border:none;
+	border-radius: 4px;
+}
+.register-box .register-btn:hover {
+    background-color: #05clc6;
+}
+.register-box .cancel-btn{
+	color:#fff;
+	text-align: center;
+	background: #afb0b6;
+	border:none;
+	border-radius: 4px;
+}
+.register-box .cancel-btn:hover {
+    background-color: #9e9ea4;
+}
