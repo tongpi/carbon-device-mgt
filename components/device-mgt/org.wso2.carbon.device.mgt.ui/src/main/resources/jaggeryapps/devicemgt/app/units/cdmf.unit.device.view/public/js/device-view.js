@@ -171,7 +171,6 @@ function loadOperationsLog(update) {
         } else {
             invokerUtil.get(uri, function (payload) {
 
-            } {
                 //update the parent status
                 var payloadObject = JSON.parse(payload);
                 if ( payloadObject["activityStatus"][0]["status"] != rowData["status"] ) {
