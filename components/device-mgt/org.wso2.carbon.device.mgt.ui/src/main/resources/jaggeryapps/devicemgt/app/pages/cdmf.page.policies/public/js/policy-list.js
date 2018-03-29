@@ -184,7 +184,7 @@ $(document).ready(function () {
             // pop-up an error saying
             // "You cannot select already inactive policies. Please deselect inactive policies and try again."
             modalDialog.header('Action cannot be performed !');
-            modalDialog.content('您无法选择已停用的策略以取消发布。 请取消选择不活动的政策并重试。');
+            modalDialog.content('您无法选择已停用的策略以取消发布。 请取消选择不活动的策略并重试。');
             modalDialog.footer('<div class="buttons"><a href="javascript:modalDialog.hide()" class="btn-operations">好的</a>' +
                 '</div>');
             modalDialog.showAsAWarning();

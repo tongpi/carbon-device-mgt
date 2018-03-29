@@ -177,7 +177,7 @@ function loadDeviceTypes() {
 						'<i class="fw fw-circle fw-stack-2x"></i><i class="fw fw-edit fw-stack-1x fw-inverse"></i>' +
 						'</span>' +
 						'</span>' +
-						'<span class="hidden-xs hidden-on-grid-view">修改项目</span>' +
+						'<span class="hidden-xs hidden-on-grid-view">修改事件</span>' +
 						'</a>';
 
 					innerhtml = editLink + editEventLink;
