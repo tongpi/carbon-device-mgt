@@ -36,7 +36,7 @@
     <li>
         <!--suppress HtmlUnknownTarget -->
         <a href="{{@app.context}}/device-type/edit-event?type={{name}}">
-            	项目
+            	事件
         </a>
     </li>
 {{/zone}}
@@ -76,7 +76,7 @@
                             </div>
 
                             <label class="wr-input-label">
-                                	项目属性 (如: 警报状态， 温度)
+                                	事件属性 (如: 警报状态， 温度)
                             </label>
                             <br>
                             <div class="form-group event_field_wrapper">
@@ -136,7 +136,7 @@
                 </div>
                 <div id="devicetype-created-msg" class="container col-centered wr-content hidden">
                     <div class="wr-form">
-                        <p class="page-sub-title">设备类型项目添加成功。</p>
+                        <p class="page-sub-title">设备类型事件添加成功。</p>
                         <b>"查看设备类型列表"</b>完成该过程并返回到设备类型列表。
                         <hr/>
                         <button class="wr-btn" onclick="window.location.href='{{@app.context}}/device-types'">
@@ -154,7 +154,7 @@
                     <div class="modal-content clearfix">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fw fw-cancel"></i></button>
-                            <h3 class="modal-title" id="deviceModalLabel">定义项目部署成功。</h3>
+                            <h3 class="modal-title" id="deviceModalLabel">定义事件部署成功。</h3>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary" onclick="location.href='{{@app.context}}/device/enroll'">返回登记页面</button>

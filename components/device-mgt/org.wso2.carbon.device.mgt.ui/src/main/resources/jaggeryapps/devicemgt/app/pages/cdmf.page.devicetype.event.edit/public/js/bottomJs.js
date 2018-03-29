@@ -164,7 +164,7 @@ $(document).ready(function () {
 		        },
 		        function (jqXHR) {
 		            if (jqXHR.status == 500) {
-		                $(errorMsg).text("定义项目部署失败，请联系管理员。");
+		                $(errorMsg).text("定义事件部署失败，请联系管理员。");
 		                $(errorMsgWrapper).removeClass("hidden");
 		            }
 
