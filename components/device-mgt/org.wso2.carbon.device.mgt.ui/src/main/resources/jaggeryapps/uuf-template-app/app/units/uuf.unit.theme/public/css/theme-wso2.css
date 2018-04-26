@@ -2783,7 +2783,7 @@ header a,
 header a:hover,
 header a:visited,
 header a:focus {
-  color: #fff;
+  color: #a3abbe;
   text-decoration: none;
 }
 header .brand {
@@ -2806,7 +2806,7 @@ header .brand h1 {
   font-weight: 300;
 }
 header .nav > li > a {
-  padding: 5px 15px;
+  padding: 13px 15px;
   height: 50px;
 }
 header .nav > li > a:hover {
@@ -2839,7 +2839,7 @@ footer {
   min-height: 40px;
   overflow: hidden;
   color: #cbcbcb;
-  background: #222222;
+  background: #2d313a;
 }
 footer > .container, footer > .container-fluid {
   padding-right: 15px;
@@ -7063,7 +7063,7 @@ body.inverse .fade-edge:after {
 }
 
 .navbar {
-  background: #526A84;
+  background: #393d46;
   border: none;
   margin-bottom: 0;
   -webkit-border-radius: 0;
@@ -7108,15 +7108,15 @@ body.inverse .fade-edge:after {
   padding: 0 8px;
   line-height: 40px;
   font-size: 18px;
-  background: #F47415;
+  background: #02c2c5;
   color: #ffffff;
 }
 .navbar-menu-toggle:hover, .navbar-menu-toggle:focus, .navbar-menu-toggle:active {
   color: #ffffff;
-  background: #D56613;
+  background: #04dde2;
 }
 .navbar-menu-toggle[aria-expanded=true] {
-  background: #D56613;
+  background: #02c2c5;
 }
 .navbar-menu-toggle .icon {
   line-height: 40px;
@@ -7137,7 +7137,7 @@ body.inverse .fade-edge:after {
   padding: 0 15px;
   line-height: 40px;
   text-transform: uppercase;
-  background: #010F1F;
+  background: #1e252d;
 }
 
 .navbar > .container .navbar-brand a,
@@ -7175,7 +7175,7 @@ body.inverse .fade-edge:after {
 }
 
 .navbar-collapse.dropdown {
-  background: #132D45;
+  background: #2c323b;
   margin-right: -10px;
   margin-left: -10px;
   padding-bottom: 0;
@@ -7207,22 +7207,22 @@ body.inverse .fade-edge:after {
   width: 150px;
   height: 120px;
   padding: 15px;
-  background: #11375B;
+  background: #474f5a;
   display: block;
   overflow: hidden;
   line-height: 1.4em;
 }
 
 .navbar-collapse.tiles ul.nav li li a {
-  background: #526A84;
+  background: #474f5a;
 }
 
 .navbar-collapse.tiles ul.nav li a:hover {
-  background: #133e67;
+  background: #2c323b;
 }
 
 .navbar-collapse.tiles ul.nav li li a:hover {
-  background: #5d7896;
+  background: #2c323b;
 }
 
 .navbar-collapse.tiles ul.nav li a i {
@@ -7240,7 +7240,7 @@ body.inverse .fade-edge:after {
 .navbar-collapse.tiles ul.nav li.has-sub > a:after {
   width: 7px;
   height: 120px;
-  background: #526a84;
+  background: #a3abbe;
   display: inline-block;
   content: " ";
   top: 0;
@@ -7268,7 +7268,7 @@ body.inverse .fade-edge:after {
   border-top: 4px solid\9;
   border-top: 4px solid transparent;
   border-bottom: 4px solid transparent;
-  color: #dadada;
+  color: #2c323b;
 }
 
 .navbar-collapse.tiles ul.nav li.has-sub[aria-expanded=true] > a:before {

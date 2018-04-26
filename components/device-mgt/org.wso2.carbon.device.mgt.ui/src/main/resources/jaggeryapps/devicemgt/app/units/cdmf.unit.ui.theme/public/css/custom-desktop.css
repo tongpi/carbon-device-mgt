@@ -808,7 +808,7 @@ header .dropdown[aria-expanded=true], header .dropdown:hover {
 }
 
 header .fw-user:before{
-    color: #333 !important;
+    color: #a3abbe !important;
 }
 
 
@@ -6948,12 +6948,12 @@ select > option:hover {
  */
 
 header.header-default {
-    background: #181e22 !important;
+    background: #2d313a !important;
     height: 50px;
 }
 
 .navbar-collapse {
-    background: #37474F;
+    background: #393d46;
 }
 
 .dropdown-menu > li {
@@ -7011,4 +7011,5 @@ header.header-default {
 .header .fw-user{
     color: #333 !important;
 }
+
 
