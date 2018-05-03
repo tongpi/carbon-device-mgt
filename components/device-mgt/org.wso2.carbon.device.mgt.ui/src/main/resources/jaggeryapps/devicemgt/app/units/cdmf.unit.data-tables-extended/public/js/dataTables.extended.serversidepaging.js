@@ -280,8 +280,8 @@ $.fn.datatables_extended_serverside_paging = function (settings, url, dataFilter
                     var selectableBtnHtml = "";
                     if (table.hasClass('sorting-enabled')) {
                         if(!table.hasClass('un-selectable')){
-                            selectableBtnHtml = '<li><button data-click-event="toggle-selectable" class="btn btn-default btn-primary select-enable-btn">Select</li>' +
-                                                '<li><button data-click-event="toggle-selected" id="dt-select-all" class="btn btn-default btn-primary disabled">Select All</li>';
+                            selectableBtnHtml = '<li><button data-click-event="toggle-selectable" class="btn btn-default btn-primary select-enable-btn">选择</li>' +
+                                                '<li><button data-click-event="toggle-selected" id="dt-select-all" class="btn btn-default btn-primary disabled">全选</li>';
                         }
                         return '<ul class="nav nav-pills navbar-right remove-margin" role="tablist">' + selectableBtnHtml +
                                '<li><button data-click-event="toggle-list-view" data-view="grid" class="btn btn-default"><i class="fw fw-grid"></i></button></li>' +
@@ -290,8 +290,8 @@ $.fn.datatables_extended_serverside_paging = function (settings, url, dataFilter
                                '</ul>';
                     } else {
                         if(!table.hasClass('un-selectable')){
-                            selectableBtnHtml = '<li><button data-click-event="toggle-selectable" class="btn btn-default btn-primary select-enable-btn">Select</li>' +
-                                                '<li><button data-click-event="toggle-selected" id="dt-select-all" class="btn btn-default btn-primary disabled">Select All</li>';
+                            selectableBtnHtml = '<li><button data-click-event="toggle-selectable" class="btn btn-default btn-primary select-enable-btn">选择</li>' +
+                                                '<li><button data-click-event="toggle-selected" id="dt-select-all" class="btn btn-default btn-primary disabled">全选</li>';
                         }
                         return '<ul class="nav nav-pills navbar-right remove-margin" role="tablist">' + selectableBtnHtml +
                                '<li><button data-click-event="toggle-list-view" data-view="grid" class="btn btn-default"><i class="fw fw-grid"></i></button></li>' +
@@ -338,17 +338,17 @@ $.fn.datatables_extended_serverside_paging = function (settings, url, dataFilter
                 $('.dataTables_wrapper [data-click-event=toggle-selectable]').click(function () {
                     var button = this,
                         thisTable = $(this).closest('.dataTables_wrapper').find('.dataTable').dataTable();
-                    if ($(button).html() == 'Select') {
+                    if ($(button).html() == '选择') {
                         thisTable.addClass("table-selectable");
-                        $(button).addClass("active").html('Cancel');
+                        $(button).addClass("active").html('取消');
                         $(button).parent().next().children("button").removeClass("disabled");
                         // EMM related code
                         $(document).off('click', '.viewEnabledIcon');
                         //--- End of EMM related codes
-                    } else if ($(button).html() == 'Cancel') {
+                    } else if ($(button).html() == '取消') {
                         $('.bulk-action-row').addClass('hidden');
                         thisTable.removeClass("table-selectable");
-                        $(button).addClass("active").html('Select');
+                        $(button).addClass("active").html('选择');
                         $(button).parent().next().children().addClass("disabled");
                         $('.DTTT_selected.selected').removeClass(rowSelectedClass);
                         // EMM related function
@@ -363,16 +363,16 @@ $.fn.datatables_extended_serverside_paging = function (settings, url, dataFilter
                     var button = this,
                         thisTable = $(this).closest('.dataTables_wrapper').find('.dataTable').dataTable();
                     if (!$(button).hasClass('disabled')) {
-                        if ($(button).html() == 'Select All') {
-                            $(button).html('Deselect All');
+                        if ($(button).html() == '全选') {
+                            $(button).html('取消全选');
                             $('.bulk-action-row').removeClass('hidden');
                             thisTable.api().rows().every(function () {
                                 $(this.node()).addClass(rowSelectedClass);
                             });
                         }
-                        else if ($(button).html() == 'Deselect All') {
+                        else if ($(button).html() == '取消全选') {
                             $('.bulk-action-row').addClass('hidden');
-                            $(button).html('Select All');
+                            $(button).html('全选');
                             thisTable.api().rows().every(function () {
                                 $(this.node()).removeClass(rowSelectedClass);
                             });
@@ -397,7 +397,7 @@ $.fn.datatables_extended_serverside_paging = function (settings, url, dataFilter
                     thisTable.api().rows().every(function () {
                         if (!$(this.node()).hasClass(rowSelectedClass)) {
                             $(button).closest('.dataTables_wrapper').find('[data-click-event=toggle-selected]').
-                            html('Select All');
+                            html('全选');
                         }
                     });
                 });
