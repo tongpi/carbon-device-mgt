@@ -128,11 +128,11 @@ $(document).ready(function () {
 	var featureWrapper = $('.feature_field_wrapper'); //Input field wrapper
 	$(addFeatureButton).click(function(){ //Once add button is clicked
 		var featureFieldHtml = '<div class="row"><div class="dontfloat  feature-wrapper" name ="deviceFeature"> <div class="col-xs-3"> <input type="text"' +
-				' class="form-control" id="feature-name" placeholder="name"/> </div> <div class="col-xs-4"> ' +
-				'<input type="text" class="form-control" id="feature-code" placeholder="code"/> </div> ' +
+				' class="form-control" id="feature-name" placeholder="名称"/> </div> <div class="col-xs-4"> ' +
+				'<input type="text" class="form-control" id="feature-code" placeholder="编码"/> </div> ' +
 				'<div class="col-xs-4"> <textarea aria-describedby="basic-addon1" type="text" ' +
-				'id="feature-description" placeholder="description"data-error-msg="invalid ' +
-				'feature description"class="form-control" rows="1" cols="30"></textarea> </div> ' +
+				'id="feature-description" placeholder="描述"data-error-msg="无效的特点描述 ' +
+				'"class="form-control" rows="1" cols="30"></textarea> </div> ' +
 				'<button type="button" class="wr-btn wr-btn-horizontal wr-btn-secondary remove_feature_button"><i class="fa fa-minus"></i></button> </div></div>'
 			$(featureWrapper).append(featureFieldHtml); // Add field html
 	});
