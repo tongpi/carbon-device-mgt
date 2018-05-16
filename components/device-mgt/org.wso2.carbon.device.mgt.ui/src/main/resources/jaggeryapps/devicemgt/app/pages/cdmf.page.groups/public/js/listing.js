@@ -22,7 +22,7 @@
  * initial mode and with out select mode.
  */
 function InitiateViewOption(url) {
-    if ($(".select-enable-btn").text() == "Select") {
+    if ($(".select-enable-btn").text() == "选择") {
         url = $(this).parent().data("url");
         $(location).attr('href', url);
     }
