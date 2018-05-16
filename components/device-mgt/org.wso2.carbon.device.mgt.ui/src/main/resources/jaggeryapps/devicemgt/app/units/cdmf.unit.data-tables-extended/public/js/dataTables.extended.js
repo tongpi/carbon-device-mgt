@@ -180,7 +180,7 @@ $.fn.datatables_extended = function (settings) {
                     else if (filterColumn.eq(column.index()).hasClass('text-filter')) {
                         var title = filterColumn.eq(column.index()).attr('data-for');
                         $(filterColumn.eq(column.index()).empty()).html('<input type="text" class="form-control" ' +
-                            'placeholder="Search ' + title + '" />');
+                            'placeholder="搜索 ' + title + '" />');
 
                         filterColumn.eq(column.index()).find('input').on('keyup change', function () {
                             column.search($(this).val()).draw();
@@ -220,8 +220,8 @@ $.fn.datatables_extended = function (settings) {
                     if (!table.hasClass('no-toolbar')) {
                         if (table.hasClass('sorting-enabled')) {
                             if(!table.hasClass('un-selectable')) {
-                                selectableBtnHtml = '<li><button data-click-event="toggle-selectable" class="btn btn-default btn-primary select-enable-btn">Select</li>' +
-                                                    '<li><button data-click-event="toggle-selected" id="dt-select-all" class="btn btn-default btn-primary disabled">Select All</li>';
+                                selectableBtnHtml = '<li><button data-click-event="toggle-selectable" class="btn btn-default btn-primary select-enable-btn">选择</li>' +
+                                                    '<li><button data-click-event="toggle-selected" id="dt-select-all" class="btn btn-default btn-primary disabled">全选</li>';
                             }
                             return '<ul class="nav nav-pills navbar-right remove-margin" role="tablist">' + selectableBtnHtml +
                                    '<li><button data-click-event="toggle-list-view" data-view="grid" class="btn btn-default"><i class="fw fw-grid"></i></button></li>' +
@@ -230,8 +230,8 @@ $.fn.datatables_extended = function (settings) {
                                    '</ul>'
                         } else {
                             if(!table.hasClass('un-selectable')) {
-                                selectableBtnHtml = '<li><button data-click-event="toggle-selectable" class="btn btn-default btn-primary select-enable-btn">Select</li>' +
-                                                    '<li><button data-click-event="toggle-selected" id="dt-select-all" class="btn btn-default btn-primary disabled">Select All</li>';
+                                selectableBtnHtml = '<li><button data-click-event="toggle-selectable" class="btn btn-default btn-primary select-enable-btn">选择</li>' +
+                                                    '<li><button data-click-event="toggle-selected" id="dt-select-all" class="btn btn-default btn-primary disabled">全选</li>';
                             }
                             return '<ul class="nav nav-pills navbar-right remove-margin" role="tablist">' + selectableBtnHtml +
                                    '<li><button data-click-event="toggle-list-view" data-view="grid" class="btn btn-default"><i class="fw fw-grid"></i></button></li>' +
@@ -281,17 +281,17 @@ $.fn.datatables_extended = function (settings) {
                 $('.dataTables_wrapper [data-click-event=toggle-selectable]').click(function () {
                     var button = this,
                         thisTable = $(this).closest('.dataTables_wrapper').find('.dataTable').dataTable();
-                    if ($(button).html() == 'Select') {
+                    if ($(button).html() == '选择') {
                         thisTable.addClass("table-selectable");
-                        $(button).addClass("active").html('Cancel');
+                        $(button).addClass("active").html('取消');
                         $(button).parent().next().children("button").removeClass("disabled");
                         // EMM related code
                         $(document).off('click', '.viewEnabledIcon');
                         //--- End of EMM related codes
-                    } else if ($(button).html() == 'Cancel') {
+                    } else if ($(button).html() == '取消') {
                         $('.bulk-action-row').addClass('hidden');
                         thisTable.removeClass("table-selectable");
-                        $(button).addClass("active").html('Select');
+                        $(button).addClass("active").html('选择');
                         $(button).parent().next().children().addClass("disabled");
                         // EMM related function
                         $(document).on('click', '.viewEnabledIcon', InitiateViewOption);
@@ -304,16 +304,16 @@ $.fn.datatables_extended = function (settings) {
                 $('.dataTables_wrapper [data-click-event=toggle-selected]').click(function () {
                     var button = this,
                         thisTable = $(this).closest('.dataTables_wrapper').find('.dataTable').dataTable();
-                    if ($(button).html() == 'Select All') {
-                        $(button).html('Deselect All');
+                    if ($(button).html() == '全选') {
+                        $(button).html('取消全选');
                         $('.bulk-action-row').removeClass('hidden');
                         thisTable.api().rows().every(function () {
                             $(this.node()).addClass(rowSelectedClass);
                         });
                     }
-                    else if ($(button).html() == 'Deselect All') {
+                    else if ($(button).html() == '取消全选') {
                         $('.bulk-action-row').addClass('hidden');
-                        $(button).html('Select All');
+                        $(button).html('全选');
                         thisTable.api().rows().every(function () {
                             $(this.node()).removeClass(rowSelectedClass);
                         });
@@ -337,7 +337,7 @@ $.fn.datatables_extended = function (settings) {
                     thisTable.api().rows().every(function () {
                         if (!$(this.node()).hasClass(rowSelectedClass)) {
                             $(button).closest('.dataTables_wrapper').find('[data-click-event=toggle-selected]').
-                            html('Select All');
+                            html('全选');
                         }
                     });
                 });

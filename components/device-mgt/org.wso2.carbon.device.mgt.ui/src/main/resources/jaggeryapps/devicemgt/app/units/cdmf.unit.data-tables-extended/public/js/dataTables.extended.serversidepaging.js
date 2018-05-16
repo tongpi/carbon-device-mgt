@@ -267,7 +267,7 @@ $.fn.datatables_extended_serverside_paging = function (settings, url, dataFilter
                 var table = this;
                 if (table.hasClass('sorting-enabled')) {
                     var dropdownmenu = $('<ul class="dropdown-menu arrow arrow-top-right dark sort-list ' +
-                        'add-margin-top-2x"><li class="dropdown-header">Sort by</li></ul>');
+                        'add-margin-top-2x"><li class="dropdown-header">排序</li></ul>');
                     $('.sort-row th', elem).each(function () {
                         if (!$(this).hasClass('no-sort')) {
                             dropdownmenu.append('<li><a href="#' + $(this).html() + '" data-column="' + $(this).index() +
