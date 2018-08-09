@@ -344,28 +344,28 @@ function loadUsers() {
             class: "text-right content-fill text-left-on-grid-view no-wrap tooltip-overflow-fix",
             data: null,
             render: function (data, type, row, meta) {
-                var editbtn = '<a data-toggle="tooltip" data-placement="top" title="Edit User"href="' + context +
+                var editbtn = '<a data-toggle="tooltip" data-placement="top" title="修改用户"href="' + context +
                     '/user/edit?username=' + encodeURIComponent(data.filter) + '" data-username="' + data.filter + '" ' +
                     'data-click-event="edit-form" ' +
-                    'class="btn padding-reduce-on-grid-view edit-user-link" data-placement="top" data-toggle="tooltip" data-original-title="Edit"> ' +
+                    'class="btn padding-reduce-on-grid-view edit-user-link" data-placement="top" data-toggle="tooltip" data-original-title="修改"> ' +
                     '<span class="fw-stack"> ' +
                     '<i class="fw fw-circle-outline fw-stack-2x"></i>' +
                     '<i class="fw fw-edit fw-stack-1x"></i>' +
                     '</span><span class="hidden-xs hidden-on-grid-view">修改</span></a>';
 
-                var resetPasswordbtn = '<a data-toggle="tooltip" data-placement="top" title="Reset Password" href="#" data-username="' + data.filter + '" data-userid="' + data.filter + '" ' +
+                var resetPasswordbtn = '<a data-toggle="tooltip" data-placement="top" title="重置密码" href="#" data-username="' + data.filter + '" data-userid="' + data.filter + '" ' +
                     'data-click-event="edit-form" ' +
                     'onclick="javascript:resetPassword(\'' + data.filter + '\')" ' +
-                    'class="btn padding-reduce-on-grid-view remove-user-link" data-placement="top" data-toggle="tooltip" data-original-title="Reset Password">' +
+                    'class="btn padding-reduce-on-grid-view remove-user-link" data-placement="top" data-toggle="tooltip" data-original-title="重置密码">' +
                     '<span class="fw-stack">' +
                     '<i class="fw fw-circle-outline fw-stack-2x"></i>' +
                     '<i class="fw fw-key fw-stack-1x"></i>' +
                     '</span><span class="hidden-xs hidden-on-grid-view">重置密码</span></a>';
 
-                var removebtn = '<a data-toggle="tooltip" data-placement="top" title="Remove User" href="#" data-username="' + data.filter + '" data-userid="' + data.filter + '" ' +
+                var removebtn = '<a data-toggle="tooltip" data-placement="top" title="删除用户" href="#" data-username="' + data.filter + '" data-userid="' + data.filter + '" ' +
                     'data-click-event="remove-form" ' +
                     'onclick="javascript:removeUser(\'' + data.filter + '\')" ' +
-                    'class="btn padding-reduce-on-grid-view remove-user-link" data-placement="top" data-toggle="tooltip" data-original-title="Remove">' +
+                    'class="btn padding-reduce-on-grid-view remove-user-link" data-placement="top" data-toggle="tooltip" data-original-title="删除">' +
                     '<span class="fw-stack">' +
                     '<i class="fw fw-circle-outline fw-stack-2x"></i>' +
                     '<i class="fw fw-delete fw-stack-1x"></i>' +
