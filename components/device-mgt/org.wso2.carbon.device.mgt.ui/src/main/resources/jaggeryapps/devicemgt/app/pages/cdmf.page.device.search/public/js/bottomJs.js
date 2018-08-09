@@ -41,7 +41,7 @@ $("#view-search-param").click(function () {
 
 var dynamicForm = '<div class="dynamic-search-param row"><div class="row"><a class="close-button-div icon fw fw-error">' +
                   '</a></div><div class="form-group wr-input-control col-md-2"><label class="wr-input-label ">状态</label>' +
-                  '<select class="state no-tag form-control select2-custom"><option>和</option><option>或者</option></select></div><div ' +
+                  '<select class="state no-tag form-control select2-custom"><option>AND</option><option>OR</option></select></div><div ' +
                   'class="form-group wr-input-control col-md-4"><label class="wr-input-label ">密钥</label><select class=' +
                   '"txt-key form-control select2-custom"><option value = "deviceModel">设备模型' +
                   '</option><option value = "PhoneNumber">电话号码</option><option value = "vendor">供应商</option><option value = "osVersion">系统版本' +
@@ -54,9 +54,9 @@ var dynamicForm = '<div class="dynamic-search-param row"><div class="row"><a cla
                   'RAM内存总数</option> <option value = "availableRAMMemory">可用的 RAM 内存</option>' +
                   '<option value = "pluggedIn">插入</option></select></div>' +
                   '<div class="form-group wr-input-control col-md-2">' +
-                  '<label class="wr-input-label ">操作者</label><select id = "operators" class="form-control' +
+                  '<label class="wr-input-label ">操作</label><select id = "operators" class="form-control' +
                   ' select2-custom no-tag operator"><option>=</option><option> !=</option><option> %</option>' +
-                  '</select></div><div class="form-group ' + 'wr-input-control col-md-4"><label class="wr-input-label">价值</label>' +
+                  '</select></div><div class="form-group ' + 'wr-input-control col-md-4"><label class="wr-input-label">值</label>' +
                   '<input type="text" class="form-control txt-value"/></div></div>';
 
 var nonNumericKeyValuePair = ["deviceModel", "vendor", "osVersion", "connectionType", "ssid", "pluggedIn"];
@@ -135,7 +135,7 @@ $(document).ready(function () {
                     $("#advance-search-result").addClass("hidden");
                     $("#advance-search-form").removeClass(" hidden");
                     $('#device-listing-status').removeClass('hidden');
-                    $('#device-listing-status-msg').text('用户输入值出错。 '+key+'需要一个数值作为搜索值。");
+                    $('#device-listing-status-msg').text('用户输入值出错。 '+key+'需要一个数值作为搜索值。');
                 }
             }
         });
@@ -214,7 +214,7 @@ $(document).ready(function () {
                         $("#advance-search-result").addClass("hidden");
                         $("#advance-search-form").removeClass(" hidden");
                         $('#device-listing-status').removeClass('hidden');
-                        $('#device-listing-status-msg').text('服务器无法执行搜索，请至少登记一个设备或检查搜索查询');
+                        $('#device-listing-status-msg').text('服务器无法执行搜索，请至少登记一个设备或检查搜索查询。');
                     }
                 );
             });
