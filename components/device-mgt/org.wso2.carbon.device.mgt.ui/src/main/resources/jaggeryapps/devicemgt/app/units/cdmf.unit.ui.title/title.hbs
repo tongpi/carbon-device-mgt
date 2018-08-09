@@ -18,8 +18,10 @@
 
 {{#zone "title"}}
     {{#if isCloud}}
-        {{@unit.params.pageTitle}} | WSO2 设备云
+        {{@unit.params.pageTitle}} 
+		{{! | WSO2 设备云}}
     {{else}}
-        {{@unit.params.pageTitle}} | {{@app.conf.appName}}
+        {{@unit.params.pageTitle}} 
+		{{! | {{@app.conf.appName }}
     {{/if}}
 {{/zone}}
