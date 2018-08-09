@@ -4876,11 +4876,11 @@ a.wr-side-panel-toggle-btn.selected {
 }
 
 .wr-hidden-operations-content .panel-title .wr-input-control.switch input[type="checkbox"] + .helper + .text:after {
-    content: "Off";
+    content: "关";
 }
 
 .wr-hidden-operations-content .panel-title .wr-input-control.switch input[type="checkbox"]:checked + .helper + .text:after {
-    content: "On";
+    content: "开";
 }
 
 .wr-hidden-operations-content .panel-title label {
